@@ -121,6 +121,152 @@ collections:
                   },
                 ],
             }
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "home-page",
+            }
+          - { label: "SEO Title", name: seoTitle, widget: string }
+          - {
+              label: "Sections",
+              name: "Sections",
+              collapsed: true,
+              widget: list,
+              fields: 
+                [
+                  {
+                    label: "Section Type",
+                    name: "sectionType",
+                    widget: "select",
+                    options: ["hero01", "content", "cta"],
+                  },
+                  {
+                    label: "Section Theme",
+                    name: "sectionTheme",
+                    widget: "select",
+                    options: ["default", "light", "colored", "dark", "darkest"],
+                  },
+                  {
+                    label: "Main Image",
+                    name: "mainImage",
+                    collapsed: true,
+                    widget: object,
+                    fields: 
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                        { 
+                          label: Position, 
+                          name: position, 
+                          widget: select, 
+                          options: ["top", "bottom", "left", "right"]  
+                        },
+                      ]
+                  },
+                  { 
+                    label: Tagline, 
+                    name: tagline, 
+                    hint: "Above headline", 
+                    collapsed: true,
+                    widget: object,
+                    fields:
+                      [
+                        { 
+                          label: Color, 
+                          name: color, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Type, 
+                          name: type, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Size, 
+                          name: size, 
+                          widget: select,
+                          default: sm,
+                          options: [xs, sm, md, lg, xl], 
+                        },
+                        { label: Text, name: text, widget: string }
+                      ] 
+                  },
+                  { 
+                    label: Heading, 
+                    name: heading, 
+                    collapsed: true,
+                    widget: object,
+                    fields:
+                      [
+                        { 
+                          label: Color, 
+                          name: color, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Type, 
+                          name: type, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Size, 
+                          name: size, 
+                          widget: select,
+                          default: lg,
+                          options: [xs, sm, md, lg, xl], 
+                        },
+                        { label: Text, name: text, widget: string }
+                      ] 
+                  },
+                  { 
+                    label: Subheading, 
+                    name: subheading, 
+                    collapsed: true,
+                    widget: object,
+                    fields:
+                      [
+                        { 
+                          label: Color, 
+                          name: color, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Type, 
+                          name: type, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Size, 
+                          name: size, 
+                          widget: select,
+                          default: md,
+                          options: [xs, sm, md, lg, xl], 
+
+                        },
+                        { label: Text, name: text, widget: string }
+                      ] 
+                  },
+                  { label: Description, name: description, widget: markdown }
+                ]
+          }
+                   
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
