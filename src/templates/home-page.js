@@ -10,19 +10,19 @@ import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const HomePageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  seoTitle,
+  sections
 }) => {
-  const heroImage = getImage(image) || image;
+  // const heroImage = getImage(image) || image;
+  console.log(sections);
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <h1>{seoTitle}</h1>
+      {sections.map((section) => (
+        <h2>{section.heading.text}</h2>
+      ))}
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -69,21 +69,14 @@ export const HomePageTemplate = ({
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
 
 HomePageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  seoTitle: PropTypes.string,
+  sections: PropTypes.object,
 };
 
 const HomePage = ({ data }) => {
@@ -91,15 +84,7 @@ const HomePage = ({ data }) => {
 
   return (
     <Layout>
-      <HomePageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
+      <HomePageTemplate {...frontmatter} />
     </Layout>
   );
 };
@@ -117,8 +102,113 @@ export default HomePage;
 export const pageQuery = graphql`
   query HomePageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
-        title
+        seoTitle
+        sections {
+          type
+          theme
+          mainImage {
+            image {
+              childrenImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+            position
+            alt
+          }
+          tagline {
+            color
+            size
+            text
+            type
+          }
+          subheading {
+            color
+            size
+            text
+            type
+          }
+          heading {
+            color
+            size
+            text
+            type
+          }
+          description {
+            bullets {
+              icon {
+                color
+                name
+              }
+              size
+            }
+            body
+          }
+          buttons {
+            color
+            size
+            text
+            type
+            icon {
+              name
+              position
+            }
+            url
+          }
+          content {
+            type
+            theme
+            mainImage {
+              image {
+                childrenImageSharp {
+                  gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                }
+              }
+              position
+              alt
+            }
+            tagline {
+              color
+              size
+              text
+              type
+            }
+            subheading {
+              color
+              size
+              text
+              type
+            }
+            heading {
+              color
+              size
+              text
+              type
+            }
+            description {
+              bullets {
+                icon {
+                  color
+                  name
+                }
+                size
+              }
+              body
+            }
+            buttons {
+              color
+              size
+              text
+              type
+              icon {
+                name
+                position
+              }
+              url 
+            }
+          }
+        }
       }
     }
   }

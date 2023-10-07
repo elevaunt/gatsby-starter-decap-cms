@@ -121,6 +121,7 @@ collections:
                   },
                 ],
             }
+
       - file: "src/pages/home/index.md"
         label: "Home"
         name: "home"
@@ -134,20 +135,20 @@ collections:
           - { label: "SEO Title", name: seoTitle, widget: string }
           - {
               label: "Sections",
-              name: "Sections",
+              name: "sections",
               collapsed: true,
               widget: list,
               fields: 
                 [
                   {
-                    label: "Section Type",
-                    name: "sectionType",
+                    label: "Type",
+                    name: "type",
                     widget: "select",
-                    options: ["hero01", "content", "cta"],
+                    options: ["hero01", "content", "cta", "card", "productFull"],
                   },
                   {
-                    label: "Section Theme",
-                    name: "sectionTheme",
+                    label: "Theme",
+                    name: "theme",
                     widget: "select",
                     options: ["default", "light", "colored", "dark", "darkest"],
                   },
@@ -155,11 +156,12 @@ collections:
                     label: "Main Image",
                     name: "mainImage",
                     collapsed: true,
+                    required: false,
                     widget: object,
                     fields: 
                       [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
+                        { label: Image, name: image, required: false, widget: image },
+                        { label: Alt, name: alt, required: false, widget: string },
                         { 
                           label: Position, 
                           name: position, 
@@ -173,6 +175,7 @@ collections:
                     name: tagline, 
                     hint: "Above headline", 
                     collapsed: true,
+                    required: false,
                     widget: object,
                     fields:
                       [
@@ -197,13 +200,14 @@ collections:
                           default: sm,
                           options: [xs, sm, md, lg, xl], 
                         },
-                        { label: Text, name: text, widget: string }
+                        { label: Text, name: text, required: false, widget: string }
                       ] 
                   },
                   { 
                     label: Heading, 
                     name: heading, 
                     collapsed: true,
+                    required: false,
                     widget: object,
                     fields:
                       [
@@ -228,13 +232,14 @@ collections:
                           default: lg,
                           options: [xs, sm, md, lg, xl], 
                         },
-                        { label: Text, name: text, widget: string }
+                        { label: Text, name: text, required: false, widget: string }
                       ] 
                   },
                   { 
                     label: Subheading, 
                     name: subheading, 
                     collapsed: true,
+                    required: false,
                     widget: object,
                     fields:
                       [
@@ -258,12 +263,348 @@ collections:
                           widget: select,
                           default: md,
                           options: [xs, sm, md, lg, xl], 
-
                         },
-                        { label: Text, name: text, widget: string }
+                        { label: Text, name: text, required: false, widget: string }
                       ] 
                   },
-                  { label: Description, name: description, widget: markdown }
+                  { 
+                    label: Description, 
+                    name: description, 
+                    collapsed: true,
+                    required: false, 
+                    widget: object,
+                    fields:
+                      [
+                        { 
+                          label: Bullet Options, 
+                          name: bullets, 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields: 
+                            [
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: md,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { 
+                                label: Icon, 
+                                name: icon, 
+                                collapsed: true,
+                                required: false,
+                                widget: object,
+                                fields: 
+                                  [
+                                    { label: Icon Name, name: name, required: false, widget: string },
+                                    { 
+                                      label: Color, 
+                                      name: color, 
+                                      required: false,
+                                      widget: select,
+                                      default: secondary,
+                                      options: [default, primary, secondary, tertiary], 
+                                    },
+                                  ]
+                              }
+                            ]
+                        },
+                        { label: Text, name: body, required: false, widget: markdown }
+                      ] 
+                  },
+                  { 
+                    label: Buttons, 
+                    name: buttons, 
+                    collapsed: true,
+                    required: false,
+                    max: 2,
+                    widget: list,
+                    fields:
+                      [
+                        { 
+                          label: Color, 
+                          name: color, 
+                          widget: select,
+                          default: default,
+                          options: [default, primary, secondary, tertiary], 
+                        },
+                        { 
+                          label: Type, 
+                          name: type, 
+                          widget: select,
+                          default: default,
+                          options: [default, solid, soft, outline, plain], 
+                        },
+                        { 
+                          label: Size, 
+                          name: size, 
+                          widget: select,
+                          default: md,
+                          options: [xs, sm, md, lg, xl], 
+                        },
+                        { 
+                          label: Icon, 
+                          name: icon, 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields: 
+                            [
+                              { label: Icon Name, name: name, required: false, widget: string },
+                              { 
+                                label: Position, 
+                                name: position, 
+                                required: false,
+                                widget: select, 
+                                options: ["before", "after"]  
+                              },
+                            ]
+                        },
+                        { label: Text, name: text, required: false, widget: string },
+                        { label: URL, name: url, required: false, widget: string },
+                      ] 
+                  },
+                  { 
+                    label: Content, 
+                    name: content, 
+                    collapsed: true,
+                    required: false,
+                    max: 3,
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Type",
+                          name: "type",
+                          default: "default",
+                          widget: "select",
+                          options: ["hero01", "content", "cta", "card", "productFull"],
+                        },
+                        {
+                          label: "Theme",
+                          name: "theme",
+                          default: "default",
+                          widget: "select",
+                          options: ["default", "light", "colored", "dark", "darkest"],
+                        },
+                        {
+                          label: "Main Image",
+                          name: "mainImage",
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields: 
+                            [
+                              { label: Image, name: image, required: false, widget: image },
+                              { label: Alt, name: alt, required: false, widget: string },
+                              { 
+                                label: Position, 
+                                name: position, 
+                                widget: select, 
+                                options: ["top", "bottom", "left", "right"]  
+                              },
+                            ]
+                        },
+                        { 
+                          label: Tagline, 
+                          name: tagline, 
+                          hint: "Above headline", 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields:
+                            [
+                              { 
+                                label: Color, 
+                                name: color, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Type, 
+                                name: type, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: sm,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { label: Text, name: text, required: false, widget: string }
+                            ] 
+                        },
+                        { 
+                          label: Heading, 
+                          name: heading, 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields:
+                            [
+                              { 
+                                label: Color, 
+                                name: color, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Type, 
+                                name: type, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: lg,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { label: Text, name: text, required: false, widget: string }
+                            ] 
+                        },
+                        { 
+                          label: Subheading, 
+                          name: subheading, 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields:
+                            [
+                              { 
+                                label: Color, 
+                                name: color, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Type, 
+                                name: type, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: md,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { label: Text, name: text, required: false, widget: string }
+                            ] 
+                        },
+                  { 
+                    label: Description, 
+                    name: description, 
+                    collapsed: true,
+                    required: false, 
+                    widget: object,
+                    fields:
+                      [
+                        { 
+                          label: Bullet Options, 
+                          name: bullets, 
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields: 
+                            [
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: md,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { 
+                                label: Icon, 
+                                name: icon, 
+                                collapsed: true,
+                                required: false,
+                                widget: object,
+                                fields: 
+                                  [
+                                    { label: Icon Name, name: name, required: false, widget: string },
+                                    { 
+                                      label: Color, 
+                                      name: color, 
+                                      required: false,
+                                      widget: select,
+                                      default: secondary,
+                                      options: [default, primary, secondary, tertiary], 
+                                    },
+                                  ]
+                              }
+                            ]
+                        },
+                        { label: Text, name: body, required: false, widget: markdown }
+                      ] 
+                  },
+                        { 
+                          label: Buttons, 
+                          name: buttons, 
+                          collapsed: true,
+                          required: false,
+                          max: 2,
+                          widget: list,
+                          fields:
+                            [
+                              { 
+                                label: Color, 
+                                name: color, 
+                                widget: select,
+                                default: default,
+                                options: [default, primary, secondary, tertiary], 
+                              },
+                              { 
+                                label: Type, 
+                                name: type, 
+                                widget: select,
+                                default: default,
+                                options: [default, solid, soft, outline, plain], 
+                              },
+                              { 
+                                label: Size, 
+                                name: size, 
+                                widget: select,
+                                default: md,
+                                options: [xs, sm, md, lg, xl], 
+                              },
+                              { 
+                                label: Icon, 
+                                name: icon, 
+                                collapsed: true,
+                                required: false,
+                                widget: object,
+                                fields: 
+                                  [
+                                    { label: Icon Name, name: name, required: false, widget: string },
+                                    { 
+                                      label: Position, 
+                                      name: position, 
+                                      required: false,
+                                      widget: select, 
+                                      options: ["before", "after"]  
+                                    },
+                                  ]
+                              },
+                              { label: Text, name: text, required: false, widget: string },
+                              { label: URL, name: url, required: false, widget: string },
+                            ] 
+                        },
+                      ]
+                  }
                 ]
           }
                    
@@ -279,6 +620,7 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
