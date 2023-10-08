@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+// import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+import renderSection from "../configs/sectionsMap.config";
+// import Features from "../components/Features";
+// import BlogRoll from "../components/BlogRoll";
+// import FullWidthImage from "../components/FullWidthImage";
 
-// eslint-disable-next-line
 export const HomePageTemplate = ({
   seoTitle,
   sections
@@ -19,9 +19,7 @@ export const HomePageTemplate = ({
   return (
     <div>
       <h1>{seoTitle}</h1>
-      {sections.map((section) => (
-        <h2>{section.heading.text}</h2>
-      ))}
+      {sections.map((section, key) => renderSection(section, key))}
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
@@ -108,9 +106,10 @@ export const pageQuery = graphql`
         sections {
           type
           theme
+          textAlign
           mainImage {
             image {
-              childrenImageSharp {
+              childImageSharp {
                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
             }
@@ -161,7 +160,7 @@ export const pageQuery = graphql`
             theme
             mainImage {
               image {
-                childrenImageSharp {
+                childImageSharp {
                   gatsbyImageData(quality: 100, layout: FULL_WIDTH)
                 }
               }

@@ -144,13 +144,20 @@ collections:
                     label: "Type",
                     name: "type",
                     widget: "select",
-                    options: ["hero01", "content", "cta", "card", "productFull"],
+                    options: ["Hero 01", "Content - Full Width", "Split Content", "Cta 01", "Card", "Product - Full Width"],
                   },
                   {
                     label: "Theme",
                     name: "theme",
                     widget: "select",
                     options: ["default", "light", "colored", "dark", "darkest"],
+                  },
+                  {
+                    label: "Text Align",
+                    name: "textAlign",
+                    widget: "select",
+                    default: "left",
+                    options: ["left", "center", "right"],
                   },
                   {
                     label: "Main Image",
@@ -166,6 +173,7 @@ collections:
                           label: Position, 
                           name: position, 
                           widget: select, 
+                          default: top,
                           options: ["top", "bottom", "left", "right"]  
                         },
                       ]
@@ -327,22 +335,22 @@ collections:
                           label: Color, 
                           name: color, 
                           widget: select,
-                          default: default,
-                          options: [default, primary, secondary, tertiary], 
+                          default: primary,
+                          options: [primary, secondary, tertiary], 
                         },
                         { 
                           label: Type, 
                           name: type, 
                           widget: select,
-                          default: default,
-                          options: [default, solid, soft, outline, plain], 
+                          default: solid,
+                          options: [solid, soft, outline, plain, link], 
                         },
                         { 
                           label: Size, 
                           name: size, 
                           widget: select,
                           default: md,
-                          options: [xs, sm, md, lg, xl], 
+                          options: [sm, md, lg], 
                         },
                         { 
                           label: Icon, 
@@ -358,7 +366,7 @@ collections:
                                 name: position, 
                                 required: false,
                                 widget: select, 
-                                options: ["before", "after"]  
+                                options: ["before", "after", "iconOnly"]  
                               },
                             ]
                         },
@@ -380,7 +388,7 @@ collections:
                           name: "type",
                           default: "default",
                           widget: "select",
-                          options: ["hero01", "content", "cta", "card", "productFull"],
+                          options: ["Hero 01", "Content - Full Width", "Split Content", "Cta 01", "Card", "Product - Full Width"],
                         },
                         {
                           label: "Theme",
@@ -403,6 +411,7 @@ collections:
                                 label: Position, 
                                 name: position, 
                                 widget: select, 
+                                default: top,
                                 options: ["top", "bottom", "left", "right"]  
                               },
                             ]
@@ -564,22 +573,22 @@ collections:
                                 label: Color, 
                                 name: color, 
                                 widget: select,
-                                default: default,
-                                options: [default, primary, secondary, tertiary], 
+                                default: primary,
+                                options: [primary, secondary, tertiary], 
                               },
                               { 
                                 label: Type, 
                                 name: type, 
                                 widget: select,
-                                default: default,
-                                options: [default, solid, soft, outline, plain], 
+                                default: solid,
+                                options: [solid, soft, outline, plain, link], 
                               },
                               { 
                                 label: Size, 
                                 name: size, 
                                 widget: select,
                                 default: md,
-                                options: [xs, sm, md, lg, xl], 
+                                options: [sm, md, lg], 
                               },
                               { 
                                 label: Icon, 
@@ -595,7 +604,7 @@ collections:
                                       name: position, 
                                       required: false,
                                       widget: select, 
-                                      options: ["before", "after"]  
+                                      options: ["before", "after", "iconOnly"]  
                                     },
                                   ]
                               },
