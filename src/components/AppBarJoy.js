@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/joy/Box';
 import Stack from '@mui/joy/Stack';
 import IconButton from '@mui/joy/IconButton';

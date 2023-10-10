@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
+import React from 'react';
 import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import IconList from "../Base/IconList";

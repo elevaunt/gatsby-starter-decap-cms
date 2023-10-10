@@ -144,20 +144,58 @@ collections:
                     label: "Type",
                     name: "type",
                     widget: "select",
-                    options: ["Hero 01", "Content - Full Width", "Split Content", "Cta 01", "Card", "Product - Full Width"],
+                    options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width"],
                   },
                   {
                     label: "Theme",
                     name: "theme",
                     widget: "select",
+                    default: "default",
                     options: ["default", "light", "colored", "dark", "darkest"],
                   },
                   {
-                    label: "Text Align",
-                    name: "textAlign",
-                    widget: "select",
-                    default: "left",
-                    options: ["left", "center", "right"],
+                    label: "Content Options",
+                    name: "contentStyles",
+                    collapsed: true,
+                    required: false,
+                    widget: object,
+                    fields: 
+                      [
+                        {
+                          label: "Split",
+                          name: "split",
+                          hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                          widget: "select",
+                          default: "1/2",
+                          options: ["1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                        },
+                        {
+                          label: "Max Width",
+                          name: "maxWidth",
+                          widget: "select",
+                          default: "xl",
+                          options: ["xl", "lg", "md", "sm", "xs"],
+                        },
+                        {
+                          label: "Padding Y",
+                          name: "py",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Padding X",
+                          name: "px",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Text Align",
+                          name: "textAlign",
+                          widget: "select",
+                          default: "left",
+                          options: ["left", "center", "right"],
+                        },
+                      ]
                   },
                   {
                     label: "Main Image",
@@ -206,7 +244,7 @@ collections:
                           name: size, 
                           widget: select,
                           default: sm,
-                          options: [xs, sm, md, lg, xl], 
+                          options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                         },
                         { label: Text, name: text, required: false, widget: string }
                       ] 
@@ -238,7 +276,7 @@ collections:
                           name: size, 
                           widget: select,
                           default: lg,
-                          options: [xs, sm, md, lg, xl], 
+                          options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                         },
                         { label: Text, name: text, required: false, widget: string }
                       ] 
@@ -270,7 +308,7 @@ collections:
                           name: size, 
                           widget: select,
                           default: md,
-                          options: [xs, sm, md, lg, xl], 
+                          options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                         },
                         { label: Text, name: text, required: false, widget: string }
                       ] 
@@ -350,7 +388,7 @@ collections:
                           name: size, 
                           widget: select,
                           default: md,
-                          options: [sm, md, lg], 
+                          options: [sm, md, lg, xl, xl2], 
                         },
                         { 
                           label: Icon, 
@@ -366,6 +404,7 @@ collections:
                                 name: position, 
                                 required: false,
                                 widget: select, 
+                                default: "after",
                                 options: ["before", "after", "iconOnly"]  
                               },
                             ]
@@ -386,16 +425,59 @@ collections:
                         {
                           label: "Type",
                           name: "type",
-                          default: "default",
                           widget: "select",
-                          options: ["Hero 01", "Content - Full Width", "Split Content", "Cta 01", "Card", "Product - Full Width"],
+                          options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width"],
                         },
                         {
                           label: "Theme",
                           name: "theme",
-                          default: "default",
                           widget: "select",
-                          options: ["default", "light", "colored", "dark", "darkest"],
+                          default: "default",
+                          options: ["inherit", "default", "light", "colored", "dark", "darkest"],
+                        },
+                        {
+                          label: "Content Styles",
+                          name: "contentStyles",
+                          collapsed: true,
+                          required: false,
+                          widget: object,
+                          fields: 
+                            [
+                              {
+                                label: "Split",
+                                name: "split",
+                                hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                                widget: "select",
+                                default: "1/2",
+                                options: ["1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                              },
+                              {
+                                label: "Max Width",
+                                name: "maxWidth",
+                                widget: "select",
+                                default: "xl",
+                                options: ["xl", "lg", "md", "sm", "xs"],
+                              },
+                              {
+                                label: "Padding Y",
+                                name: "py",
+                                required: false,
+                                widget: "number",
+                              },
+                              {
+                                label: "Padding X",
+                                name: "px",
+                                required: false,
+                                widget: "number",
+                              },
+                              {
+                                label: "Text Align",
+                                name: "textAlign",
+                                widget: "select",
+                                default: "left",
+                                options: ["left", "center", "right"],
+                              },
+                            ]
                         },
                         {
                           label: "Main Image",
@@ -444,7 +526,7 @@ collections:
                                 name: size, 
                                 widget: select,
                                 default: sm,
-                                options: [xs, sm, md, lg, xl], 
+                                options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                               },
                               { label: Text, name: text, required: false, widget: string }
                             ] 
@@ -476,7 +558,7 @@ collections:
                                 name: size, 
                                 widget: select,
                                 default: lg,
-                                options: [xs, sm, md, lg, xl], 
+                                options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                               },
                               { label: Text, name: text, required: false, widget: string }
                             ] 
@@ -508,58 +590,58 @@ collections:
                                 name: size, 
                                 widget: select,
                                 default: md,
-                                options: [xs, sm, md, lg, xl], 
+                                options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
                               },
                               { label: Text, name: text, required: false, widget: string }
                             ] 
                         },
-                  { 
-                    label: Description, 
-                    name: description, 
-                    collapsed: true,
-                    required: false, 
-                    widget: object,
-                    fields:
-                      [
                         { 
-                          label: Bullet Options, 
-                          name: bullets, 
+                          label: Description, 
+                          name: description, 
                           collapsed: true,
-                          required: false,
+                          required: false, 
                           widget: object,
-                          fields: 
+                          fields:
                             [
                               { 
-                                label: Size, 
-                                name: size, 
-                                widget: select,
-                                default: md,
-                                options: [xs, sm, md, lg, xl], 
-                              },
-                              { 
-                                label: Icon, 
-                                name: icon, 
+                                label: Bullet Options, 
+                                name: bullets, 
                                 collapsed: true,
                                 required: false,
                                 widget: object,
                                 fields: 
                                   [
-                                    { label: Icon Name, name: name, required: false, widget: string },
                                     { 
-                                      label: Color, 
-                                      name: color, 
-                                      required: false,
+                                      label: Size, 
+                                      name: size, 
                                       widget: select,
-                                      default: secondary,
-                                      options: [default, primary, secondary, tertiary], 
+                                      default: md,
+                                      options: [xs, sm, md, lg, xl], 
                                     },
+                                    { 
+                                      label: Icon, 
+                                      name: icon, 
+                                      collapsed: true,
+                                      required: false,
+                                      widget: object,
+                                      fields: 
+                                        [
+                                          { label: Icon Name, name: name, required: false, widget: string },
+                                          { 
+                                            label: Color, 
+                                            name: color, 
+                                            required: false,
+                                            widget: select,
+                                            default: secondary,
+                                            options: [default, primary, secondary, tertiary], 
+                                          },
+                                        ]
+                                    }
                                   ]
-                              }
-                            ]
+                              },
+                              { label: Text, name: body, required: false, widget: markdown }
+                            ] 
                         },
-                        { label: Text, name: body, required: false, widget: markdown }
-                      ] 
-                  },
                         { 
                           label: Buttons, 
                           name: buttons, 
@@ -588,7 +670,7 @@ collections:
                                 name: size, 
                                 widget: select,
                                 default: md,
-                                options: [sm, md, lg], 
+                                options: [sm, md, lg, xl, xl2], 
                               },
                               { 
                                 label: Icon, 
@@ -604,6 +686,7 @@ collections:
                                       name: position, 
                                       required: false,
                                       widget: select, 
+                                      default: "after",
                                       options: ["before", "after", "iconOnly"]  
                                     },
                                   ]

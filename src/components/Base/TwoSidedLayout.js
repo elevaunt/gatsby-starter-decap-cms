@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AspectRatio from '@mui/joy/AspectRatio';
 import Section from '../Base/Section';
 import Box from '@mui/joy/Box';

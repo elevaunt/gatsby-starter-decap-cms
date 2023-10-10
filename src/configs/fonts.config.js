@@ -3,10 +3,10 @@
 import '@fontsource/bebas-neue/400.css';
 
 // Subheadings
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/200.css';
+
+// Handwriting
+import '@fontsource/kalam/400.css'
 
 // Body
 import '@fontsource/montserrat/300.css';

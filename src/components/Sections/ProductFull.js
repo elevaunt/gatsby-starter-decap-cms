@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
+import React from 'react';
 import Image from '../Base/Image';
 import Section from '../Base/Section';
 import Content from "../Base/Content";

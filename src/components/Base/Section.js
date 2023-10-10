@@ -1,7 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { CssVarsProvider } from '@mui/joy/styles'
 import { Box, Container, Stack } from '@mui/joy';
 import { defaultTheme, light, colored, dark, darkest } from "../../configs/themes.mui.config";
+import { HeadingBlock } from "./Headings";
 
 const Section = ({ 
   theme, 
@@ -13,6 +14,7 @@ const Section = ({
   children 
 }) => {
   const themeMap = {
+    "default": defaultTheme,
     "light": light,
     "colored": colored,
     "dark": dark,
@@ -23,18 +25,20 @@ const Section = ({
 
   return (
     <CssVarsProvider theme={sectionTheme}>
-      <Box
-        sx={{
-          backgroundColor: "background.body",
-          ...sectionSx,
-        }}
-      >
-        <Container maxWidth={maxWidth} sx={containerSx}>
-          <Stack direction={stackDirection} gap={stackGap}>
-            {children}
-          </Stack>
-        </Container>
-      </Box>
+      <HeadingBlock level={-1}>
+        <Box
+          sx={{
+            backgroundColor: "background.body",
+            ...sectionSx,
+          }}
+        >
+          <Container maxWidth={maxWidth} sx={containerSx}>
+            <Stack direction={stackDirection} gap={stackGap}>
+              {children}
+            </Stack>
+          </Container>
+        </Box>
+      </HeadingBlock>
     </CssVarsProvider>
   )
 }

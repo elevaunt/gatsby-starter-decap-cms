@@ -1,21 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
+import React from 'react';
 import Image from '../Base/Image';
 import Section from '../Base/Section';
 import Content from "../Base/Content";
 import Buttons from "../Base/Buttons";
+import { HeadingBlock } from "../Base/Headings";
 
 
 export default function Hero({
   theme,
-  textAlign,
+  contentStyles,
   mainImage,
   tagline,
   subheading,
   heading,
   description,
   buttons,
-  isNestedContent,
 }) {
   // const imgRatio = img?.width ? img.width / img.height : 3 / 4;
   const imgPosition = mainImage.position;
@@ -29,8 +29,8 @@ export default function Hero({
   }
 
   const contentProps = {
+    contentStyles,
     tagline,
-    textAlign,
     subheading,
     heading,
     description,
@@ -41,20 +41,20 @@ export default function Hero({
     flex: "0 1 50%",
   }
 
-  console.log({heading: heading.text, mainImage, isNestedContent});
-  const containerPadding = isNestedContent ? {px: [0, 0, 0, 0], pt: [4, 4, 6], pb: [0, 0, 0]} : {py: 20}
   return (
     <Section
       theme={theme}
-      containerSx={{ ...containerPadding }}
-      maxWidth="lg"
+      containerSx={{ px: contentStyles.px, py: contentStyles.py }}
+      maxWidth="lg" // contentStyles.maxWidth
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
     >
       {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
-      <Content {...contentProps} >
-        {buttons?.length && <Buttons buttons={buttons} />}
-      </Content>
+      <HeadingBlock>
+        <Content {...contentProps} >
+          {buttons?.length && <Buttons buttons={buttons} sx={{ pt: 4 }} />}
+        </Content>
+      </HeadingBlock>
       {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
     </Section>
   );

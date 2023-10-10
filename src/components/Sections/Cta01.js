@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
+import React from 'react';
 import Image from '../Base/Image';
 import Section from '../Base/Section';
 import Buttons from "../Base/Buttons";
 import Content from "../Base/Content";
+import { HeadingBlock } from "../Base/Headings";
 
 // export function Cta01_old({
 //   theme,
@@ -57,7 +58,7 @@ import Content from "../Base/Content";
 
 export default function Cta01({
   theme,
-  textAlign,
+  contentStyles,
   mainImage,
   tagline,
   subheading,
@@ -82,7 +83,7 @@ export default function Cta01({
   }
   const contentProps = {
     tagline,
-    textAlign,
+    contentStyles,
     subheading,
     heading,
     description,
@@ -97,7 +98,9 @@ export default function Cta01({
       stackGap={4}
     >
       {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
-      <Content {...contentProps} />
+      <HeadingBlock level={1}>
+        <Content {...contentProps} />
+      </HeadingBlock>
       {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
       {buttons?.length && <Buttons buttons={buttons} />}
     </Section>

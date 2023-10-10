@@ -1,112 +1,113 @@
 ---
 templateKey: home-page
-seoTitle: Home page
+seoTitle: Home Page
 sections:
   - buttons:
       - color: primary
         type: solid
-        size: lg
-        text: Button
-        url: "#"
+        size: xl2
+        text: Primary
         icon:
-          name: arrow-right
-          position: after
+          name: ArrowBack
+          position: before
+        url: "#"
       - color: secondary
         type: solid
-        size: lg
+        size: xl2
         text: Secondary
+        icon:
+          name: ArrowForward
+          position: after
     heading:
       color: default
       type: default
-      size: xl
-      text: Find Your Power
+      size: xl7
+      text: Find your power
     mainImage:
-      image: /img/chemex.jpg
-      alt: Lee & Amanda Porter
       position: right
+      image: /img/flavor_wheel.jpg
+      alt: Lee & Amanda
     subheading:
-      color: default
+      color: primary
       type: default
-      size: md
+      size: xl3
       text: Over Pornography
-    sectionTheme: default
-    theme: colored
+    theme: default
     tagline:
       color: default
-      type: default
-      size: sm
-      text: Learn How You Can
-    textAlign: center
+      type: primary
+      size: xl2
+      text: Learn how you can
     content:
       - buttons:
           - color: primary
             type: solid
             size: md
-            text: afdafds
-            url: aafdafdsa
             icon:
-              name: afdaf
-              position: before
+              name: Cancel
+              position: after
+            text: afdsaf
+            url: afsd
         heading:
           color: default
           type: default
           size: lg
-          text: afds
+          text: afdasf
         mainImage:
-          image: /img/flavor_wheel.jpg
-          alt: fafa
           position: top
+          image: /img/flavor_wheel.jpg
         subheading:
           color: default
           type: default
           size: md
-          text: afdsafds
-        theme: light
+          text: fasdfas
+        theme: default
         tagline:
           color: default
           type: default
           size: sm
-          text: fafds
-        ContentTheme: default
-        ContentType: default
-        type: content
+          text: dsafas
+        type: Content
+        contentStyles:
+          split: 1/2
+          textAlign: left
+          py: 0
+          px: -3
+          maxWidth: lg
         description:
           bullets:
-            size: lg
+            size: md
             icon:
-              name: house
-              color: tertiary
-          body: |-
-            CONTENT
-
-            some text that is great
-
-            \* with bullets
-
-            \* and another bullet
-
-            And more content below the bullets here
+              color: secondary
+          body: a﻿dfsafdas
     type: Hero 01
+    contentStyles:
+      split: 1/2
+      textAlign: center
+      paddingY: "40"
+      paddingX: "4"
+      py: 40
+      px: 2
+      maxWidth: lg
     description:
       bullets:
         size: md
         icon:
-          name: square
           color: secondary
+          name: checkmark
       body: We Help People Overcome Pornography So That They Can Heal From Past
         Wounds And Live A Shame Free Life Full Of Joy.
   - buttons:
       - color: primary
         type: solid
-        size: md
+        size: xl2
         icon:
-          name: Arrow-Right
+          name: ArrowForward
           position: iconOnly
-        url: "#"
     heading:
-      color: primary
+      color: default
       type: primary
-      size: sm
+      size: xl3
       text: Want to let go of shame in 5 easy steps?
     mainImage:
       position: left
@@ -115,13 +116,16 @@ sections:
       color: default
       type: default
       size: md
-    theme: dark
+    theme: darkest
     tagline:
       color: default
       type: default
       size: sm
-    textAlign: left
     type: Cta 01
+    contentStyles:
+      split: 1/2
+      textAlign: left
+      maxWidth: xl
     description:
       bullets:
         size: md
@@ -129,84 +133,99 @@ sections:
           color: secondary
       body: Shame is a major factor holding you back from the progress you want.  Get
         your free copy of our ***5 Steps to Let Go of Shame***.
-  - buttons:
-      - color: primary
-        type: solid
-        size: lg
-        text: Link To That Product Funnel
-        url: "#"
-    heading:
-      color: primary
-      type: primary
-      size: lg
-      text: Product Title Here
+  - contentStyles:
+      split: 1/2
+      textAlign: left
+      paddingY: "10"
+      py: 20
+      px: 1
+      maxWidth: xl
     mainImage:
-      image: /img/blog-index.jpg
       position: left
+      image: /img/jumbotron.jpg
+      alt: fdsf
+    tagline:
+      color: secondary
+      type: tertiary
+      size: xl
+      text: MORE ABOUT US
+    heading:
+      color: default
+      type: default
+      size: xl4
+      text: Lee & Amanda Porter
     subheading:
       color: default
       type: default
       size: md
-    theme: colored
-    tagline:
-      color: secondary
-      type: secondary
-      size: lg
-      text: "AMAZING PRODUCT #1"
-    textAlign: left
-    type: Product - Full Width
     description:
       bullets:
         size: md
         icon:
           color: secondary
-          name: circle-check
       body: >-
-        Add a description here of what the product is, WHY it is so amazing, WHY
-        they need it, and what they'll learn/discover from it.\
+        We’ve been there, we know the struggle and the pain that can persist
+        with a porn habit. We know the heartache it can cause.\
 
         \
 
-        In this course, you will learn:
+        We've also spent hundreds of hours learning about how the brain works and how to program the results you want!  We are Master Practitioners in Neurolinguistic Programming (NLP).  What does this mean for you? \
 
+        \
 
-        * **​Awesome thing**​**/Benefit 1,** so you can...<what it means for them>
+        We know how to help you CHANGE your mind!\
 
-        * ​**Awesome thing/Benefit 2,** so you can...<what it means for them>
+        \
 
-        * ​**​Awesome thing​/Benefit 3,** so you can...<what it means for them>
+        We have found tools that worked for us to finally find peace and healing from the problems that come from pornography use.\
+
+        \
+
+        Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
+    type: Content
+    theme: default
   - heading:
       color: default
       type: default
-      size: lg
-      text: OF NESTED CONTENT
+      size: xl6
+      text: Porn Habit?
     mainImage:
-      position: top
+      position: right
+      image: ""
     subheading:
       color: default
       type: default
       size: md
     theme: light
     tagline:
-      color: default
+      color: tertiary
       type: default
-      size: md
-      text: This is an Example
-    textAlign: center
+      size: xl3
+      text: STRUGGLING TO KICK YOUR
     content:
-      - type: Split Content
+      - type: Content
         theme: light
+        contentStyles:
+          split: 1/2
+          textAlign: left
+          paddingY: "0"
+          paddingX: "0"
+          py: 6
+          px: 0
+          maxWidth: xl
         mainImage:
-          position: left
-          image: /img/chemex.jpg
+          position: right
+          image: /img/products-grid2.jpg
+          alt: asfas
         tagline:
-          color: default
-          type: default
-          size: sm
+          color: tertiary
+          type: tertiary
+          size: lg
+          text: ""
         heading:
           color: default
           type: default
-          size: lg
+          size: xl4
           text: Does This Sound Like You?
         subheading:
           color: default
@@ -217,22 +236,192 @@ sections:
             size: md
             icon:
               color: secondary
-              name: circle-check
+              name: double arrow right
           body: >-
-            This is where you address some of the challenges or struggles your
-            avatar might be facing.  When you list some of their biggest
-            problems/frustrations better than they can, they'll know you are
-            talking to THEM, and that they are in the right place. 
+            Maybe you've been viewing porn for decades, maybe it's only been a
+            short while.  Regardless of how long it's been, maybe you are
+            experiencing some of the same feelings we did for years. Can you
+            relate?
 
 
-            * ​**Do you feel like...** didn't believe in myself (internal belief)
+            * ​**Frustrated** because you've wanted to quit but don't know how
 
-            * ​**Does it seem...** I have no outside help or resources (external)
+            * ​**Hopeless**, you've tried everything you can think of but nothing has worked
 
-            * ​**Are you frustrated that...** The market is in a downturn (environment)
+            * ​​**Feeling terrible** about yourself every time you view porn
 
-            * ​**And when it comes down to it, do you...**  big summed-up problem here
-    type: Content - Full Width
+            * ​**Scared** you may lose all you hold dear​
+    type: Content
+    contentStyles:
+      split: 1/1
+      textAlign: center
+      paddingY: "10"
+      py: 20
+      px: 2
+      maxWidth: xl
+    description:
+      bullets:
+        size: md
+        icon:
+          color: secondary
+  - heading:
+      color: default
+      type: default
+      size: lg
+      text: TESTING MULTIPLE NESTED CONTENT
+    mainImage:
+      position: top
+    subheading:
+      color: default
+      type: default
+      size: md
+    theme: dark
+    tagline:
+      color: default
+      type: default
+      size: sm
+    content:
+      - theme: dark
+        contentStyles:
+          split: 1/2
+          maxWidth: xl
+          textAlign: left
+        mainImage:
+          position: top
+        tagline:
+          color: default
+          type: default
+          size: sm
+        heading:
+          color: default
+          type: default
+          size: lg
+          text: Content 01
+        subheading:
+          color: default
+          type: default
+          size: md
+        description:
+          bullets:
+            size: md
+            icon:
+              color: secondary
+          body: >-
+            We’ve been there, we know the struggle and the pain that can persist
+            with a porn habit. We know the heartache it can cause.\
+
+            \
+
+            We've also spent hundreds of hours learning about how the brain works and how to program the results you want!  We are Master Practitioners in Neurolinguistic Programming (NLP).  What does this mean for you? \
+
+            \
+
+            We know how to help you CHANGE your mind!\
+
+            \
+
+            We have found tools that worked for us to finally find peace and healing from the problems that come from pornography use.\
+
+            \
+
+            Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
+        type: Content
+      - theme: dark
+        contentStyles:
+          split: 1/2
+          maxWidth: xl
+          textAlign: left
+        mainImage:
+          position: top
+        tagline:
+          color: default
+          type: default
+          size: sm
+        heading:
+          color: default
+          type: default
+          size: lg
+          text: Content 02
+        subheading:
+          color: default
+          type: default
+          size: md
+        description:
+          bullets:
+            size: md
+            icon:
+              color: secondary
+          body: >-
+            We’ve been there, we know the struggle and the pain that can persist
+            with a porn habit. We know the heartache it can cause.\
+
+            \
+
+            We've also spent hundreds of hours learning about how the brain works and how to program the results you want!  We are Master Practitioners in Neurolinguistic Programming (NLP).  What does this mean for you? \
+
+            \
+
+            We know how to help you CHANGE your mind!\
+
+            \
+
+            We have found tools that worked for us to finally find peace and healing from the problems that come from pornography use.\
+
+            \
+
+            Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
+        type: Content
+      - theme: dark
+        contentStyles:
+          split: 1/1
+          maxWidth: xl
+          textAlign: left
+        mainImage:
+          position: top
+        tagline:
+          color: default
+          type: default
+          size: sm
+        heading:
+          color: default
+          type: default
+          size: lg
+          text: Content 03
+        subheading:
+          color: default
+          type: default
+          size: md
+        description:
+          bullets:
+            size: md
+            icon:
+              color: secondary
+          body: >-
+            We’ve been there, we know the struggle and the pain that can persist
+            with a porn habit. We know the heartache it can cause.\
+
+            \
+
+            We've also spent hundreds of hours learning about how the brain works and how to program the results you want!  We are Master Practitioners in Neurolinguistic Programming (NLP).  What does this mean for you? \
+
+            \
+
+            We know how to help you CHANGE your mind!\
+
+            \
+
+            We have found tools that worked for us to finally find peace and healing from the problems that come from pornography use.\
+
+            \
+
+            Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
+        type: Content
+    type: Content
+    contentStyles:
+      split: 1/1
+      maxWidth: xl
+      textAlign: center
+      py: 20
     description:
       bullets:
         size: md

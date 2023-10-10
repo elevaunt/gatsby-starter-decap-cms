@@ -187,6 +187,7 @@ const createTheme = (prefix, opts) => {
     fontFamily: {
       display: 'Bebas Neue', // applies to `h1`–`h2`
       secondary: "Poppins", // applies to `h3` - `h4` and `title-*`
+      tertiary: "",
       body: 'Montserrat', // applies to `body-*`
     },
     fontSize: {
@@ -215,20 +216,48 @@ const createTheme = (prefix, opts) => {
         color: `var(--${prefix}-fontFamily-secondary)`,
       },
       h4: {
-        fontFamily: "var(--tpc-00-fontFamily-secondary)",
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
         letterSpacing: "0.01em",
         color: `var(--${prefix}-palette-text-secondary)`,
       },
+      "title-xl7": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl6": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl5": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl4": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl3": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl2": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
+      "title-xl": {
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
+        color: `var(--${prefix}-palette-text-secondary)`,
+      },
       "title-lg": {
-        fontFamily: "var(--tpc-00-fontFamily-secondary)",
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
         color: `var(--${prefix}-palette-text-secondary)`,
       },
       "title-md": {
-        fontFamily: "var(--tpc-00-fontFamily-secondary)",
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
         color: `var(--${prefix}-palette-text-secondary)`,
       },
       "title-sm": {
-        fontFamily: "var(--tpc-00-fontFamily-secondary)",
+        fontFamily: `var(--${prefix}-fontFamily-secondary)`,
         color: `var(--${prefix}-palette-text-secondary)`,
       },
       "body-lg": {
@@ -243,6 +272,30 @@ const createTheme = (prefix, opts) => {
       "body-xs": {
         color: `var(--${prefix}-palette-text-body)`,
       }
+    }, 
+    components: {
+      JoyButton: {
+        styleOverrides: {
+          root: ({ ownerState, theme }) => ({
+            ...(ownerState.size === 'xl' && {
+              '--Icon-fontSize': '2rem',
+              '--Button-gap': '1rem',
+              minHeight: 'var(--Button-minHeight, 4rem)',
+              fontSize: theme.vars.fontSize.xl,
+              paddingBlock: '0.5rem',
+              paddingInline: '2rem',
+            }),
+            ...(ownerState.size === 'xl2' && {
+              '--Icon-fontSize': '3rem',
+              '--Button-gap': '1.5rem',
+              minHeight: 'var(--Button-minHeight, 5rem)',
+              fontSize: theme.vars.fontSize.xl,
+              paddingBlock: '0.75rem',
+              paddingInline: '2.5rem',
+            }),
+          }),
+        },
+      },
     },
   }
 };
