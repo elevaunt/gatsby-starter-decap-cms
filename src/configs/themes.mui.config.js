@@ -187,8 +187,9 @@ const createTheme = (prefix, opts) => {
     fontFamily: {
       display: 'Bebas Neue', // applies to `h1`–`h2`
       secondary: "Poppins", // applies to `h3` - `h4` and `title-*`
-      tertiary: "",
+      tertiary: "Kalam",
       body: 'Montserrat', // applies to `body-*`
+      handwriting: "kalam",
     },
     fontSize: {
       xs: "0.875rem",

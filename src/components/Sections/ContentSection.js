@@ -58,7 +58,7 @@ const ContentSection = ({
       <HeadingBlock level={isNestedContent ? 2 : 1}>
         <Content {...contentProps} >
           {buttons?.length && <Buttons buttons={buttons} />}
-          <Stack direction={"row"} gap={6}>
+          <Stack direction={["column", "column", "row"]} gap={[4, 4, 6]}>
             {content?.map((content, key) => {
               content.isNestedContent = true;
               return renderSection(content, key);
