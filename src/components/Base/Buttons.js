@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 import Stack from '@mui/joy/Stack';
@@ -7,6 +7,8 @@ import Icon from "./Icon";
 import { ArrowBack } from "@mui/icons-material";
 
 const Buttons = ({ buttons, sx }) => {
+
+  const [stackDirection, setStackDirection]= useState("row");
 
   const linkProps = (btn) => {
     if (!btn.url) return;
@@ -16,38 +18,46 @@ const Buttons = ({ buttons, sx }) => {
     }
   }
 
-  const renderButton = (btn) => {
-    // console.log(btn);
+  const renderButton = (btn, setStackDirection) => {
+    let ButtonComponent = Button;
     const iconOnly = btn.icon.position === "iconOnly";
     const icon = {};
     if (btn.icon.position === "before") icon.startDecorator = <Icon name={btn.icon.name} />
     if (btn.icon.position === "after") icon.endDecorator = <Icon name={btn.icon.name} />
-    // console.log("renderButton", icon);
+    if (btn.type === "link") {
+      ButtonComponent = Link;
+      if (stackDirection !== "column") setStackDirection("column");
+    }
     return (
-      <Button
+      <ButtonComponent
         color={btn.color !== "default" && btn.color}
         size={btn.size}
-        variant={btn.type !== "default" && btn.type}
+        variant={btn.variant}
         {...icon}
         {...linkProps(btn)}
+        sx={(theme) => ({
+          fontSize: btn.type === "link" ? btn.size : undefined,
+          p: iconOnly ? ".75em" : undefined,
+          borderRadius: theme.radius.md,
+        })}
       >
         {btn.text}
         {iconOnly && <Icon name={btn.icon.name} />}
-      </Button>
+      </ButtonComponent>
     );
   }
-  // console.log("BUTTONS", buttons);
   return (
     <Stack
-      direction={["column", null, "row"]}
-      gap={2}
+      direction={["column", null, stackDirection]}
+      gap={stackDirection === "column" ? 1 : 2}
       sx={{
         flex: "0 1 15%",
+        alignItems: "center",
         alignSelf: "center",
         ...sx,
       }}
     >
-      {buttons.map(btn => renderButton(btn))}
+      {buttons.map(btn => renderButton(btn, setStackDirection))}
     </Stack>
   )
 };
