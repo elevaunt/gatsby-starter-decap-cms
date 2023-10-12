@@ -2,40 +2,20 @@
 import React from 'react';
 import Markdown from 'react-markdown'
 import Typography from '@mui/joy/Typography';
-import { Box } from '@mui/joy';
+import { Box, List, ListItem, ListItemDecorator, ListItemContent } from '@mui/joy';
 import { Heading, HeadingBlock } from "./Headings";
+import { Block } from "@mui/icons-material";
+import Icon from "./Icon";
 
 // Vertically stacked content
 const Content = ({
   contentStyles,
   tagline,
-  textAlign,
   heading,
   subheading,
   description,
   children,
 }) => {
-  // const size = {
-  //   heading: {
-  //     sm: 'xl4',
-  //     md: 'xl5',
-  //     lg: 'xl6',
-  //     xl: 'xl7',
-  //   },
-  //   subheading: {
-  //     sm: 'lg',
-  //     md: 'xl',
-  //     lg: 'xl2',
-  //     xl: 'xl3',
-  //   },
-  //   tagline: {
-  //     sm: 'sm',
-  //     md: 'md',
-  //     lg: 'lg',
-  //     xl: 'xl',
-  //   }
-  // }
-
   //  REDO type in CMS to be h1, h2, etc...
   // consider https://dev.to/dcwither/typography-separating-style-from-semantics-n3f
   // - https://codesandbox.io/s/automatic-heading-level-olroi?from-embed=&file=/src/Heading.js:213-217
@@ -62,6 +42,35 @@ const Content = ({
 
   const alignItems = contentStyles?.textAlign === "center" ? "center" : contentStyles?.textAlign === "right" ? "flex-end" : "flex-start";
 
+  const renderHeading = (headingType, headingProps) => {
+    return (
+      <Typography
+        level={type[headingType][headingProps.type]}
+        fontSize={headingProps.size}
+        color={headingProps.color}
+        sx={(theme) => ({
+          display: "block",
+          fontFamily: theme.fontFamily[headingProps.font],
+        })}
+      >
+        {headingProps.text}
+      </Typography>
+    )
+  }
+
+  const ListItemReplacement = ({icon, children, ...props}) => {
+    return (
+    <ListItem
+      sx={{
+        textAlign: "left",
+        alignItems: "flex-start",
+      }}
+    >
+      {icon && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
+      <ListItemContent>{children}</ListItemContent>
+    </ListItem>
+  )}
+
   return (
     <Box
       sx={() => ({
@@ -70,7 +79,7 @@ const Content = ({
         alignItems: ['center', 'center', alignItems],
         textAlign: contentStyles.textAlign,
         justifyContent: 'center',
-        minWidth: [null, null, 420],
+        // minWidth: [null, null, 420],
         gap: 0,
         //  flexBasis: basis,
         flexShrink: 999,
@@ -78,31 +87,20 @@ const Content = ({
       })}
     >
       <Heading>
-        {tagline.text && (
-          <>
-            <Typography level={type.tagline[tagline.type]} fontSize={tagline.size} color={tagline.color}>
-              {tagline.text}
-            </Typography>
-            <br />
-          </>
-        )}
-        {heading.text && (
-          <>
-            <Typography level={type.heading[heading.type]} fontSize={heading.size} color={heading.color}>
-              {heading.text}
-            </Typography>
-            <br />
-          </>
-        )}
-        {subheading.text && (
-          <>
-            <Typography level={type.subheading[subheading.type]} fontSize={subheading.size} color={subheading.color}>
-              {subheading.text}
-            </Typography>
-          </>
-        )}
+        {tagline.text && renderHeading("tagline", tagline)}
+        {heading.text && renderHeading("heading", heading)}
+        {subheading.text && renderHeading("subheading", subheading)}
       </Heading>
-      {description && <Typography textAlign={contentStyles.textAlign}><Markdown>{description.body}</Markdown></Typography>}
+      {description && (
+        <Typography textAlign={contentStyles.textAlign}>
+          <Markdown
+            components={{
+              ul: List,
+              li(props) {return <ListItemReplacement icon={description.bullets.icon} {...props} />},
+            }}
+          >{description.body}</Markdown>
+        </Typography>
+      )}
       {children}
     </Box>
   )
