@@ -10,8 +10,9 @@ import { Stack } from "@mui/joy";
 
 
 const ContentSection = ({
-  contentStyles,
+  id,
   theme,
+  contentStyles,
   mainImage,
   tagline,
   heading,
@@ -19,7 +20,7 @@ const ContentSection = ({
   description,
   buttons,
   content,
-  isNestedContent,
+  secondaryContent,
 }) => {
   const imgPosition = mainImage.position;
   let direction = "row";
@@ -44,29 +45,25 @@ const ContentSection = ({
   const imgSx = {
     flex: "0 1 50%",
   }
-  const { px, py } = contentStyles;
-  const containerPadding = isNestedContent ? { px: [0, 0, 0], pt: [py * .66, null, py], pb: [0, 0, 0] } : { px, py };
   return (
     <Section
+      id={id}
       theme={theme}
-      containerSx={{ ...containerPadding }}
       maxWidth={contentStyles.maxWidth}
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
+      containerStyles={{...contentStyles, secondaryContent}}
     >
-      {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
-      <HeadingBlock level={isNestedContent ? 2 : 1}>
+      {mainImage.image && ["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      <HeadingBlock level={secondaryContent ? 2 : 1}>
         <Content {...contentProps} >
           {buttons?.length && <Buttons buttons={buttons} />}
           <Stack direction={["column", "column", "row"]} gap={[4, 4, 6]}>
-            {content?.map((content, key) => {
-              content.isNestedContent = true;
-              return renderSection(content, key);
-            })}
+            {content?.map((content, key) => renderSection(content, key))}
           </Stack>
         </Content>
       </HeadingBlock>
-      {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {mainImage.image && ["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
     </Section>
   );
 };

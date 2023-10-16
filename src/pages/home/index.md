@@ -4,91 +4,119 @@ seoTitle: Home Page
 sections:
   - buttons:
       - color: primary
-        type: solid
+        type: button
         size: xl2
         text: Primary
         icon:
           name: ArrowBack
           position: before
         url: "#"
+        variant: solid
+        action: link
       - color: secondary
-        type: solid
-        size: xl2
-        text: Secondary
+        type: link
+        size: sm
+        text: About Us
         icon:
           name: ArrowForward
           position: after
+        variant: plain
+        action: link
+        url: "#About"
     heading:
       color: default
       type: default
       size: xl7
       text: Find your power
+      font: heading
     mainImage:
       position: right
       image: /img/flavor_wheel.jpg
       alt: Lee & Amanda
+      radius: xl
+      mt: 0
+      mb: 0
+      shadow: none
     subheading:
       color: primary
       type: default
       size: xl3
       text: Over Pornography
+      font: subheading
     theme: default
     tagline:
       color: default
       type: primary
       size: xl2
       text: Learn how you can
+      font: heading
     content:
       - buttons:
-          - color: primary
-            type: solid
+          - type: button
+            color: primary
+            variant: solid
             size: md
             icon:
-              name: Cancel
               position: after
-            text: afdsaf
-            url: afsd
+              name: fdaf
+            action: link
+            text: fdasdsaf
+            url: fdasfas
         heading:
           color: default
-          type: default
+          font: heading
           size: lg
-          text: afdasf
+          text: afasf
         mainImage:
           position: top
-          image: /img/flavor_wheel.jpg
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
+          image: /img/blog-index.jpg
+          alt: gk
         subheading:
           color: default
-          type: default
+          font: heading
           size: md
-          text: fasdfas
+          text: afdsaf
+        secondaryContent: true
         theme: default
         tagline:
           color: default
-          type: default
+          font: heading
           size: sm
-          text: dsafas
+          text: fadfdasf
         type: Content
+        id: Required-for-some-reason
         contentStyles:
-          split: 1/2
+          shadow: none
+          maxWidth: xl
+          forcePadding: true
+          mt: 0
+          containerTheme: default
+          radius: none
+          mb: 0
           textAlign: left
-          py: 0
-          px: -3
-          maxWidth: lg
+          split: 1/2
         description:
           bullets:
             size: md
             icon:
               color: secondary
-          body: a﻿dfsafdas
     type: Hero 01
+    id: Hero
     contentStyles:
-      split: 1/2
-      textAlign: center
-      paddingY: "40"
-      paddingX: "4"
-      py: 40
-      px: 2
+      shadow: none
       maxWidth: lg
+      forcePadding: false
+      mt: 0
+      px: 2
+      py: 30
+      radius: none
+      mb: 0
+      textAlign: center
+      split: 1/2
     description:
       bullets:
         size: md
@@ -99,33 +127,48 @@ sections:
         Wounds And Live A Shame Free Life Full Of Joy.
   - buttons:
       - color: primary
-        type: solid
+        type: button
         size: xl2
         icon:
           name: ArrowForward
           position: iconOnly
+        variant: solid
+        action: modal
     heading:
       color: default
       type: primary
       size: xl3
       text: Want to let go of shame in 5 easy steps?
+      font: heading
     mainImage:
       position: left
       image: /img/products-full-width.jpg
+      radius: xl
+      mt: 0
+      mb: 0
+      shadow: none
     subheading:
       color: default
       type: default
       size: md
+      font: subheading
     theme: darkest
     tagline:
       color: default
       type: default
       size: sm
+      font: heading
     type: Cta 01
+    id: Cta01
     contentStyles:
       split: 1/2
       textAlign: left
       maxWidth: xl
+      mt: 0
+      mb: 0
+      forcePadding: false
+      radius: none
+      shadow: none
     description:
       bullets:
         size: md
@@ -133,31 +176,45 @@ sections:
           color: secondary
       body: Shame is a major factor holding you back from the progress you want.  Get
         your free copy of our ***5 Steps to Let Go of Shame***.
-  - contentStyles:
-      split: 1/2
-      textAlign: left
-      paddingY: "10"
-      py: 20
-      px: 1
-      maxWidth: xl
+  - heading:
+      color: default
+      type: default
+      size: xl4
+      text: Lee & Amanda Porter
+      font: heading
     mainImage:
       position: left
       image: /img/jumbotron.jpg
       alt: fdsf
+      radius: xl
+      mt: 0
+      mb: 0
+      shadow: lg
+    subheading:
+      color: default
+      type: default
+      size: md
+      font: subheading
+    theme: default
     tagline:
       color: secondary
       type: tertiary
       size: xl
       text: MORE ABOUT US
-    heading:
-      color: default
-      type: default
-      size: xl4
-      text: Lee & Amanda Porter
-    subheading:
-      color: default
-      type: default
-      size: md
+      font: subheading
+    type: Content
+    id: About
+    contentStyles:
+      shadow: none
+      maxWidth: xl
+      forcePadding: false
+      mt: 0
+      px: 1
+      py: 20
+      radius: none
+      mb: 0
+      textAlign: left
+      split: 1/2
     description:
       bullets:
         size: md
@@ -182,61 +239,79 @@ sections:
         \
 
         Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
-    type: Content
-    theme: default
   - heading:
       color: default
       type: default
       size: xl6
       text: Porn Habit?
+      font: heading
     mainImage:
       position: right
       image: ""
+      radius: xl
+      mt: 0
+      mb: 0
+      shadow: none
     subheading:
       color: default
       type: default
       size: md
+      font: subheading
     theme: light
     tagline:
-      color: tertiary
+      color: secondary
       type: default
       size: xl3
       text: STRUGGLING TO KICK YOUR
+      font: handwriting
     content:
-      - type: Content
-        theme: light
-        contentStyles:
-          split: 1/2
-          textAlign: left
-          paddingY: "0"
-          paddingX: "0"
-          py: 6
-          px: 0
-          maxWidth: xl
+      - heading:
+          color: default
+          type: default
+          size: xl4
+          text: Does This Sound Like You?
+          font: heading
         mainImage:
           position: right
           image: /img/products-grid2.jpg
           alt: asfas
+          radius: xl
+          mt: 0
+          mb: 0
+          shadow: none
+        subheading:
+          color: default
+          type: default
+          size: md
+          font: subheading
+        secondaryContent: true
+        theme: light
         tagline:
           color: tertiary
           type: tertiary
           size: lg
           text: ""
-        heading:
-          color: default
-          type: default
-          size: xl4
-          text: Does This Sound Like You?
-        subheading:
-          color: default
-          type: default
-          size: md
+          font: heading
+        type: Content
+        id: Struggling
+        contentStyles:
+          shadow: none
+          maxWidth: xl
+          forcePadding: false
+          mt: 0
+          containerTheme: light
+          px: 0
+          py: 6
+          radius: none
+          mb: 0
+          textAlign: left
+          split: 1/2
         description:
           bullets:
             size: md
             icon:
               color: secondary
-              name: double arrow right
+              name: CheckCircle
           body: >-
             Maybe you've been viewing porn for decades, maybe it's only been a
             short while.  Regardless of how long it's been, maybe you are
@@ -252,13 +327,18 @@ sections:
 
             * ​**Scared** you may lose all you hold dear​
     type: Content
+    id: Sound-Like-You
     contentStyles:
-      split: 1/1
-      textAlign: center
-      paddingY: "10"
-      py: 20
-      px: 2
+      shadow: none
       maxWidth: xl
+      forcePadding: false
+      mt: 0
+      px: 2
+      py: 20
+      radius: none
+      mb: 0
+      textAlign: center
+      split: 1/1
     description:
       bullets:
         size: md
@@ -269,38 +349,63 @@ sections:
       type: default
       size: lg
       text: TESTING MULTIPLE NESTED CONTENT
+      font: heading
     mainImage:
       position: top
+      radius: xl
+      mt: 0
+      mb: 0
+      shadow: none
     subheading:
       color: default
       type: default
       size: md
+      font: subheading
     theme: dark
     tagline:
       color: default
       type: default
       size: sm
+      font: heading
     content:
-      - theme: dark
-        contentStyles:
-          split: 1/2
-          maxWidth: xl
-          textAlign: left
-        mainImage:
-          position: top
-        tagline:
-          color: default
-          type: default
-          size: sm
-        heading:
+      - heading:
           color: default
           type: default
           size: lg
           text: Content 01
+          font: heading
+        mainImage:
+          position: top
+          radius: xl
+          mt: 0
+          mb: 0
+          shadow: none
         subheading:
           color: default
           type: default
           size: md
+          font: subheading
+        secondaryContent: true
+        theme: dark
+        tagline:
+          color: default
+          type: default
+          size: sm
+          font: heading
+        type: Content
+        id: nested-01
+        contentStyles:
+          shadow: none
+          maxWidth: xl
+          forcePadding: true
+          mt: 0
+          containerTheme: light
+          px: 8
+          py: 4
+          radius: none
+          mb: 0
+          textAlign: left
+          split: 1/1
         description:
           bullets:
             size: md
@@ -325,27 +430,44 @@ sections:
             \
 
             Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
-        type: Content
-      - theme: dark
-        contentStyles:
-          split: 1/2
-          maxWidth: xl
-          textAlign: left
-        mainImage:
-          position: top
-        tagline:
-          color: default
-          type: default
-          size: sm
-        heading:
-          color: default
+      - heading:
+          color: primary
           type: default
           size: lg
           text: Content 02
+          font: heading
+        mainImage:
+          position: top
+          radius: xl
+          mt: 0
+          mb: 0
+          shadow: none
         subheading:
           color: default
           type: default
           size: md
+          font: subheading
+        secondaryContent: true
+        theme: dark
+        tagline:
+          color: default
+          type: default
+          size: sm
+          font: heading
+        type: Content
+        id: nested-02
+        contentStyles:
+          shadow: md
+          maxWidth: xl
+          forcePadding: true
+          mt: 10
+          containerTheme: colored
+          px: 8
+          py: 8
+          radius: lg
+          mb: 0
+          textAlign: left
+          split: 1/2
         description:
           bullets:
             size: md
@@ -370,27 +492,44 @@ sections:
             \
 
             Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
-        type: Content
-      - theme: dark
-        contentStyles:
-          split: 1/1
-          maxWidth: xl
-          textAlign: left
-        mainImage:
-          position: top
-        tagline:
-          color: default
-          type: default
-          size: sm
-        heading:
+      - heading:
           color: default
           type: default
           size: lg
           text: Content 03
+          font: heading
+        mainImage:
+          position: top
+          radius: xl
+          mt: 0
+          mb: 0
+          shadow: none
         subheading:
           color: default
           type: default
           size: md
+          font: subheading
+        secondaryContent: true
+        theme: dark
+        tagline:
+          color: default
+          type: default
+          size: sm
+          font: heading
+        type: Content
+        id: nested-03
+        contentStyles:
+          shadow: xl
+          maxWidth: xl
+          forcePadding: true
+          mt: 0
+          containerTheme: default
+          px: 4
+          py: 4
+          radius: lg
+          mb: 0
+          textAlign: left
+          split: 1/1
         description:
           bullets:
             size: md
@@ -415,13 +554,18 @@ sections:
             \
 
             Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
-        type: Content
     type: Content
+    id: Nested-Conent
     contentStyles:
-      split: 1/1
+      shadow: none
       maxWidth: xl
-      textAlign: center
+      forcePadding: false
+      mt: 0
       py: 20
+      radius: none
+      mb: 0
+      textAlign: center
+      split: 1/1
     description:
       bullets:
         size: md

@@ -21,7 +21,7 @@ function Copyright() {
 
 export default function Footer() {
   return (
-    <Section theme="darkest" sx={{flexShrink: 1}}>
+    <Section id="footer" theme="darkest" sx={{flexShrink: 1}}>
       <Box
         component="footer"
         sx={{

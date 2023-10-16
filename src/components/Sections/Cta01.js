@@ -57,6 +57,7 @@ import { HeadingBlock } from "../Base/Headings";
 
 
 export default function Cta01({
+  id,
   theme,
   contentStyles,
   mainImage,
@@ -92,6 +93,7 @@ export default function Cta01({
 
   return (
     <Section
+      id={id}
       theme={theme}
       containerSx={{ py: 2 }}
       stackDirection={[mobileDirection, mobileDirection, direction]}

@@ -58,18 +58,19 @@ const Content = ({
     )
   }
 
-  const ListItemReplacement = ({icon, children, ...props}) => {
+  const ListItemReplacement = ({ icon, children, ...props }) => {
     return (
-    <ListItem
-      sx={{
-        textAlign: "left",
-        alignItems: "flex-start",
-      }}
-    >
-      {icon && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
-      <ListItemContent>{children}</ListItemContent>
-    </ListItem>
-  )}
+      <ListItem
+        sx={{
+          textAlign: "left",
+          alignItems: "flex-start",
+        }}
+      >
+        {icon && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
+        <ListItemContent>{children}</ListItemContent>
+      </ListItem>
+    )
+  }
 
   return (
     <Box
@@ -86,17 +87,19 @@ const Content = ({
         textWrap: [null, null, 'balance'],
       })}
     >
-      <Heading>
-        {tagline.text && renderHeading("tagline", tagline)}
-        {heading.text && renderHeading("heading", heading)}
-        {subheading.text && renderHeading("subheading", subheading)}
-      </Heading>
-      {description && (
+      {tagline && heading && subheading && (
+        <Heading>
+          {tagline.text && renderHeading("tagline", tagline)}
+          {heading.text && renderHeading("heading", heading)}
+          {subheading.text && renderHeading("subheading", subheading)}
+        </Heading>
+      )}
+      {description.body && (
         <Typography textAlign={contentStyles.textAlign}>
           <Markdown
             components={{
               ul: List,
-              li(props) {return <ListItemReplacement icon={description.bullets.icon} {...props} />},
+              li(props) { return <ListItemReplacement icon={description.bullets.icon} {...props} /> },
             }}
           >{description.body}</Markdown>
         </Typography>

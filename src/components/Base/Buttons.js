@@ -28,6 +28,12 @@ const Buttons = ({ buttons, sx }) => {
       ButtonComponent = Link;
       if (stackDirection !== "column") setStackDirection("column");
     }
+    const handleButtonClick = () => {
+      if (btn.action === "modal") {
+        console.log("TODO: hook up opening the modal by id");
+      }
+    }
+    console.log(btn.text, btn.action);
     return (
       <ButtonComponent
         color={btn.color !== "default" && btn.color}
@@ -40,6 +46,7 @@ const Buttons = ({ buttons, sx }) => {
           p: iconOnly ? ".75em" : undefined,
           borderRadius: theme.radius.md,
         })}
+        onClick={handleButtonClick}
       >
         {btn.text}
         {iconOnly && <Icon name={btn.icon.name} />}

@@ -8,6 +8,7 @@ import { HeadingBlock } from "../Base/Headings";
 
 
 export default function Hero({
+  id,
   theme,
   contentStyles,
   mainImage,
@@ -43,6 +44,7 @@ export default function Hero({
 
   return (
     <Section
+      id={id}
       theme={theme}
       containerSx={{ px: contentStyles.px, py: contentStyles.py }}
       maxWidth="lg" // contentStyles.maxWidth

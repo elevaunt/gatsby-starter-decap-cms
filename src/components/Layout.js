@@ -17,11 +17,16 @@ import AppBarJoy from "./AppBarJoy";
 export function JoyWrapper({ nav = "full", children }) {
   return (
     <CssVarsProvider theme={defaultTheme}>
+      {/* 
+        Add react helmet here to get things in the header
+        Like page seoTitle, global styles, etc
+      */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           minHeight: '100vh',
+          scrollBehavior: "smooth",
         }}
       >
         <CssBaseline />

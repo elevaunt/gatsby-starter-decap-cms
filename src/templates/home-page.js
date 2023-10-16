@@ -10,9 +10,9 @@ export const HomePageTemplate = ({
   sections
 }) => {
   return (
-    <div>
+    <main>
       {sections.map((section, key) => renderSection(section, key))}
-    </div>
+    </main>
   );
 };
 
@@ -48,10 +48,13 @@ export const pageQuery = graphql`
       frontmatter {
         seoTitle
         sections {
+          id
           type
           theme
           contentStyles {
             split
+            mt
+            mb
             py
             px
             textAlign
@@ -64,21 +67,28 @@ export const pageQuery = graphql`
             }
             position
             alt
+            radius
+            mt
+            mb
+            shadow
           }
           tagline {
             color
+            font
             size
             text
             type
           }
           subheading {
             color
+            font
             size
             text
             type
           }
           heading {
             color
+            font
             size
             text
             type
@@ -103,15 +113,24 @@ export const pageQuery = graphql`
               position
             }
             url
+            action
           }
           content {
+            id
             type
+            secondaryContent
             theme
             contentStyles {
+              containerTheme
               split
+              mt
+              mb
               py
               px
               textAlign
+              forcePadding
+              radius
+              shadow
             }
             mainImage {
               image {
@@ -121,21 +140,28 @@ export const pageQuery = graphql`
               }
               position
               alt
+              radius
+              mt
+              mb
+              shadow
             }
             tagline {
               color
+              font
               size
               text
               type
             }
             subheading {
               color
+              font
               size
               text
               type
             }
             heading {
               color
+              font
               size
               text
               type
@@ -160,6 +186,7 @@ export const pageQuery = graphql`
                 position
               }
               url 
+              action
             }
           }
         }

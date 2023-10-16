@@ -113,13 +113,23 @@ const brandShades = {
   },
 };
 
+const shadowOpacity = ".4";
+
 const createTheme = (prefix, opts) => {
-  const {primary: primaryLight, secondary: secondaryLight, ...paletteLight} = opts?.colorSchemes.light.palette;
+  const {primary: primaryLight, secondary: secondaryLight, background, ...paletteLight} = opts?.colorSchemes.light.palette;
   return {
     cssVarPrefix: prefix,
     colorSchemes: {
       light: {
         palette: {
+          background: {
+            default: "#FFFFFF",
+            light: brandShades.yellow01[500],
+            colored: brandShades.green01[500],
+            dark: brandShades.green03[500],
+            darkest: brandShades.green04[500],
+            ...background,
+          },
           primary: {
             ...primaryLight,
             // plain
@@ -181,7 +191,10 @@ const createTheme = (prefix, opts) => {
             solidDisabledBg: `var(--${prefix}-palette-neutral-50)`,
           },
           ...paletteLight,
-        }
+        },
+        // shadowRing: "0 0 #000",
+        // shadowChannel: "",
+        shadowOpacity: shadowOpacity,
       }
     },
     fontFamily: {
@@ -204,6 +217,23 @@ const createTheme = (prefix, opts) => {
       xl6: "4.5rem",
       xl7: "5.25rem",
     },
+    radius: {
+      xs: "4px",
+      sm: "8px",
+      md: "12px",
+      lg: "16px", 
+      xl: "20px",
+      xl2: "24px",
+      xl3: "28px",
+      xl4: "32px",
+    },
+    // shadow: {
+    //   xs: `var(--${prefix}-shadowRing, 0 0 #000),0px 1px 2px 0px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity}))`,
+    //   sm: `var(--${prefix}-shadowRing, 0 0 #000),0px 1px 2px 0px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity})),0px 2px 4px 0px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity}))`,
+    //   md: `var(--${prefix}-shadowRing, 0 0 #000),0px 2px 8px -2px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity})),0px 6px 12px -2px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity}))`,
+    //   lg: `var(--${prefix}-shadowRing, 0 0 #000),0px 2px 8px -2px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity})),0px 12px 16px -4px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity}))`,
+    //   xl: `var(--${prefix}-shadowRing, 0 0 #000),0px 2px 8px -2px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity})),0px 20px 24px -4px rgba(var(--${prefix}-shadowChannel, 21 21 21) / var(--${prefix}-shadowOpacity, ${shadowOpacity}))`,
+    // },
     typography: {
       h1: {
         letterSpacing: "0.01em",
