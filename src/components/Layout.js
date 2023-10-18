@@ -1,10 +1,11 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 // import { Helmet } from "react-helmet";
 import Footer from "./Footer";
 // import Navbar from "./Navbar";
 // import useSiteMetadata from "./SiteMetadata";
 // import { withPrefix } from "gatsby";
 import "../configs/fonts.config"
+import "../style/custom-style.sass";
 
 
 import CssBaseline from '@mui/joy/CssBaseline';
@@ -14,32 +15,37 @@ import Box from '@mui/joy/Box';
 import AppBarJoy from "./AppBarJoy";
 
 
+export const ModalContext = createContext({ isModalOpen: false, setIsModalOpen: () => {} })
+
 export function JoyWrapper({ nav = "full", children }) {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <CssVarsProvider theme={defaultTheme}>
       {/* 
         Add react helmet here to get things in the header
         Like page seoTitle, global styles, etc
       */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-          scrollBehavior: "smooth",
-        }}
-      >
-        <CssBaseline />
+      <ModalContext.Provider value={{ isModalOpen, setIsModalOpen }}>
         <Box
           sx={{
-            flex: "1 1 auto"
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+            scrollBehavior: "smooth",
           }}
         >
-          <AppBarJoy />
-          {children}
+          <CssBaseline />
+          <Box
+            sx={{
+              flex: "1 1 auto"
+            }}
+          >
+            <AppBarJoy />
+            {children}
+          </Box>
+          <Footer />
         </Box>
-        <Footer />
-      </Box>
+      </ModalContext.Provider>
     </CssVarsProvider>
   );
 }

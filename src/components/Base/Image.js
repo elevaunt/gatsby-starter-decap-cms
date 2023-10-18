@@ -21,7 +21,6 @@ const Image = ({
   }))
   return (
     <Box sx={{
-      borderRadius: "xl",
       ...sx
     }}>
       <Image image={img} alt={alt} />

@@ -43,6 +43,7 @@ const Content = ({
   const alignItems = contentStyles?.textAlign === "center" ? "center" : contentStyles?.textAlign === "right" ? "flex-end" : "flex-start";
 
   const renderHeading = (headingType, headingProps) => {
+    const fontFamily = headingProps.font === "heading" ? "display" : headingProps.font;
     return (
       <Typography
         level={type[headingType][headingProps.type]}
@@ -50,7 +51,7 @@ const Content = ({
         color={headingProps.color}
         sx={(theme) => ({
           display: "block",
-          fontFamily: theme.fontFamily[headingProps.font],
+          fontFamily: theme.fontFamily[fontFamily],
         })}
       >
         {headingProps.text}
@@ -100,6 +101,7 @@ const Content = ({
             components={{
               ul: List,
               li(props) { return <ListItemReplacement icon={description.bullets.icon} {...props} /> },
+              p: Typography,
             }}
           >{description.body}</Markdown>
         </Typography>

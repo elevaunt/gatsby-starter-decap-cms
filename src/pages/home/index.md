@@ -571,4 +571,88 @@ sections:
         size: md
         icon:
           color: secondary
+  - heading:
+      color: default
+      font: heading
+      size: lg
+      text: ""
+    mainImage:
+      position: left
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
+      image: /img/amanda-in-focus-lee-behind.jpg
+      alt: fdasf
+    subheading:
+      color: default
+      font: subheading
+      size: md
+      text: ""
+    theme: default
+    tagline:
+      color: default
+      font: heading
+      size: sm
+    content:
+      - heading:
+          color: default
+          font: heading
+          size: xl
+          text: TEST HEADING
+        mainImage:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
+        subheading:
+          color: default
+          font: handwriting
+          size: md
+          text: TEST SUBHEADING
+        secondaryContent: true
+        theme: default
+        tagline:
+          color: default
+          font: heading
+          size: sm
+        type: Content
+        id: test-modal-nested-content
+        contentStyles:
+          shadow: none
+          maxWidth: xl
+          forcePadding: true
+          mt: 0
+          containerTheme: default
+          px: 2
+          py: 1
+          radius: none
+          mb: 0
+          textAlign: left
+          split: 1/2
+        description:
+          bullets:
+            size: md
+            icon:
+              color: secondary
+          body: k﻿l;fjadkl;jfla kl; fkl;dj akl;jf lk;j ;jfl ;dajl;fkjdas iopugio
+            pahjrtkewaiopjvkl;j l;ajfljdal ;fkldajsiogjal mrkleajlkjf oiauo
+            ;jlekwanreaul; fmdl; ajsl;j fds; aufiopajs l;
+    type: Modal
+    id: Modal-01
+    contentStyles:
+      split: 1/3
+      textAlign: center
+      maxWidth: xl
+      mt: 0
+      mb: 0
+      py: 0
+      px: 0
+    description:
+      bullets:
+        size: md
+        icon:
+          color: secondary
+      body: ""
 ---

@@ -4,6 +4,7 @@ import Cta01 from "../components/Sections/Cta01";
 import ProductFull from "../components/Sections/ProductFull";
 import ProductCard from "../components/Product/ProductCard"
 import ContentSection from "../components/Sections/ContentSection";
+import Modal from "../components/Sections/Modal";
 
 export const sectionsMap = {
   "Hero 01": Hero01,
@@ -11,6 +12,7 @@ export const sectionsMap = {
   "Product - Full Width": ProductFull,
   "Content": ContentSection,
   "Card": ProductCard,
+  "Modal": Modal,
 }
 
 export const renderSection = (section, key) => {

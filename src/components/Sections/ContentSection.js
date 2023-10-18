@@ -42,8 +42,33 @@ const ContentSection = ({
     content,
   }
 
+  let flexBasis = "50%";
+  switch (contentStyles.split) {
+    case "1/1":
+      flexBasis = "100%";
+      break;
+    case "1/2":
+      flexBasis = "50%";
+      break;
+    case "1/3":
+      flexBasis = "33.33%";
+      break;
+    case "1/4":
+      flexBasis = "25%";
+      break;
+    case "1/5":
+      flexBasis = "20%";
+      break;
+    case "1/6":
+      flexBasis = "16.66%";
+      break;
+  
+    default:
+      break;
+  }
+
   const imgSx = {
-    flex: "0 1 50%",
+    flex: `0 1 ${flexBasis}`,
   }
   return (
     <Section

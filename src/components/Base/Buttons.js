@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 import Stack from '@mui/joy/Stack';
 import Icon from "./Icon";
-import { ArrowBack } from "@mui/icons-material";
+import { ModalContext } from "../Layout";
 
 const Buttons = ({ buttons, sx }) => {
-
+  const { setIsModalOpen } = useContext(ModalContext);
   const [stackDirection, setStackDirection]= useState("row");
 
   const linkProps = (btn) => {
@@ -30,10 +30,9 @@ const Buttons = ({ buttons, sx }) => {
     }
     const handleButtonClick = () => {
       if (btn.action === "modal") {
-        console.log("TODO: hook up opening the modal by id");
+        setIsModalOpen(true);
       }
     }
-    console.log(btn.text, btn.action);
     return (
       <ButtonComponent
         color={btn.color !== "default" && btn.color}

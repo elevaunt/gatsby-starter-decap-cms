@@ -11,7 +11,7 @@ import Button from '@mui/joy/Button';
 import Tooltip from '@mui/joy/Tooltip';
 import MenuItem from '@mui/joy/MenuItem';
 import logo from "../img/tpc-horizontal-green.png";
-import { Dropdown } from "@mui/joy";
+import { Dropdown, MenuButton } from "@mui/joy";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -117,15 +117,21 @@ function AppBarJoy() {
 
   const Profile = () => (
     <Dropdown sx={{ flexGrow: 0 }}>
-      <Tooltip title="Open settings">
-        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+      {/* <Tooltip title="Open settings"> */}
+      {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-        </IconButton>
-      </Tooltip>
+        </IconButton> */}
+      <MenuButton
+        // onClick={handleOpenUserMenu}
+        sx={{ p: 0 }}
+      >
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+      </MenuButton>
+      {/* </Tooltip> */}
       <Menu
         sx={{ mt: '45px' }}
         id="appbar-profile"
-        anchorEl={anchorElUser}
+        // anchorEl={anchorElUser}
         // anchorOrigin={{
         //   vertical: 'top',
         //   horizontal: 'right',
@@ -135,8 +141,8 @@ function AppBarJoy() {
         //   vertical: 'top',
         //   horizontal: 'right',
         // }}
-        open={Boolean(anchorElUser)}
-        onClose={handleCloseUserMenu}
+        // open={Boolean(anchorElUser)}
+        // onClose={handleCloseUserMenu}
       >
         {settings.map((setting) => (
           <MenuItem key={setting} onClick={handleCloseUserMenu}>
@@ -148,10 +154,10 @@ function AppBarJoy() {
   )
 
   return (
-    <Container maxWidth="xl" sx={{py: 1}}>
+    <Container maxWidth="xl" sx={{ py: 1 }}>
       <Stack
         direction={"row"}
-        justifyContent={{xs: "space-between", md: "flex-start"}}
+        justifyContent={{ xs: "space-between", md: "flex-start" }}
         alignItems="center"
         spacing={2}
       >
