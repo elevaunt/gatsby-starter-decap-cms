@@ -81,35 +81,42 @@ function AppBarJoy() {
   )
 
   const MenuMobile = () => (
-    <Dropdown sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' }, }}>
-      <MenuButton
-        size="lg"
-        aria-label="site menu"
-        aria-controls="menu-appbar"
-        aria-haspopup="true"
-        color="inherit"
-        slots={{ root: IconButton }}
-        sx={{
-          ml: "0 !important",
-        }}
-      >
-        <MenuIcon />
-      </MenuButton>
-      <Menu
-        id="menu-appbar-mobile"
-        variant="plain"
-        keepMounted
-        sx={{
-          display: { xs: 'block', md: 'none' },
-        }}
-      >
-        {pages.map((page) => (
-          <MenuItem key={page}>
-            <Typography textAlign="center">{page}</Typography>
-          </MenuItem>
-        ))}
-      </Menu>
-    </Dropdown>
+    <Box
+      sx={{
+        flexGrow: 0,
+        display: {
+          xs: 'flex', md: 'none', lg: "none"
+        },
+        ml: "0 !important",
+      }}>
+      <Dropdown >
+        <MenuButton
+          size="lg"
+          aria-label="site menu"
+          aria-controls="menu-appbar"
+          aria-haspopup="true"
+          color="primary"
+          slots={{ root: IconButton }}
+        >
+          <MenuIcon />
+        </MenuButton>
+        <Menu
+          id="menu-appbar-mobile"
+          variant="plain"
+          color="primary"
+          keepMounted
+          sx={{
+            display: { xs: 'block', md: 'none' },
+          }}
+        >
+          {pages.map((page) => (
+            <MenuItem key={page}>
+              <Typography textAlign="center">{page}</Typography>
+            </MenuItem>
+          ))}
+        </Menu>
+      </Dropdown>
+    </Box>
   )
 
   const Profile = () => (

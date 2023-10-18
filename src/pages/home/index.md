@@ -561,6 +561,7 @@ sections:
       maxWidth: xl
       forcePadding: false
       mt: 0
+      px: 2
       py: 20
       radius: none
       mb: 0
