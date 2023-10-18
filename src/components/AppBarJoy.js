@@ -11,9 +11,10 @@ import Button from '@mui/joy/Button';
 import Tooltip from '@mui/joy/Tooltip';
 import MenuItem from '@mui/joy/MenuItem';
 import logo from "../img/tpc-horizontal-green.png";
+import avatar from "../../static/img/apple-touch-icon.png";
 import { Dropdown, MenuButton } from "@mui/joy";
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Programs', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function AppBarJoy() {
@@ -57,6 +58,9 @@ function AppBarJoy() {
         component={"img"}
         src={logo}
         alt="The Porters Coaching"
+        sx={{
+          maxWidth: "100%",
+        }}
       />
     </Box>
   )
@@ -77,76 +81,68 @@ function AppBarJoy() {
   )
 
   const MenuMobile = () => (
-    <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' }, ml: -2 }}>
-      <IconButton
-        size="large"
-        aria-label="account of current user"
+    <Dropdown sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' }, }}>
+      <MenuButton
+        size="lg"
+        aria-label="site menu"
         aria-controls="menu-appbar"
         aria-haspopup="true"
-        onClick={handleOpenNavMenu}
         color="inherit"
+        slots={{ root: IconButton }}
+        sx={{
+          ml: "0 !important",
+        }}
       >
         <MenuIcon />
-      </IconButton>
+      </MenuButton>
       <Menu
-        id="menu-appbar"
-        anchorEl={anchorElNav}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
+        id="menu-appbar-mobile"
+        variant="plain"
         keepMounted
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        open={Boolean(anchorElNav)}
-        onClose={handleCloseNavMenu}
         sx={{
           display: { xs: 'block', md: 'none' },
         }}
       >
         {pages.map((page) => (
-          <MenuItem key={page} onClick={handleCloseNavMenu}>
+          <MenuItem key={page}>
             <Typography textAlign="center">{page}</Typography>
           </MenuItem>
         ))}
       </Menu>
-    </Box>
+    </Dropdown>
   )
 
   const Profile = () => (
     <Dropdown sx={{ flexGrow: 0 }}>
-      {/* <Tooltip title="Open settings"> */}
-      {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-        </IconButton> */}
-      <MenuButton
-        // onClick={handleOpenUserMenu}
-        sx={{ p: 0 }}
-      >
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-      </MenuButton>
-      {/* </Tooltip> */}
+      <Tooltip title="Open settings">
+        <MenuButton
+          slots={{ root: IconButton }}
+          slotProps={{
+            root: {
+              alt: "Remy Sharp",
+              variant: "solid",
+              color: "primary",
+            }
+          }}
+          sx={{
+            borderRadius: 40,
+          }}
+        >
+          LP
+        </MenuButton>
+      </Tooltip>
       <Menu
-        sx={{ mt: '45px' }}
         id="appbar-profile"
-        // anchorEl={anchorElUser}
-        // anchorOrigin={{
-        //   vertical: 'top',
-        //   horizontal: 'right',
-        // }}
-        // keepMounted
-        // transformOrigin={{
-        //   vertical: 'top',
-        //   horizontal: 'right',
-        // }}
-        // open={Boolean(anchorElUser)}
-        // onClose={handleCloseUserMenu}
+        keepMounted
+        variant="plain"
+        color="primary"
+        sx={(theme) => ({
+          boxShadow: theme.vars.shadow.md,
+        })}
       >
         {settings.map((setting) => (
-          <MenuItem key={setting} onClick={handleCloseUserMenu}>
-            <Typography textAlign="center">{setting}</Typography>
+          <MenuItem key={setting}>
+            <Typography textAlign="left">{setting}</Typography>
           </MenuItem>
         ))}
       </Menu>

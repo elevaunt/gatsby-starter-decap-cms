@@ -113,7 +113,7 @@ const brandShades = {
   },
 };
 
-const shadowOpacity = ".4";
+const shadowOpacity = ".2";
 
 const createTheme = (prefix, opts) => {
   const {primary: primaryLight, secondary: secondaryLight, background, ...paletteLight} = opts?.colorSchemes.light.palette;
