@@ -999,44 +999,67 @@ collections:
   - name: "menus"
     label: "Menus"
     files:
-      - file: "src/site-menus/index.md"
-        label: "Site Menus"
-        name: "site-menus"
+      - file: "src/site-menus/main-menu.md"
+        label: "Main Menu"
+        name: "main-menu"
         fields:
           - {
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "site-menus",
+              default: "main-menu",
             }
           - {
-            label: Menus,
-            name: menus,
-            widget: list,
-            fields: 
-              [
-                { label: Label, name: label, widget: string },
-                {
-                  label: Menu Items,
-                  name: menuItems,
-                  widget: list,
-                  required: false,
-                  fields:
-                    [
-                      { label: Label, name: label, widget: string },
-                      { label: URL, name: url, widget: string, required: false },
-                      {
-                        label: Submenu,
-                        name: submenu,
-                        widget: list,
-                        required: false,
-                        fields:
-                          [
-                            { label: Label, name: label, widget: string },
-                            { label: URL, name: url, widget: string },
-                          ],
-                      }
-                    ],
-                }
-              ]
-          }
+              label: Menu Items,
+              name: menuItems,
+              widget: list,
+              required: false,
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: URL, name: url, widget: string, required: false },
+                  {
+                    label: Submenu,
+                    name: submenu,
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Label, name: label, widget: string },
+                        { label: URL, name: url, widget: string },
+                      ],
+                  }
+                ],
+            }
+      - file: "src/site-menus/footer-menu.md"
+        label: "Footer Menu"
+        name: "footer-menu"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "footer-menu",
+            }
+          - {
+              label: Menu Items,
+              name: menuItems,
+              widget: list,
+              required: false,
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: URL, name: url, widget: string, required: false },
+                  {
+                    label: Submenu,
+                    name: submenu,
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Label, name: label, widget: string },
+                        { label: URL, name: url, widget: string },
+                      ],
+                  }
+                ],
+            }
