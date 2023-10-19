@@ -6,17 +6,17 @@ import Stack from '@mui/joy/Stack';
 import Icon from "./Icon";
 import { ModalContext } from "../Layout";
 
+export const linkProps = (btn) => {
+  if (!btn.url) return;
+  return {
+    component: 'a',
+    href: btn.url
+  }
+}
+
 const Buttons = ({ buttons, sx }) => {
   const { setOpenModal } = useContext(ModalContext);
   const [stackDirection, setStackDirection]= useState("row");
-
-  const linkProps = (btn) => {
-    if (!btn.url) return;
-    return {
-      component: 'a',
-      href: btn.url
-    }
-  }
 
   const renderButton = (btn, setStackDirection) => {
     let ButtonComponent = Button;

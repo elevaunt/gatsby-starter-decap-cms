@@ -1,4 +1,5 @@
 ---
+templateKey: site-menus
 menuItems:
   - label: Programs
     submenu:

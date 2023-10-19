@@ -10,31 +10,40 @@ import Button from '@mui/joy/Button';
 import Tooltip from '@mui/joy/Tooltip';
 import MenuItem from '@mui/joy/MenuItem';
 import logo from "../img/tpc-horizontal-green.png";
-import { Dropdown, List, ListItem, MenuButton, Modal, ModalClose, ModalDialog } from "@mui/joy";
+import { Dropdown, Link, List, ListItem, ListItemButton, ListSubheader, MenuButton, MenuList, Modal, ModalClose, ModalDialog } from "@mui/joy";
 import { ModalContext } from "./Layout";
+import { useStaticQuery, graphql } from "gatsby";
+import { linkProps } from "./Base/Buttons";
 
 const pages = ['Programs', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function AppBarJoy() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const { openModal, setOpenModal } = useContext(ModalContext);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  const data = useStaticQuery(graphql`
+    query MainMenuQuery {
+      file(name: {eq: "main-menu"}) {
+        name
+        children {
+          ... on MarkdownRemark {
+            frontmatter {
+              menuItems {
+                label
+                url
+                submenu {
+                  label
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const mainMenu = data.file.children[0].frontmatter.menuItems;
 
   const LogoDesktop = () => (
     <Box
@@ -65,20 +74,75 @@ function AppBarJoy() {
     </Box>
   )
 
-  const MenuDesktop = () => (
-    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
-      {pages.map((page) => (
-        <Button
-          key={page}
-          variant="plain"
-          onClick={handleCloseNavMenu}
-          sx={{ my: 2, color: 'inherit', display: 'block' }}
-        >
-          {page}
-        </Button>
-      ))}
-    </Box>
-  )
+  const renderMenuItem = (item) => {
+    return (
+      <Button
+        key={item.label}
+        variant="plain"
+        onClick={handleCloseNavMenu}
+        sx={{ my: 2, color: 'inherit', display: 'flex' }}
+        {...linkProps(item)}
+      >
+        {item.label}
+      </Button>
+    )
+  }
+
+  const MenuDesktop = () => {
+    return (
+      <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
+        {mainMenu.map((item) => {
+          console.log(item);
+          if (item.submenu) {
+            return (
+              <Dropdown>
+                <MenuButton
+                  slots={{ root: Button }}
+                  slotProps={{
+                    root: {
+                      variant: "plain",
+                    }
+                  }}
+                  size="sm"
+                >
+                  {item.label}
+                </MenuButton>
+                <Menu
+                  id={`${item.label}-menu`}
+                  variant="plain"
+                  color="primary"
+                  size="sm"
+                  placement="bottom-start"
+                  keepMounted
+                  sx={{
+                    boxShadow: "md",
+                  }}
+                >
+                  <MenuList>
+                    {item.submenu.map((submenu) => (
+                      <MenuItem
+                        slots={{ root: Link }}
+                        slotProps={{
+                          root: {
+                            href: submenu.url,
+                          }
+                        }}
+                        key={submenu.label}
+                      >
+                        <Typography textAlign="left">{submenu.label}</Typography>
+                      </MenuItem>
+                    ))}
+                  </MenuList>
+                </Menu>
+              </Dropdown>
+            )
+          } else {
+            return renderMenuItem(item);
+          }
+        })}
+      </Box>
+    )
+  }
 
   const MenuMobile = () => (
     <Box
@@ -96,7 +160,7 @@ function AppBarJoy() {
         aria-controls="menu-appbar"
         aria-haspopup="true"
         color="primary"
-        onClick={() => {setOpenModal("mobile-menu")}}
+        onClick={() => { setOpenModal("mobile-menu") }}
       >
         <MenuIcon />
       </IconButton>
@@ -121,11 +185,29 @@ function AppBarJoy() {
               padding: 2,
             }}
           >
-            {pages.map((page) => (
-              <ListItem key={page}>
-                <Typography textAlign="center">{page}</Typography>
-              </ListItem>
-            ))}
+            {mainMenu.map((item) => {
+              if (item.submenu) {
+                retun(
+                  <ListItem nested>
+                    <ListSubheader></ListSubheader>
+                    <List>
+                      {item.submenu.map((submenu) => (
+                        <ListItem key={item.label} >
+                          <ListItemButton {...linkProps(item)} >{submenu.label}</ListItemButton>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </ListItem>
+                )
+              }
+              return (
+                <ListItem key={item.label} >
+                  <ListItemButton {...linkProps(item)} >
+                    <Typography textAlign={"left"}>{item.label}</Typography>
+                  </ListItemButton>
+                </ListItem>
+              )
+            })}
           </List>
         </ModalDialog>
       </Modal>
@@ -134,7 +216,7 @@ function AppBarJoy() {
 
   const ProfileDesktop = () => (
     <Box
-      sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 0}}
+      sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 0 }}
     >
       <Dropdown>
         <Tooltip title="Open settings">
@@ -159,9 +241,9 @@ function AppBarJoy() {
           keepMounted
           variant="plain"
           color="primary"
-          sx={(theme) => ({
-            boxShadow: theme.vars.shadow.md,
-          })}
+          sx={{
+            boxShadow: "md",
+          }}
         >
           {settings.map((setting) => (
             <MenuItem key={setting}>
