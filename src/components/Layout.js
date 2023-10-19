@@ -15,17 +15,17 @@ import Box from '@mui/joy/Box';
 import AppBarJoy from "./AppBarJoy";
 
 
-export const ModalContext = createContext({ isModalOpen: false, setIsModalOpen: () => {} })
+export const ModalContext = createContext({ openModal: false, setOpenModal: () => {} })
 
 export function JoyWrapper({ nav = "full", children }) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   return (
     <CssVarsProvider theme={defaultTheme}>
       {/* 
         Add react helmet here to get things in the header
         Like page seoTitle, global styles, etc
       */}
-      <ModalContext.Provider value={{ isModalOpen, setIsModalOpen }}>
+      <ModalContext.Provider value={{ openModal, setOpenModal }}>
         <Box
           sx={{
             display: 'flex',

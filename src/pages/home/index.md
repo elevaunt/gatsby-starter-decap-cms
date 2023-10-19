@@ -134,6 +134,7 @@ sections:
           position: iconOnly
         variant: solid
         action: modal
+        url: "#Modal-01"
     heading:
       color: default
       type: primary

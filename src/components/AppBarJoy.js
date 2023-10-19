@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Box from '@mui/joy/Box';
 import Stack from '@mui/joy/Stack';
 import IconButton from '@mui/joy/IconButton';
@@ -6,13 +6,12 @@ import Typography from '@mui/joy/Typography';
 import Menu from '@mui/joy/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/joy/Container';
-import Avatar from '@mui/joy/Avatar';
 import Button from '@mui/joy/Button';
 import Tooltip from '@mui/joy/Tooltip';
 import MenuItem from '@mui/joy/MenuItem';
 import logo from "../img/tpc-horizontal-green.png";
-import avatar from "../../static/img/apple-touch-icon.png";
-import { Dropdown, MenuButton } from "@mui/joy";
+import { Dropdown, List, ListItem, MenuButton, Modal, ModalClose, ModalDialog } from "@mui/joy";
+import { ModalContext } from "./Layout";
 
 const pages = ['Programs', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -20,6 +19,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function AppBarJoy() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { openModal, setOpenModal } = useContext(ModalContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -89,29 +89,83 @@ function AppBarJoy() {
         },
         ml: "0 !important",
       }}>
-      <Dropdown >
-        <MenuButton
-          size="lg"
-          aria-label="site menu"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          color="primary"
-          slots={{ root: IconButton }}
-        >
-          <MenuIcon />
-        </MenuButton>
-        <Menu
-          id="menu-appbar-mobile"
+
+      <IconButton
+        size="lg"
+        aria-label="site menu"
+        aria-controls="menu-appbar"
+        aria-haspopup="true"
+        color="primary"
+        onClick={() => {setOpenModal("mobile-menu")}}
+      >
+        <MenuIcon />
+      </IconButton>
+      <Modal
+        id={"mobile-menu"}
+        open={openModal === "mobile-menu"}
+        onClose={() => setOpenModal(false)}
+      >
+        <ModalDialog
+          layout="fullscreen"
           variant="plain"
-          color="primary"
-          keepMounted
           sx={{
-            display: { xs: 'block', md: 'none' },
+            padding: 0,
+            backgroundColor: "background.body",
           }}
         >
-          {pages.map((page) => (
-            <MenuItem key={page}>
-              <Typography textAlign="center">{page}</Typography>
+          <ModalClose color={"primary"} />
+          <List
+            id="menu-appbar-mobile"
+            sx={{
+              display: { xs: 'block', md: 'none' },
+              padding: 2,
+            }}
+          >
+            {pages.map((page) => (
+              <ListItem key={page}>
+                <Typography textAlign="center">{page}</Typography>
+              </ListItem>
+            ))}
+          </List>
+        </ModalDialog>
+      </Modal>
+    </Box>
+  )
+
+  const ProfileDesktop = () => (
+    <Box
+      sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 0}}
+    >
+      <Dropdown>
+        <Tooltip title="Open settings">
+          <MenuButton
+            slots={{ root: IconButton }}
+            slotProps={{
+              root: {
+                alt: "Remy Sharp",
+                variant: "solid",
+                color: "primary",
+              }
+            }}
+            sx={{
+              borderRadius: 40,
+            }}
+          >
+            LP
+          </MenuButton>
+        </Tooltip>
+        <Menu
+          id="appbar-profile"
+          keepMounted
+          variant="plain"
+          color="primary"
+          sx={(theme) => ({
+            boxShadow: theme.vars.shadow.md,
+          })}
+        >
+          {settings.map((setting) => (
+            <MenuItem key={setting}>
+              <Typography textAlign="left">{setting}</Typography>
             </MenuItem>
           ))}
         </Menu>
@@ -119,41 +173,60 @@ function AppBarJoy() {
     </Box>
   )
 
-  const Profile = () => (
-    <Dropdown sx={{ flexGrow: 0 }}>
-      <Tooltip title="Open settings">
-        <MenuButton
-          slots={{ root: IconButton }}
-          slotProps={{
-            root: {
-              alt: "Remy Sharp",
-              variant: "solid",
-              color: "primary",
-            }
-          }}
+  const ProfileMobile = () => (
+    <Box
+      sx={{
+        flexGrow: 0,
+        display: {
+          xs: 'flex', md: 'none', lg: "none"
+        },
+        ml: "0 !important",
+      }}>
+
+      <IconButton
+        size="md"
+        aria-label="appbar profile"
+        aria-controls="appbar-profile"
+        aria-haspopup="true"
+        color="primary"
+        variant="solid"
+        onClick={() => { setOpenModal("mobile-profile") }}
+        sx={{
+          borderRadius: 40,
+        }}
+      >
+        LP
+      </IconButton>
+      <Modal
+        id={"mobile-profile"}
+        open={openModal === "mobile-profile"}
+        onClose={() => setOpenModal(false)}
+      >
+        <ModalDialog
+          layout="fullscreen"
+          variant="plain"
           sx={{
-            borderRadius: 40,
+            padding: 0,
+            backgroundColor: "background.body",
           }}
         >
-          LP
-        </MenuButton>
-      </Tooltip>
-      <Menu
-        id="appbar-profile"
-        keepMounted
-        variant="plain"
-        color="primary"
-        sx={(theme) => ({
-          boxShadow: theme.vars.shadow.md,
-        })}
-      >
-        {settings.map((setting) => (
-          <MenuItem key={setting}>
-            <Typography textAlign="left">{setting}</Typography>
-          </MenuItem>
-        ))}
-      </Menu>
-    </Dropdown>
+          <ModalClose color={"primary"} />
+          <List
+            id="menu-appbar-mobile"
+            sx={{
+              display: { xs: 'block', md: 'none' },
+              padding: 2,
+            }}
+          >
+            {settings.map((setting) => (
+              <ListItem key={setting}>
+                <Typography textAlign="center">{setting}</Typography>
+              </ListItem>
+            ))}
+          </List>
+        </ModalDialog>
+      </Modal>
+    </Box>
   )
 
   return (
@@ -168,7 +241,8 @@ function AppBarJoy() {
         <MenuMobile />
         <LogoMobile />
         <MenuDesktop />
-        <Profile />
+        <ProfileDesktop />
+        <ProfileMobile />
       </Stack>
     </Container>
   );

@@ -7,7 +7,7 @@ import Icon from "./Icon";
 import { ModalContext } from "../Layout";
 
 const Buttons = ({ buttons, sx }) => {
-  const { setIsModalOpen } = useContext(ModalContext);
+  const { setOpenModal } = useContext(ModalContext);
   const [stackDirection, setStackDirection]= useState("row");
 
   const linkProps = (btn) => {
@@ -28,9 +28,9 @@ const Buttons = ({ buttons, sx }) => {
       ButtonComponent = Link;
       if (stackDirection !== "column") setStackDirection("column");
     }
-    const handleButtonClick = () => {
+    const handleButtonClick = (e) => {
       if (btn.action === "modal") {
-        setIsModalOpen(true);
+        setOpenModal(btn.url.replace("#", ""));
       }
     }
     return (
