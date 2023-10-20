@@ -43,7 +43,6 @@ export default HomePage;
 
 export const Head = ({ data, location }) => {
   const { pageTitle, settings } = data.markdownRemark.frontmatter;
-  console.log("Head settings", settings);
   const ogImg = settings.shareImage.childImageSharp.fixed.src
   return (
     <>
