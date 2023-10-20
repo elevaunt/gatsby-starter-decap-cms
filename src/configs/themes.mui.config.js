@@ -111,6 +111,19 @@ const brandShades = {
     800: "#493D32",
     900: "#44362F",
   },
+  joyNeutral: {
+    25: "#DEDEDE",
+    50: "#C8C8C8",
+    100: "#B2B2B2",
+    200: "#9B9B9B",
+    300: "#858585",
+    400: "#6F6F6F",
+    500: "#595959",
+    600: "#545454",
+    700: "#4F4F4F",
+    800: "#4B4B4B",
+    900: "#464646",
+  }
 };
 
 const shadowOpacity = ".2";
@@ -335,7 +348,7 @@ export const defaultTheme = extendTheme(createTheme("tpc-default", {
   colorSchemes: {
     light: {
       palette: {
-        neutral: brandShades.green04,
+        // neutral: brandShades.green01,
         primary: brandShades.green02,
         secondary: brandShades.orange01,
         text: {

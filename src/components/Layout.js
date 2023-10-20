@@ -17,7 +17,7 @@ import AppBarJoy from "./AppBarJoy";
 
 export const ModalContext = createContext({ openModal: false, setOpenModal: () => {} })
 
-export function JoyWrapper({ nav = "full", children }) {
+export function JoyWrapper({ hideMenu, children }) {
   const [openModal, setOpenModal] = useState(false)
   return (
     <CssVarsProvider theme={defaultTheme}>
@@ -40,7 +40,7 @@ export function JoyWrapper({ nav = "full", children }) {
               flex: "1 1 auto"
             }}
           >
-            <AppBarJoy />
+            <AppBarJoy hideMenu={hideMenu} />
             {children}
           </Box>
           <Footer />

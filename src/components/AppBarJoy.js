@@ -18,7 +18,7 @@ import { linkProps } from "./Base/Buttons";
 const pages = ['Programs', 'About', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function AppBarJoy() {
+function AppBarJoy({ hideMenu }) {
   const { openModal, setOpenModal } = useContext(ModalContext);
 
   const data = useStaticQuery(graphql`
@@ -79,8 +79,8 @@ function AppBarJoy() {
       <Button
         key={item.label}
         variant="plain"
-        onClick={handleCloseNavMenu}
-        sx={{ my: 2, color: 'inherit', display: 'flex' }}
+        color="primary"
+        sx={{ display: 'flex' }}
         {...linkProps(item)}
       >
         {item.label}
@@ -97,13 +97,12 @@ function AppBarJoy() {
             return (
               <Dropdown>
                 <MenuButton
-                  slots={{ root: Button }}
-                  slotProps={{
-                    root: {
-                      variant: "plain",
-                    }
+                  variant="plain"
+                  color="primary"
+                  size="md"
+                  sx={{
+                    alignSelf: "center",
                   }}
-                  size="sm"
                 >
                   {item.label}
                 </MenuButton>
@@ -112,27 +111,13 @@ function AppBarJoy() {
                   variant="plain"
                   color="primary"
                   size="sm"
-                  placement="bottom-start"
+                  // placement="bottom-start"
                   keepMounted
                   sx={{
                     boxShadow: "md",
                   }}
                 >
-                  <MenuList>
-                    {item.submenu.map((submenu) => (
-                      <MenuItem
-                        slots={{ root: Link }}
-                        slotProps={{
-                          root: {
-                            href: submenu.url,
-                          }
-                        }}
-                        key={submenu.label}
-                      >
-                        <Typography textAlign="left">{submenu.label}</Typography>
-                      </MenuItem>
-                    ))}
-                  </MenuList>
+                  {item.submenu.map((submenu) => <MenuItem key={submenu.label}>{submenu.label}</MenuItem>)}
                 </Menu>
               </Dropdown>
             )
@@ -187,7 +172,7 @@ function AppBarJoy() {
           >
             {mainMenu.map((item) => {
               if (item.submenu) {
-                retun(
+                return (
                   <ListItem nested>
                     <ListSubheader></ListSubheader>
                     <List>
@@ -219,7 +204,12 @@ function AppBarJoy() {
       sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 0 }}
     >
       <Dropdown>
-        <Tooltip title="Open settings">
+        <Tooltip
+          title="Open settings"
+          size="sm"
+          variant="soft"
+          placement="bottom-end"
+        >
           <MenuButton
             slots={{ root: IconButton }}
             slotProps={{
@@ -241,15 +231,13 @@ function AppBarJoy() {
           keepMounted
           variant="plain"
           color="primary"
+          size="sm"
+          placement="bottom-end"
           sx={{
             boxShadow: "md",
           }}
         >
-          {settings.map((setting) => (
-            <MenuItem key={setting}>
-              <Typography textAlign="left">{setting}</Typography>
-            </MenuItem>
-          ))}
+          {settings.map((setting) => <MenuItem key={setting}>{setting}</MenuItem>)}
         </Menu>
       </Dropdown>
     </Box>
@@ -312,7 +300,7 @@ function AppBarJoy() {
   )
 
   return (
-    <Container maxWidth="xl" sx={{ py: 1 }}>
+    <Container maxWidth="xl" sx={{ py: 2 }}>
       <Stack
         direction={"row"}
         justifyContent={{ xs: "space-between", md: "flex-start" }}
@@ -320,11 +308,15 @@ function AppBarJoy() {
         spacing={2}
       >
         <LogoDesktop />
-        <MenuMobile />
-        <LogoMobile />
-        <MenuDesktop />
-        <ProfileDesktop />
-        <ProfileMobile />
+        {!hideMenu && (
+          <>
+            <MenuMobile />
+            <LogoMobile />
+            <MenuDesktop />
+            <ProfileDesktop />
+            <ProfileMobile />
+          </>
+        )}
       </Stack>
     </Container>
   );
