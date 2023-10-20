@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 
 import Layout from "../components/Layout";
 import renderSection from "../configs/sectionsMap.config";
 
 export const HomePageTemplate = ({
-  seoTitle,
+  pageTitle,
   sections
 }) => {
   return (
@@ -17,7 +17,7 @@ export const HomePageTemplate = ({
 };
 
 HomePageTemplate.propTypes = {
-  seoTitle: PropTypes.string,
+  pageTitle: PropTypes.string,
   sections: PropTypes.object,
 };
 
@@ -41,12 +41,64 @@ HomePage.propTypes = {
 
 export default HomePage;
 
+export const Head = ({ data, location }) => {
+  const { pageTitle, settings } = data.markdownRemark.frontmatter;
+  console.log("Head settings", settings);
+  const ogImg = settings.shareImage.childImageSharp.fixed.src
+  return (
+    <>
+      <html lang="en" />
+      <title>{pageTitle} - The Porters Coaching</title>
+      <meta name="description" content={settings.description} />
+
+      {/* <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href={`${withPrefix("/")}img/apple-touch-icon.png`}
+      /> */}
+      <link
+        rel="icon"
+        type="image/png"
+        href={`${withPrefix("/")}img/tpc-favicon-63x63.png`}
+        sizes="32x32"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href={`${withPrefix("/")}img/tpc-favicon-63x63.png`}
+        sizes="16x16"
+      />
+      {/* <link
+        rel="mask-icon"
+        href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
+        color="#ff4400"
+      /> */}
+
+      <meta property="og:type" content="business.business" />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:url" content={location.pathname} />
+      <meta property="og:image" content={ogImg} />
+    </>
+  )
+}
+
 export const pageQuery = graphql`
   query HomePageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        seoTitle
+        pageTitle
+        settings {
+          description
+          shareImage {
+            absolutePath
+            childImageSharp {
+              fixed {
+                src
+              }
+            }
+          }
+        }
         sections {
           id
           type

@@ -1,6 +1,11 @@
 ---
 templateKey: home-page
-seoTitle: Home Page
+pageTitle: Home
+settings:
+  shareImage: /img/amanda-in-focus-lee-behind.jpg
+  description: The Porters Coaching is dedicated to helping people overcome
+    pornography.  This is for people with an unwanted porn habit, their spouses,
+    and parents who want to teach their children
 sections:
   - buttons:
       - color: primary

@@ -132,7 +132,30 @@ collections:
               widget: "hidden",
               default: "home-page",
             }
-          - { label: "SEO Title", name: seoTitle, widget: string }
+          - { label: "Title", name: pageTitle, widget: string }
+          - {
+              label: "Page Settings",
+              name: "settings",
+              collapsed: true,
+              widget: object,
+              fields: 
+                [
+                  { 
+                    label: Page Description,
+                    name: description,
+                    widget: text,
+                    required: false,
+                    hint: SEO friendly description,
+                  },
+                  { 
+                    label: Share Image,
+                    name: shareImage,
+                    widget: image,
+                    required: false,
+                    hint: Image when share to social media,
+                  }
+                ]
+            }
           - {
               label: "Sections",
               name: "sections",

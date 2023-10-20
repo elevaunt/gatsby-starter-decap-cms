@@ -21,10 +21,6 @@ export function JoyWrapper({ hideMenu, children }) {
   const [openModal, setOpenModal] = useState(false)
   return (
     <CssVarsProvider theme={defaultTheme}>
-      {/* 
-        Add react helmet here to get things in the header
-        Like page seoTitle, global styles, etc
-      */}
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
         <Box
           sx={{

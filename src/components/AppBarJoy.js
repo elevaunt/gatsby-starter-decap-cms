@@ -92,7 +92,6 @@ function AppBarJoy({ hideMenu }) {
     return (
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
         {mainMenu.map((item) => {
-          console.log(item);
           if (item.submenu) {
             return (
               <Dropdown>
