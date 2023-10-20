@@ -34,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
 
       // don't create a page for site menus
-      if (edge.node.frontmatter.templateKey !== "site-menu") {
+      if (edge.node.frontmatter.templateKey !== "site-menus") {
         createPage({
           path: edge.node.fields.slug,
           tags: edge.node.frontmatter.tags,
