@@ -17,6 +17,9 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              settings {
+                pageUrl
+              }
             }
           }
         }
@@ -32,20 +35,27 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge) => {
       const id = edge.node.id
-
       // don't create a page for site menus
       if (edge.node.frontmatter.templateKey !== "site-menus") {
-        createPage({
-          path: edge.node.fields.slug,
-          tags: edge.node.frontmatter.tags,
-          component: path.resolve(
-            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-          ),
-          // additional data can be passed via context
-          context: {
-            id,
-          },
-        })
+        if (edge.node.frontmatter.templateKey === 'funnel' || edge.node.frontmatter.templateKey === 'page') {
+          createPage({
+            path: edge.node.frontmatter.settings.pageUrl,
+            component: path.resolve(`src/templates/home-page.js`),
+            context: { id },
+          })
+        } else {
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component: path.resolve(
+              `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+            ),
+            // additional data can be passed via context
+            context: {
+              id,
+            },
+          })
+        }
       }
     })
 

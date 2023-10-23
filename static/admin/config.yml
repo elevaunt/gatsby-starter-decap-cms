@@ -33,8 +33,1582 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "funnels"
+    label: "Funnels"
+    label_singular: "Funnel"
+    folder: "src/pages/funnels"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "funnel",
+        }
+      - { 
+          label: "Title", 
+          name: title, 
+          widget: string,
+          hint: This is for internal use only
+          }
+      - {
+          label: "Page Settings",
+          name: "settings",
+          collapsed: true,
+          widget: object,
+          fields: 
+            [
+              { label: "SEO Title", name: seoTitle, widget: string },
+              { 
+                label: "Page URL", 
+                name: pageUrl, 
+                widget: string ,
+                hint: "If not provided, the url will default to /pages/[seoTitle]"
+              },
+              { 
+                label: Page Description,
+                name: description,
+                widget: text,
+                required: false,
+                hint: SEO friendly description,
+              },
+              { 
+                label: Share Image,
+                name: shareImage,
+                widget: image,
+                required: false,
+                hint: Image when share to social media,
+              }
+            ]
+        }
+      - {
+          label: "Sections",
+          name: "sections",
+          collapsed: true,
+          widget: list,
+          fields: 
+            [
+              { label: ID, name: id, widget: string },
+              {
+                label: "Type",
+                name: "type",
+                widget: "select",
+                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+              },
+              {
+                label: "Theme",
+                name: "theme",
+                widget: "select",
+                default: "default",
+                options: ["default", "light", "colored", "dark", "darkest"],
+              },
+              {
+                label: "Content Options",
+                name: "contentStyles",
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields: 
+                  [
+                    {
+                      label: "Split",
+                      name: "split",
+                      hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                      widget: "select",
+                      default: "1/2",
+                      options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                      required: false,
+                    },
+                    {
+                      label: "Text Align",
+                      name: "textAlign",
+                      widget: "select",
+                      default: "left",
+                      options: ["left", "center", "right"],
+                      required: false,
+                    },
+                    {
+                      label: "Max Width",
+                      name: "maxWidth",
+                      widget: "select",
+                      default: "xl",
+                      options: ["xl", "lg", "md", "sm", "xs"],
+                      required: false,
+                    },
+                    {
+                      label: "Margin Top", 
+                      name: mt, 
+                      widget: number, 
+                      default: 0,
+                      required: false,
+                    },
+                    {
+                      label: "Margin Bottom", 
+                      name: mb, 
+                      widget: number, 
+                      default: 0,
+                      required: false,
+                    },
+                    {
+                      label: "Padding Y",
+                      name: "py",
+                      required: false,
+                      widget: "number",
+                    },
+                    {
+                      label: "Padding X",
+                      name: "px",
+                      required: false,
+                      widget: "number",
+                    },
+                  ]
+              },
+              {
+                label: "Main Image",
+                name: "mainImage",
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields: 
+                  [
+                    { label: Image, name: image, required: false, widget: image },
+                    { label: Alt, name: alt, required: false, widget: string },
+                    { 
+                      label: Position, 
+                      name: position, 
+                      widget: select, 
+                      default: top,
+                      options: ["top", "bottom", "left", "right"]  
+                    },
+                    {
+                      label: "Rounded Corners", 
+                      name: radius, 
+                      widget: select, 
+                      default: none,
+                      options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                    },
+                    {
+                      label: "Margin Top", 
+                      name: mt, 
+                      widget: number, 
+                      default: 0,
+                    },
+                    {
+                      label: "Margin Bottom", 
+                      name: mb, 
+                      widget: number, 
+                      default: 0,
+                    },
+                    {
+                      label: "Shadow", 
+                      name: shadow, 
+                      widget: select, 
+                      default: none,
+                      options: ["none", "sm", "md", "lg", "xl",]  
+                    },
+                  ]
+              },
+              { 
+                label: Tagline, 
+                name: tagline, 
+                hint: "Above headline", 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: heading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: sm,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Heading, 
+                name: heading, 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: heading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: lg,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Subheading, 
+                name: subheading, 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: subheading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: md,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Description, 
+                name: description, 
+                collapsed: true,
+                required: false, 
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Bullet Options, 
+                      name: bullets, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl], 
+                          },
+                          { 
+                            label: Icon, 
+                            name: icon, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Icon Name, 
+                                  name: name, 
+                                  required: false, 
+                                  widget: string,
+                                  hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                },
+                                { 
+                                  label: Color, 
+                                  name: color, 
+                                  required: false,
+                                  widget: select,
+                                  default: secondary,
+                                  options: [default, primary, secondary, tertiary], 
+                                },
+                              ]
+                          }
+                        ]
+                    },
+                    { label: Text, name: body, required: false, widget: markdown }
+                  ] 
+              },
+              { 
+                label: Buttons, 
+                name: buttons, 
+                collapsed: true,
+                required: false,
+                max: 2,
+                widget: list,
+                fields:
+                  [
+                    { 
+                      label: Type, 
+                      name: type, 
+                      widget: select,
+                      default: button,
+                      options: [button, link], 
+                    },
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: primary,
+                      options: [primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Variant, 
+                      name: variant, 
+                      widget: select,
+                      default: solid,
+                      options: [solid, soft, outline, plain, link], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: md,
+                      options: [sm, md, lg, xl, xl2], 
+                    },
+                    { 
+                      label: Icon, 
+                      name: icon, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { 
+                            label: Icon Name, 
+                            name: name, 
+                            required: false, 
+                            widget: string,
+                            hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                          },
+                          { 
+                            label: Position, 
+                            name: position, 
+                            required: false,
+                            widget: select, 
+                            default: "after",
+                            options: ["before", "after", "iconOnly"]  
+                          },
+                        ]
+                    },
+                    { label: Text, name: text, required: false, widget: string },
+                    { label: URL, name: url, required: false, widget: string },
+                    { 
+                      label: Action, 
+                      name: action, 
+                      widget: select,
+                      default: link,
+                      options: [link, modal],
+                      hint: "To open an modal, make sure the #id of the modal is in the URL field",
+                    },
+                  ] 
+              },
+              { 
+                label: Secondary Content, 
+                name: content, 
+                collapsed: true,
+                required: false,
+                max: 3,
+                widget: list,
+                fields:
+                  [
+                    { label: ID, name: id, widget: string },
+                    {
+                      label: "Type",
+                      name: "type",
+                      widget: "select",
+                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                    },
+                    {
+                      label: "Secondary Content Flag",
+                      name: "secondaryContent",
+                      widget: "hidden",
+                      default: true,
+                    },
+                    {
+                      label: "Section Theme",
+                      name: "theme",
+                      widget: "select",
+                      default: "default",
+                      options: ["inherit", "default", "light", "colored", "dark", "darkest"],
+                    },
+                    {
+                      label: "Content Options",
+                      name: "contentStyles",
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                      [
+                        {
+                          label: "Container Theme",
+                          name: "containerTheme",
+                          widget: "select",
+                          default: "default",
+                          options: ["inherit", "default", "light", "colored", "dark", "darkest"],
+                        },
+                        {
+                          label: "Split",
+                          name: "split",
+                          hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                          widget: "select",
+                          default: "1/2",
+                          options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                        },
+                        {
+                          label: "Text Align",
+                          name: "textAlign",
+                          widget: "select",
+                          default: "left",
+                          options: ["left", "center", "right"],
+                        },
+                        {
+                          label: "Max Width",
+                          name: "maxWidth",
+                          widget: "select",
+                          default: "xl",
+                          options: ["xl", "lg", "md", "sm", "xs"],
+                        },
+                        {
+                          label: "Margin Top", 
+                          name: mt, 
+                          widget: number, 
+                          default: 0,
+                        },
+                        {
+                          label: "Margin Bottom", 
+                          name: mb, 
+                          widget: number, 
+                          default: 0,
+                        },
+                        {
+                          label: "Padding Y",
+                          name: "py",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Padding X",
+                          name: "px",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Force Padding",
+                          name: "forcePadding",
+                          widget: "boolean",
+                          default: true,
+                          hint: "Useful for nested content with a different background than the main section"
+                        },
+                        {
+                          label: "Rounded Corners", 
+                          name: radius, 
+                          widget: select, 
+                          default: none,
+                          options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                        },
+                        {
+                          label: "Shadow", 
+                          name: shadow, 
+                          widget: select, 
+                          default: none,
+                          options: ["none", "sm", "md", "lg", "xl",]  
+                        },
+                      ]
+                    },
+                    {
+                      label: "Main Image",
+                      name: "mainImage",
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { label: Image, name: image, required: false, widget: image },
+                          { label: Alt, name: alt, required: false, widget: string },
+                          { 
+                            label: Position, 
+                            name: position, 
+                            widget: select, 
+                            default: top,
+                            options: ["top", "bottom", "left", "right"]  
+                          },
+                          {
+                            label: "Rounded Corners", 
+                            name: radius, 
+                            widget: select, 
+                            default: none,
+                            options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                          },
+                          {
+                            label: "Margin Top", 
+                            name: mt, 
+                            widget: number, 
+                            default: 0,
+                          },
+                          {
+                            label: "Margin Bottom", 
+                            name: mb, 
+                            widget: number, 
+                            default: 0,
+                          },
+                          {
+                            label: "Shadow", 
+                            name: shadow, 
+                            widget: select, 
+                            default: none,
+                            options: ["none", "sm", "md", "lg", "xl",]  
+                          },
+                        ]
+                    },
+                    { 
+                      label: Tagline, 
+                      name: tagline, 
+                      hint: "Above headline", 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: sm,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Heading, 
+                      name: heading, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: lg,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Subheading, 
+                      name: subheading, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Description, 
+                      name: description, 
+                      collapsed: true,
+                      required: false, 
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Bullet Options, 
+                            name: bullets, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Size, 
+                                  name: size, 
+                                  widget: select,
+                                  default: md,
+                                  options: [xs, sm, md, lg, xl], 
+                                },
+                                { 
+                                  label: Icon, 
+                                  name: icon, 
+                                  collapsed: true,
+                                  required: false,
+                                  widget: object,
+                                  fields: 
+                                    [
+                                      { 
+                                        label: Icon Name, 
+                                        name: name, 
+                                        required: false, 
+                                        widget: string,
+                                        hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                      },
+                                      { 
+                                        label: Color, 
+                                        name: color, 
+                                        required: false,
+                                        widget: select,
+                                        default: secondary,
+                                        options: [default, primary, secondary, tertiary], 
+                                      },
+                                    ]
+                                }
+                              ]
+                          },
+                          { label: Text, name: body, required: false, widget: markdown }
+                        ] 
+                    },
+                    { 
+                      label: Buttons, 
+                      name: buttons, 
+                      collapsed: true,
+                      required: false,
+                      max: 2,
+                      widget: list,
+                      fields:
+                        [
+                          { 
+                            label: Type, 
+                            name: type, 
+                            widget: select,
+                            default: button,
+                            options: [button, link], 
+                          },
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: primary,
+                            options: [primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Variant, 
+                            name: variant, 
+                            widget: select,
+                            default: solid,
+                            options: [solid, soft, outline, plain, link], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [sm, md, lg, xl, xl2], 
+                          },
+                          { 
+                            label: Icon, 
+                            name: icon, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Icon Name, 
+                                  name: name, 
+                                  required: false, 
+                                  widget: string,
+                                  hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                },
+                                { 
+                                  label: Position, 
+                                  name: position, 
+                                  required: false,
+                                  widget: select, 
+                                  default: "after",
+                                  options: ["before", "after", "iconOnly"]  
+                                },
+                              ]
+                          },
+                          { label: Text, name: text, required: false, widget: string },
+                          { label: URL, name: url, required: false, widget: string },
+                          { 
+                            label: Action, 
+                            name: action, 
+                            widget: select,
+                            default: link,
+                            options: [link, modal],
+                            hint: "To open an modal, make sure the #id of the modal is in the URL field",
+                          },
+                        ] 
+                    },
+                  ]
+              }
+            ]
+      }
+
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
+    folder: "src/pages/site-pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "page",
+        }
+      - { 
+          label: "Title", 
+          name: title, 
+          widget: string,
+          hint: This is for internal use only
+          }
+      - {
+          label: "Page Settings",
+          name: "settings",
+          collapsed: true,
+          widget: object,
+          fields: 
+            [
+              { label: "SEO Title", name: seoTitle, widget: string },
+              { 
+                label: "Page URL", 
+                name: pageUrl, 
+                widget: string ,
+                hint: "If not provided, the url will default to /pages/[seoTitle]"
+              },
+              { 
+                label: Page Description,
+                name: description,
+                widget: text,
+                required: false,
+                hint: SEO friendly description,
+              },
+              { 
+                label: Share Image,
+                name: shareImage,
+                widget: image,
+                required: false,
+                hint: Image when share to social media,
+              }
+            ]
+        }
+      - {
+          label: "Sections",
+          name: "sections",
+          collapsed: true,
+          widget: list,
+          fields: 
+            [
+              { label: ID, name: id, widget: string },
+              {
+                label: "Type",
+                name: "type",
+                widget: "select",
+                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+              },
+              {
+                label: "Theme",
+                name: "theme",
+                widget: "select",
+                default: "default",
+                options: ["default", "light", "colored", "dark", "darkest"],
+              },
+              {
+                label: "Content Options",
+                name: "contentStyles",
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields: 
+                  [
+                    {
+                      label: "Split",
+                      name: "split",
+                      hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                      widget: "select",
+                      default: "1/2",
+                      options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                      required: false,
+                    },
+                    {
+                      label: "Text Align",
+                      name: "textAlign",
+                      widget: "select",
+                      default: "left",
+                      options: ["left", "center", "right"],
+                      required: false,
+                    },
+                    {
+                      label: "Max Width",
+                      name: "maxWidth",
+                      widget: "select",
+                      default: "xl",
+                      options: ["xl", "lg", "md", "sm", "xs"],
+                      required: false,
+                    },
+                    {
+                      label: "Margin Top", 
+                      name: mt, 
+                      widget: number, 
+                      default: 0,
+                      required: false,
+                    },
+                    {
+                      label: "Margin Bottom", 
+                      name: mb, 
+                      widget: number, 
+                      default: 0,
+                      required: false,
+                    },
+                    {
+                      label: "Padding Y",
+                      name: "py",
+                      required: false,
+                      widget: "number",
+                    },
+                    {
+                      label: "Padding X",
+                      name: "px",
+                      required: false,
+                      widget: "number",
+                    },
+                  ]
+              },
+              {
+                label: "Main Image",
+                name: "mainImage",
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields: 
+                  [
+                    { label: Image, name: image, required: false, widget: image },
+                    { label: Alt, name: alt, required: false, widget: string },
+                    { 
+                      label: Position, 
+                      name: position, 
+                      widget: select, 
+                      default: top,
+                      options: ["top", "bottom", "left", "right"]  
+                    },
+                    {
+                      label: "Rounded Corners", 
+                      name: radius, 
+                      widget: select, 
+                      default: none,
+                      options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                    },
+                    {
+                      label: "Margin Top", 
+                      name: mt, 
+                      widget: number, 
+                      default: 0,
+                    },
+                    {
+                      label: "Margin Bottom", 
+                      name: mb, 
+                      widget: number, 
+                      default: 0,
+                    },
+                    {
+                      label: "Shadow", 
+                      name: shadow, 
+                      widget: select, 
+                      default: none,
+                      options: ["none", "sm", "md", "lg", "xl",]  
+                    },
+                  ]
+              },
+              { 
+                label: Tagline, 
+                name: tagline, 
+                hint: "Above headline", 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: heading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: sm,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Heading, 
+                name: heading, 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: heading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: lg,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Subheading, 
+                name: subheading, 
+                collapsed: true,
+                required: false,
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: default,
+                      options: [default, primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Font, 
+                      name: font, 
+                      widget: select,
+                      default: subheading,
+                      options: [heading, subheading, body, handwriting], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: md,
+                      options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                    },
+                    { label: Text, name: text, required: false, widget: string }
+                  ] 
+              },
+              { 
+                label: Description, 
+                name: description, 
+                collapsed: true,
+                required: false, 
+                widget: object,
+                fields:
+                  [
+                    { 
+                      label: Bullet Options, 
+                      name: bullets, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl], 
+                          },
+                          { 
+                            label: Icon, 
+                            name: icon, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Icon Name, 
+                                  name: name, 
+                                  required: false, 
+                                  widget: string,
+                                  hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                },
+                                { 
+                                  label: Color, 
+                                  name: color, 
+                                  required: false,
+                                  widget: select,
+                                  default: secondary,
+                                  options: [default, primary, secondary, tertiary], 
+                                },
+                              ]
+                          }
+                        ]
+                    },
+                    { label: Text, name: body, required: false, widget: markdown }
+                  ] 
+              },
+              { 
+                label: Buttons, 
+                name: buttons, 
+                collapsed: true,
+                required: false,
+                max: 2,
+                widget: list,
+                fields:
+                  [
+                    { 
+                      label: Type, 
+                      name: type, 
+                      widget: select,
+                      default: button,
+                      options: [button, link], 
+                    },
+                    { 
+                      label: Color, 
+                      name: color, 
+                      widget: select,
+                      default: primary,
+                      options: [primary, secondary, tertiary], 
+                    },
+                    { 
+                      label: Variant, 
+                      name: variant, 
+                      widget: select,
+                      default: solid,
+                      options: [solid, soft, outline, plain, link], 
+                    },
+                    { 
+                      label: Size, 
+                      name: size, 
+                      widget: select,
+                      default: md,
+                      options: [sm, md, lg, xl, xl2], 
+                    },
+                    { 
+                      label: Icon, 
+                      name: icon, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { 
+                            label: Icon Name, 
+                            name: name, 
+                            required: false, 
+                            widget: string,
+                            hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                          },
+                          { 
+                            label: Position, 
+                            name: position, 
+                            required: false,
+                            widget: select, 
+                            default: "after",
+                            options: ["before", "after", "iconOnly"]  
+                          },
+                        ]
+                    },
+                    { label: Text, name: text, required: false, widget: string },
+                    { label: URL, name: url, required: false, widget: string },
+                    { 
+                      label: Action, 
+                      name: action, 
+                      widget: select,
+                      default: link,
+                      options: [link, modal],
+                      hint: "To open an modal, make sure the #id of the modal is in the URL field",
+                    },
+                  ] 
+              },
+              { 
+                label: Secondary Content, 
+                name: content, 
+                collapsed: true,
+                required: false,
+                max: 3,
+                widget: list,
+                fields:
+                  [
+                    { label: ID, name: id, widget: string },
+                    {
+                      label: "Type",
+                      name: "type",
+                      widget: "select",
+                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                    },
+                    {
+                      label: "Secondary Content Flag",
+                      name: "secondaryContent",
+                      widget: "hidden",
+                      default: true,
+                    },
+                    {
+                      label: "Section Theme",
+                      name: "theme",
+                      widget: "select",
+                      default: "default",
+                      options: ["inherit", "default", "light", "colored", "dark", "darkest"],
+                    },
+                    {
+                      label: "Content Options",
+                      name: "contentStyles",
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                      [
+                        {
+                          label: "Container Theme",
+                          name: "containerTheme",
+                          widget: "select",
+                          default: "default",
+                          options: ["inherit", "default", "light", "colored", "dark", "darkest"],
+                        },
+                        {
+                          label: "Split",
+                          name: "split",
+                          hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
+                          widget: "select",
+                          default: "1/2",
+                          options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                        },
+                        {
+                          label: "Text Align",
+                          name: "textAlign",
+                          widget: "select",
+                          default: "left",
+                          options: ["left", "center", "right"],
+                        },
+                        {
+                          label: "Max Width",
+                          name: "maxWidth",
+                          widget: "select",
+                          default: "xl",
+                          options: ["xl", "lg", "md", "sm", "xs"],
+                        },
+                        {
+                          label: "Margin Top", 
+                          name: mt, 
+                          widget: number, 
+                          default: 0,
+                        },
+                        {
+                          label: "Margin Bottom", 
+                          name: mb, 
+                          widget: number, 
+                          default: 0,
+                        },
+                        {
+                          label: "Padding Y",
+                          name: "py",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Padding X",
+                          name: "px",
+                          required: false,
+                          widget: "number",
+                        },
+                        {
+                          label: "Force Padding",
+                          name: "forcePadding",
+                          widget: "boolean",
+                          default: true,
+                          hint: "Useful for nested content with a different background than the main section"
+                        },
+                        {
+                          label: "Rounded Corners", 
+                          name: radius, 
+                          widget: select, 
+                          default: none,
+                          options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                        },
+                        {
+                          label: "Shadow", 
+                          name: shadow, 
+                          widget: select, 
+                          default: none,
+                          options: ["none", "sm", "md", "lg", "xl",]  
+                        },
+                      ]
+                    },
+                    {
+                      label: "Main Image",
+                      name: "mainImage",
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields: 
+                        [
+                          { label: Image, name: image, required: false, widget: image },
+                          { label: Alt, name: alt, required: false, widget: string },
+                          { 
+                            label: Position, 
+                            name: position, 
+                            widget: select, 
+                            default: top,
+                            options: ["top", "bottom", "left", "right"]  
+                          },
+                          {
+                            label: "Rounded Corners", 
+                            name: radius, 
+                            widget: select, 
+                            default: none,
+                            options: ["none", "sm", "md", "lg", "xl", "xl2", "xl3", "xl4"]  
+                          },
+                          {
+                            label: "Margin Top", 
+                            name: mt, 
+                            widget: number, 
+                            default: 0,
+                          },
+                          {
+                            label: "Margin Bottom", 
+                            name: mb, 
+                            widget: number, 
+                            default: 0,
+                          },
+                          {
+                            label: "Shadow", 
+                            name: shadow, 
+                            widget: select, 
+                            default: none,
+                            options: ["none", "sm", "md", "lg", "xl",]  
+                          },
+                        ]
+                    },
+                    { 
+                      label: Tagline, 
+                      name: tagline, 
+                      hint: "Above headline", 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: sm,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Heading, 
+                      name: heading, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: lg,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Subheading, 
+                      name: subheading, 
+                      collapsed: true,
+                      required: false,
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: default,
+                            options: [default, primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Font, 
+                            name: font, 
+                            widget: select,
+                            default: heading,
+                            options: [heading, subheading, body, handwriting], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl, xl2, xl3, xl4, xl5, xl6, xl7], 
+                          },
+                          { label: Text, name: text, required: false, widget: string }
+                        ] 
+                    },
+                    { 
+                      label: Description, 
+                      name: description, 
+                      collapsed: true,
+                      required: false, 
+                      widget: object,
+                      fields:
+                        [
+                          { 
+                            label: Bullet Options, 
+                            name: bullets, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Size, 
+                                  name: size, 
+                                  widget: select,
+                                  default: md,
+                                  options: [xs, sm, md, lg, xl], 
+                                },
+                                { 
+                                  label: Icon, 
+                                  name: icon, 
+                                  collapsed: true,
+                                  required: false,
+                                  widget: object,
+                                  fields: 
+                                    [
+                                      { 
+                                        label: Icon Name, 
+                                        name: name, 
+                                        required: false, 
+                                        widget: string,
+                                        hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                      },
+                                      { 
+                                        label: Color, 
+                                        name: color, 
+                                        required: false,
+                                        widget: select,
+                                        default: secondary,
+                                        options: [default, primary, secondary, tertiary], 
+                                      },
+                                    ]
+                                }
+                              ]
+                          },
+                          { label: Text, name: body, required: false, widget: markdown }
+                        ] 
+                    },
+                    { 
+                      label: Buttons, 
+                      name: buttons, 
+                      collapsed: true,
+                      required: false,
+                      max: 2,
+                      widget: list,
+                      fields:
+                        [
+                          { 
+                            label: Type, 
+                            name: type, 
+                            widget: select,
+                            default: button,
+                            options: [button, link], 
+                          },
+                          { 
+                            label: Color, 
+                            name: color, 
+                            widget: select,
+                            default: primary,
+                            options: [primary, secondary, tertiary], 
+                          },
+                          { 
+                            label: Variant, 
+                            name: variant, 
+                            widget: select,
+                            default: solid,
+                            options: [solid, soft, outline, plain, link], 
+                          },
+                          { 
+                            label: Size, 
+                            name: size, 
+                            widget: select,
+                            default: md,
+                            options: [sm, md, lg, xl, xl2], 
+                          },
+                          { 
+                            label: Icon, 
+                            name: icon, 
+                            collapsed: true,
+                            required: false,
+                            widget: object,
+                            fields: 
+                              [
+                                { 
+                                  label: Icon Name, 
+                                  name: name, 
+                                  required: false, 
+                                  widget: string,
+                                  hint: "Find icon name from Material Icons: https://mui.com/material-ui/material-icons/",
+                                },
+                                { 
+                                  label: Position, 
+                                  name: position, 
+                                  required: false,
+                                  widget: select, 
+                                  default: "after",
+                                  options: ["before", "after", "iconOnly"]  
+                                },
+                              ]
+                          },
+                          { label: Text, name: text, required: false, widget: string },
+                          { label: URL, name: url, required: false, widget: string },
+                          { 
+                            label: Action, 
+                            name: action, 
+                            widget: select,
+                            default: link,
+                            options: [link, modal],
+                            hint: "To open an modal, make sure the #id of the modal is in the URL field",
+                          },
+                        ] 
+                    },
+                  ]
+              }
+            ]
+      }
+
+  - name: "pages-one-offs"
+    label: "Pages - One Offs"
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
@@ -132,7 +1706,12 @@ collections:
               widget: "hidden",
               default: "home-page",
             }
-          - { label: "Title", name: pageTitle, widget: string }
+          - { 
+              label: "Title", 
+              name: pageTitle, 
+              widget: string,
+              hint: This is for internal use only
+             }
           - {
               label: "Page Settings",
               name: "settings",
@@ -140,6 +1719,20 @@ collections:
               widget: object,
               fields: 
                 [
+                  { label: "SEO Title", name: seoTitle, widget: string },
+                  { 
+                    label: "Page URL", 
+                    name: pageUrl, 
+                    widget: string ,
+                    hint: "If not provided, the url will default to /pages/[seoTitle]"
+                  },
+                  {
+                    label: "Page Type",
+                    name: "pageType",
+                    widget: "select",
+                    default: "Page",
+                    options: ["Page", "Funnel"],
+                  },
                   { 
                     label: Page Description,
                     name: description,
@@ -191,7 +1784,7 @@ collections:
                           hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
                           widget: "select",
                           default: "1/2",
-                          options: ["1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                          options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
                           required: false,
                         },
                         {
@@ -557,7 +2150,7 @@ collections:
                               hint: "The width of either the main image or first nested content block.  Only valid for Hero and Content types",
                               widget: "select",
                               default: "1/2",
-                              options: ["1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
+                              options: ["3/4", "2/3", "1/1", "1/2", "1/3", "1/4", "1/5", "1/6"],
                             },
                             {
                               label: "Text Align",

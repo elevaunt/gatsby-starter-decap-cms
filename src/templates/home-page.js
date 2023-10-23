@@ -43,7 +43,7 @@ export default HomePage;
 
 export const Head = ({ data, location }) => {
   const { pageTitle, settings } = data.markdownRemark.frontmatter;
-  const ogImg = settings.shareImage.childImageSharp.fixed.src
+  const ogImg = settings.shareImage?.childImageSharp.fixed.src
   return (
     <>
       <html lang="en" />
@@ -88,6 +88,9 @@ export const pageQuery = graphql`
       frontmatter {
         pageTitle
         settings {
+          seoTitle
+          pageUrl
+          pageType
           description
           shareImage {
             absolutePath
@@ -109,6 +112,7 @@ export const pageQuery = graphql`
             py
             px
             textAlign
+            maxWidth
           }
           mainImage {
             image {
