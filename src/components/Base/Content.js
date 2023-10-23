@@ -81,10 +81,8 @@ const Content = ({
         alignItems: ['center', 'center', alignItems],
         textAlign: contentStyles.textAlign,
         justifyContent: 'center',
-        // minWidth: [null, null, 420],
         gap: 0,
-        //  flexBasis: basis,
-        flexShrink: 999,
+        flex: contentStyles.flex,
         textWrap: [null, null, 'balance'],
       })}
     >

@@ -37,6 +37,8 @@ const Section = ({
   const containerTheme = containerStyles && containerStyles.containerTheme;
   const inherit = containerTheme === "inherit";
   const secondaryTheme = (containerTheme && !inherit) ? themeMap[containerTheme] : sectionTheme
+
+  console.log("SECTION", containerStyles);
   return (
     <CssVarsProvider theme={sectionTheme}>
       <HeadingBlock level={-1}>

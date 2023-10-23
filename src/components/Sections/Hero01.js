@@ -46,7 +46,7 @@ export default function Hero({
     <Section
       id={id}
       theme={theme}
-      containerSx={{ px: [contentStyles.px * .66, null, contentStyles.px], py: [contentStyles.py * .66, null, contentStyles.py] }}
+      containerStyles={contentStyles}
       maxWidth="lg" // contentStyles.maxWidth
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
