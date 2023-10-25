@@ -40,7 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
         if (edge.node.frontmatter.templateKey === 'funnel' || edge.node.frontmatter.templateKey === 'page') {
           createPage({
             path: edge.node.frontmatter.settings.pageUrl,
-            component: path.resolve(`src/templates/home-page.js`),
+            component: path.resolve(`src/templates/main-template.js`),
             context: { id },
           })
         } else {

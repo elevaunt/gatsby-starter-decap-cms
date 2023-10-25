@@ -1,5 +1,5 @@
 ---
-templateKey: home-page
+templateKey: main-template
 pageTitle: Home Page
 settings:
   shareImage: /img/amanda-in-focus-lee-behind.jpg

@@ -5,10 +5,7 @@ import { graphql, withPrefix } from "gatsby";
 import Layout from "../components/Layout";
 import renderSection from "../configs/sectionsMap.config";
 
-export const HomePageTemplate = ({
-  pageTitle,
-  sections
-}) => {
+export const MainTemplate = ({ sections }) => {
   return (
     <main>
       {sections.map((section, key) => renderSection(section, key))}
@@ -16,22 +13,22 @@ export const HomePageTemplate = ({
   );
 };
 
-HomePageTemplate.propTypes = {
+MainTemplate.propTypes = {
   pageTitle: PropTypes.string,
   sections: PropTypes.object,
 };
 
-const HomePage = ({ data }) => {
+const RenderPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout>
-      <HomePageTemplate {...frontmatter} />
+      <MainTemplate {...frontmatter} />
     </Layout>
   );
 };
 
-HomePage.propTypes = {
+RenderPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -39,7 +36,7 @@ HomePage.propTypes = {
   }),
 };
 
-export default HomePage;
+export default RenderPage;
 
 export const Head = ({ data, location }) => {
   const { pageTitle, settings } = data.markdownRemark.frontmatter;
@@ -82,7 +79,7 @@ export const Head = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query HomePageTemplate($id: String!) {
+  query MainTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

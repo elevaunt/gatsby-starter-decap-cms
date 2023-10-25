@@ -43,7 +43,6 @@ const ContentSection = ({
     buttons,
     content,
   }
-  console.log( contentStyles );
 
   const imgSx = {
     flex: `0 1 ${primaryFlexBasis}`,
