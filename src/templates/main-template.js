@@ -22,7 +22,7 @@ const RenderPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout hideMenu={frontmatter.hideMenu}>
       <MainTemplate {...frontmatter} />
     </Layout>
   );
@@ -83,6 +83,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        hideMenu
         pageTitle
         settings {
           seoTitle

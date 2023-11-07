@@ -67,7 +67,7 @@ const Content = ({
           alignItems: "flex-start",
         }}
       >
-        {icon && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
+        {icon.name && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
         <ListItemContent>{children}</ListItemContent>
       </ListItem>
     )

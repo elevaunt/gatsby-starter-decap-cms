@@ -38,7 +38,7 @@ const Buttons = ({ buttons, sx }) => {
         color={btn.color !== "default" && btn.color}
         size={btn.size}
         variant={btn.variant}
-        {...icon}
+        icon={btn.icon.name && icon}
         {...linkProps(btn)}
         sx={(theme) => ({
           fontSize: btn.type === "link" ? btn.size : undefined,

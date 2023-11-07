@@ -46,6 +46,12 @@ collections:
           widget: "hidden",
           default: "funnel",
         }
+      - {
+          label: "Hide Menu",
+          name: "hideMenu",
+          widget: "hidden",
+          default: "true",
+        }
       - { 
           label: "Title", 
           name: title, 
@@ -1607,6 +1613,89 @@ collections:
             ]
       }
 
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    folder: "src/pages/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product",
+        }
+      - { 
+          label: "Title", 
+          name: title, 
+          widget: string,
+          hint: This is for internal use only
+          }
+      - {
+          label: "Product Settings",
+          name: "settings",
+          collapsed: true,
+          widget: object,
+          fields: 
+            [
+              { label: "Create Product Page?", name: "hasProductPage", widget: "boolean", default: false },
+              { label: "SEO Title", name: seoTitle, widget: string, required: false },
+              { label: "Featured Product", name: "featuredProduct", widget: "boolean", default: false },
+              # change to Relation type of widget
+              { label: "Associated Funnel", name: "funnelUrl", widget: "string", required: false },
+              { 
+                label: SEO Description,
+                name: description,
+                widget: text,
+                required: false,
+                hint: SEO friendly description,
+              },
+              { 
+                label: Share Image,
+                name: shareImage,
+                widget: image,
+                required: false,
+                hint: Image when share to social media,
+              }
+            ]
+        }
+      - {
+          label: "Price Settings",
+          name: "priceSettings",
+          collapsed: true,
+          widget: object,
+          fields: 
+            [
+              { label: "Price", name: "price", widget: "number" },
+              # { label: "Price Type", name: "price", widget: "text" },
+              # One Time, Subscription, Payment Plan
+              # If subscription: 
+              ## charge how often? Monthly?
+              ## Had free trial?
+              ## Setup fee?
+              # If Payment Plan
+              ## How many payments?
+              ## charge how often?
+            ]
+        }
+      - {
+          label: "Purchase Actions",
+          name: "purchaseAction",
+          collapsed: true,
+          widget: object,
+          fields: 
+            [
+              { label: "Digital Asset Access", name: "assetDownload", widget: image, required: false },
+              # change to Relation type of widget
+              { label: "Course Access", name: "courseName", widget: string, required: false },
+            ]
+        }
+      - { label: "Featured Image", name: "featuredimage", widget: image, required: false }
+      - { label: "Tagline", name: "tagline", widget: "string", required: false }
+      - { label: "Short Description", name: "shortDescription", widget: "text" }
+      - { label: "Long Description", name: "body", widget: "markdown", required: false }
+
   - name: "pages-one-offs"
     label: "Pages - One Offs"
     files:
@@ -2499,118 +2588,6 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "product-page",
-            }
-          - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
-          - { label: Heading, name: heading, widget: string }
-          - { label: Description, name: description, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Blurbs,
-                    name: blurbs,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Text, name: text, widget: text },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image2,
-                    name: image2,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                  {
-                    label: Image3,
-                    name: image3,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                      ],
-                  },
-                ],
-            }
-          - {
-              label: Testimonials,
-              name: testimonials,
-              widget: list,
-              fields:
-                [
-                  { label: Quote, name: quote, widget: string },
-                  { label: Author, name: author, widget: string },
-                ],
-            }
-          - { label: Full_image, name: full_image, widget: image }
-          - {
-              label: Pricing,
-              name: pricing,
-              widget: object,
-              fields:
-                [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: string },
-                  {
-                    label: Plans,
-                    name: plans,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Plan, name: plan, widget: string },
-                        { label: Price, name: price, widget: string },
-                        {
-                          label: Description,
-                          name: description,
-                          widget: string,
-                        },
-                        { label: Items, name: items, widget: list },
-                      ],
-                  },
-                ],
-            }
 
   - name: "site-menus"
     label: "Site Menus"
