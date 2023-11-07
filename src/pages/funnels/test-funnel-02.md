@@ -1,5 +1,6 @@
 ---
 templateKey: funnel
+hideMenu: true
 title: Test Funnel 02
 settings:
   pageType: Funnel
