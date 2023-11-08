@@ -1,7 +1,8 @@
 ---
-templateKey: product
+templateKey: page
 title: Test Product
 settings:
+  pageUrl: /test-product
   hasProductPage: true
   featuredProduct: true
   seoTitle: Test Product
