@@ -166,6 +166,10 @@ export const pageQuery = graphql`
             size
             text
             type
+            mt
+            mb
+            ml
+            mr
             icon {
               name
               position
@@ -244,6 +248,10 @@ export const pageQuery = graphql`
               size
               text
               type
+              mt
+              mb
+              ml
+              mr
               icon {
                 name
                 position

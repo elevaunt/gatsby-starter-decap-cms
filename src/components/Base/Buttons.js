@@ -44,6 +44,10 @@ const Buttons = ({ buttons, sx }) => {
           fontSize: btn.type === "link" ? btn.size : undefined,
           p: iconOnly ? ".75em" : undefined,
           borderRadius: theme.radius.md,
+          mt: btn.mt,
+          mb: btn.mb,
+          ml: btn.ml,
+          mr: btn.mr,
         })}
         onClick={handleButtonClick}
       >

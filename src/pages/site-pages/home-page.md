@@ -50,16 +50,20 @@ sections:
       body: We Help People Overcome Pornography So That They Can Heal From Past
         Wounds And Live A Shame Free Life Full Of Joy.
   - buttons:
-      - type: button
+      - size: xl
         color: primary
         variant: solid
-        size: xl
+        mr: 0
+        mt: 0
+        text: ""
+        url: "#modal-5-steps"
+        mb: 0
+        action: modal
         icon:
           position: iconOnly
           name: TrendingFlat
-        action: modal
-        text: ""
-        url: "#modal-5-steps"
+        type: button
+        ml: 0
     heading:
       color: default
       font: heading
@@ -357,15 +361,19 @@ sections:
 
         We can teach you the tools and skills you need so you can finally find healing for yourself, your relationships, and all other areas of your life - **shame free!**
   - buttons:
-      - type: button
+      - size: xl2
         color: secondary
         variant: solid
-        size: xl2
-        icon:
-          position: after
-        action: modal
+        mr: 0
+        mt: 2
         text: 5 STEPS TO LET GO OF SHAME
         url: "#modal-5-steps"
+        mb: 0
+        action: modal
+        icon:
+          position: after
+        type: button
+        ml: 0
     heading:
       color: default
       font: heading
@@ -428,7 +436,21 @@ sections:
       font: heading
       size: sm
     content:
-      - heading:
+      - buttons:
+          - size: md
+            color: primary
+            variant: solid
+            mr: 0
+            mt: 0
+            text: TEST
+            url: /
+            mb: 0
+            action: link
+            icon:
+              position: after
+            type: button
+            ml: 0
+        heading:
           color: default
           font: heading
           size: lg
