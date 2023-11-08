@@ -162,7 +162,8 @@ sections:
         \
 
         Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
-  - heading:
+  - buttons: []
+    heading:
       color: default
       font: heading
       size: xl7
@@ -244,7 +245,7 @@ sections:
           color: default
           font: heading
           size: xl4
-          text: Struggling to kick your Porn habit?
+          text: Struggling to kick a Porn habit?
         mainImage:
           position: top
           radius: none

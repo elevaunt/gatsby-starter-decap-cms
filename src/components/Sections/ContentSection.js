@@ -47,6 +47,9 @@ const ContentSection = ({
   const imgSx = {
     flex: `0 1 ${primaryFlexBasis}`,
   }
+
+  const contentCount = content?.length;
+  console.log({content, contentCount, secondaryContent, contentProps});
   return (
     <Section
       id={id}
@@ -55,6 +58,9 @@ const ContentSection = ({
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
       containerStyles={{...contentStyles, secondaryContent}}
+      sectionSx={secondaryContent && {
+        flex: "0 1 100%",
+      }}
     >
       {mainImage.image && ["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
       <HeadingBlock level={secondaryContent ? 2 : 1}>
