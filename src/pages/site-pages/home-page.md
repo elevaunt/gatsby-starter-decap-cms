@@ -20,16 +20,17 @@ sections:
       mb: 0
       shadow: none
       image: /img/amanda-leaning-on-lee-green-popsicles.jpg
+      aspectRatio: 9/10
     subheading:
       color: primary
       font: subheading
-      size: xl2
+      size: xl5
       text: Over Pornography
     theme: default
     tagline:
       color: default
       font: heading
-      size: xl
+      size: xl3
       text: LEARN HOW YOU CAN
     type: Hero 01
     id: Hero
@@ -71,6 +72,8 @@ sections:
       mb: 0
       shadow: none
       image: /img/man-smiling-street.jpg
+      alt: ""
+      aspectRatio: 3/2
     subheading:
       color: default
       font: subheading
@@ -106,10 +109,11 @@ sections:
       position: left
       radius: none
       mt: 0
-      mb: -10
+      mb: 0
       shadow: none
       image: /img/lee-amanda-posing-triangles.jpg
       alt: Lee & Amanda Porter
+      aspectRatio: 3/4
     subheading:
       color: default
       font: subheading
@@ -118,16 +122,16 @@ sections:
     tagline:
       color: primary
       font: heading
-      size: xl
+      size: xl3
       text: MORE ABOUT US
     type: Content
     id: About
     contentStyles:
       split: 1/2
       textAlign: left
-      maxWidth: lg
+      maxWidth: xl
       mt: 0
-      mb: 0
+      mb: -10
       py: 10
       px: 10
     description:
@@ -188,6 +192,7 @@ sections:
           shadow: none
           image: /img/kateryna-hliznitsova-tpav7j9z6em-unsplash.jpg
           alt: Teens with laptop
+          aspectRatio: 16/9
         subheading:
           color: default
           font: heading
@@ -310,10 +315,11 @@ sections:
       position: bottom
       radius: none
       mt: 0
-      mb: -80
+      mb: -10
       shadow: none
       image: /img/amanda-in-focus-lee-behind.jpg
       alt: We can teach you how to quit forever
+      aspectRatio: 4/3
     subheading:
       color: primary
       font: subheading
@@ -372,6 +378,7 @@ sections:
       mb: 0
       shadow: none
       image: /img/man-looking-at-camera-on-couch-trees.jpg
+      aspectRatio: 3/2
     subheading:
       color: default
       font: subheading
@@ -389,6 +396,8 @@ sections:
       maxWidth: lg
       mt: 0
       mb: 0
+      py: 5
+      px: 5
     description:
       bullets:
         size: md

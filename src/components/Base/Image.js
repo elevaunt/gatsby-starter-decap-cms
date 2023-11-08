@@ -1,29 +1,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Box, styled } from '@mui/joy';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { AspectRatio, Box, styled } from '@mui/joy';
 
 const Image = ({
   image,
   alt,
+  aspectRatio,
   radius,
   mt,
   mb,
   shadow,
   sx
 }) => {
-  const img = getImage(image)
-  const Image = styled(GatsbyImage)(({theme}) => ({
-    marginTop: mt,
-    marginBottom: mb,
+  const img = image.childImageSharp.fluid
+  const Image = styled("img")(({ theme }) => ({
     borderRadius: theme.vars.radius[radius],
     boxShadow: theme.vars.shadow[shadow],
   }))
   return (
     <Box sx={{
+      marginTop: mt,
+      marginBottom: mb,
       ...sx
     }}>
-      <Image image={img} alt={alt} />
+      <AspectRatio objectFit="cover" ratio={aspectRatio || 16/9}>
+        <Image src={img.src} srcSet={img.srcSet} alt={alt} />
+      </AspectRatio>
     </Box>
   )
 };

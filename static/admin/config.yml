@@ -187,6 +187,7 @@ collections:
                       default: top,
                       options: ["top", "bottom", "left", "right"]  
                     },
+                    { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                     {
                       label: "Rounded Corners", 
                       name: radius, 
@@ -569,6 +570,7 @@ collections:
                             default: top,
                             options: ["top", "bottom", "left", "right"]  
                           },
+                          { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                           {
                             label: "Rounded Corners", 
                             name: radius, 
@@ -974,6 +976,7 @@ collections:
                       default: top,
                       options: ["top", "bottom", "left", "right"]  
                     },
+                    { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                     {
                       label: "Rounded Corners", 
                       name: radius, 
@@ -1356,6 +1359,7 @@ collections:
                             default: top,
                             options: ["top", "bottom", "left", "right"]  
                           },
+                          { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                           {
                             label: "Rounded Corners", 
                             name: radius, 
@@ -1937,6 +1941,7 @@ collections:
                           default: top,
                           options: ["top", "bottom", "left", "right"]  
                         },
+                        { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                         {
                           label: "Rounded Corners", 
                           name: radius, 
@@ -2319,6 +2324,7 @@ collections:
                                 default: top,
                                 options: ["top", "bottom", "left", "right"]  
                               },
+                              { label: Aspect Ratio, name: aspectRatio, required: false, widget: string },
                               {
                                 label: "Rounded Corners", 
                                 name: radius, 

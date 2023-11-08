@@ -39,7 +39,7 @@ export default function Hero({
   }
 
   const imgSx = {
-    flex: "0 1 50%",
+    flex: "0 .5 50%",
   }
 
   return (
@@ -47,7 +47,7 @@ export default function Hero({
       id={id}
       theme={theme}
       containerStyles={contentStyles}
-      maxWidth="lg" // contentStyles.maxWidth
+      maxWidth="xl" // contentStyles.maxWidth
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
     >

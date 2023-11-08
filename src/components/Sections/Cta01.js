@@ -79,7 +79,7 @@ export default function Cta01({
   }
 
   const imgSx = {
-    flex: "0 1 25%",
+    flex: "0 0 30%",
     mt: -8,
   }
   const contentProps = {
@@ -96,6 +96,7 @@ export default function Cta01({
       id={id}
       theme={theme}
       containerSx={{ py: 2 }}
+      maxWidth={contentStyles.maxWidth}
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
     >

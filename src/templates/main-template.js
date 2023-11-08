@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { graphql, withPrefix } from "gatsby";
-
+import PropTypes from "prop-types";
+import React from "react";
 import Layout from "../components/Layout";
 import renderSection from "../configs/sectionsMap.config";
+
 
 export const MainTemplate = ({ sections }) => {
   return (
@@ -115,10 +115,15 @@ export const pageQuery = graphql`
           mainImage {
             image {
               childImageSharp {
-                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                fluid {
+                  src
+                  srcSet
+                  sizes
+                }
               }
             }
             position
+            aspectRatio
             alt
             radius
             mt
@@ -188,10 +193,15 @@ export const pageQuery = graphql`
             mainImage {
               image {
                 childImageSharp {
-                  gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                  fluid {
+                    src
+                    srcSet
+                    sizes
+                  }
                 }
               }
               position
+              aspectRatio
               alt
               radius
               mt
