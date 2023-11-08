@@ -237,7 +237,7 @@ collections:
                       name: font, 
                       widget: select,
                       default: heading,
-                      options: [heading, subheading, body, handwriting], 
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -269,7 +269,7 @@ collections:
                       name: font, 
                       widget: select,
                       default: heading,
-                      options: [heading, subheading, body, handwriting], 
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -300,8 +300,8 @@ collections:
                       label: Font, 
                       name: font, 
                       widget: select,
-                      default: subheading,
-                      options: [heading, subheading, body, handwriting], 
+                      default: secondary,
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -620,7 +620,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -652,7 +652,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -684,7 +684,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -1026,7 +1026,7 @@ collections:
                       name: font, 
                       widget: select,
                       default: heading,
-                      options: [heading, subheading, body, handwriting], 
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -1058,7 +1058,7 @@ collections:
                       name: font, 
                       widget: select,
                       default: heading,
-                      options: [heading, subheading, body, handwriting], 
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -1089,8 +1089,8 @@ collections:
                       label: Font, 
                       name: font, 
                       widget: select,
-                      default: subheading,
-                      options: [heading, subheading, body, handwriting], 
+                      default: secondary,
+                      options: [heading, secondary, body, handwriting], 
                     },
                     { 
                       label: Size, 
@@ -1409,7 +1409,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -1441,7 +1441,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -1473,7 +1473,7 @@ collections:
                             name: font, 
                             widget: select,
                             default: heading,
-                            options: [heading, subheading, body, handwriting], 
+                            options: [heading, secondary, body, handwriting], 
                           },
                           { 
                             label: Size, 
@@ -1991,7 +1991,7 @@ collections:
                           name: font, 
                           widget: select,
                           default: heading,
-                          options: [heading, subheading, body, handwriting], 
+                          options: [heading, secondary, body, handwriting], 
                         },
                         { 
                           label: Size, 
@@ -2023,7 +2023,7 @@ collections:
                           name: font, 
                           widget: select,
                           default: heading,
-                          options: [heading, subheading, body, handwriting], 
+                          options: [heading, secondary, body, handwriting], 
                         },
                         { 
                           label: Size, 
@@ -2054,8 +2054,8 @@ collections:
                           label: Font, 
                           name: font, 
                           widget: select,
-                          default: subheading,
-                          options: [heading, subheading, body, handwriting], 
+                          default: secondary,
+                          options: [heading, secondary, body, handwriting], 
                         },
                         { 
                           label: Size, 
@@ -2374,7 +2374,7 @@ collections:
                                 name: font, 
                                 widget: select,
                                 default: heading,
-                                options: [heading, subheading, body, handwriting], 
+                                options: [heading, secondary, body, handwriting], 
                               },
                               { 
                                 label: Size, 
@@ -2406,7 +2406,7 @@ collections:
                                 name: font, 
                                 widget: select,
                                 default: heading,
-                                options: [heading, subheading, body, handwriting], 
+                                options: [heading, secondary, body, handwriting], 
                               },
                               { 
                                 label: Size, 
@@ -2438,7 +2438,7 @@ collections:
                                 name: font, 
                                 widget: select,
                                 default: heading,
-                                options: [heading, subheading, body, handwriting], 
+                                options: [heading, secondary, body, handwriting], 
                               },
                               { 
                                 label: Size, 

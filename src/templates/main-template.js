@@ -39,12 +39,12 @@ RenderPage.propTypes = {
 export default RenderPage;
 
 export const Head = ({ data, location }) => {
-  const { pageTitle, settings } = data.markdownRemark.frontmatter;
+  const { settings } = data.markdownRemark.frontmatter;
   const ogImg = settings.shareImage?.childImageSharp.fixed.src
   return (
     <>
       <html lang="en" />
-      <title>{pageTitle} - The Porters Coaching</title>
+      <title>{settings.seoTitle} - The Porters Coaching</title>
       <meta name="description" content={settings.description} />
 
       {/* <link
@@ -71,7 +71,7 @@ export const Head = ({ data, location }) => {
       /> */}
 
       <meta property="og:type" content="business.business" />
-      <meta property="og:title" content={pageTitle} />
+      <meta property="og:title" content={settings.seoTitle} />
       <meta property="og:url" content={location.pathname} />
       <meta property="og:image" content={ogImg} />
     </>
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         hideMenu
-        pageTitle
+        title
         settings {
           seoTitle
           pageUrl

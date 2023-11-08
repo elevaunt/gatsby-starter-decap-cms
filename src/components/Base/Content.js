@@ -44,6 +44,7 @@ const Content = ({
 
   const renderHeading = (headingType, headingProps) => {
     const fontFamily = headingProps.font === "heading" ? "display" : headingProps.font;
+    console.log({ headingType, headingProps});
     return (
       <Typography
         level={type[headingType][headingProps.type]}

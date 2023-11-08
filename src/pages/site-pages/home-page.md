@@ -23,8 +23,8 @@ sections:
       aspectRatio: 9/10
     subheading:
       color: primary
-      font: subheading
-      size: xl5
+      font: secondary
+      size: xl3
       text: Over Pornography
     theme: default
     tagline:
@@ -76,7 +76,7 @@ sections:
       aspectRatio: 3/2
     subheading:
       color: default
-      font: subheading
+      font: secondary
       size: md
     theme: darkest
     tagline:
@@ -116,7 +116,7 @@ sections:
       aspectRatio: 3/4
     subheading:
       color: default
-      font: subheading
+      font: secondary
       size: md
     theme: default
     tagline:
@@ -171,7 +171,7 @@ sections:
       shadow: none
     subheading:
       color: default
-      font: subheading
+      font: secondary
       size: md
     theme: light
     tagline:
@@ -322,7 +322,7 @@ sections:
       aspectRatio: 4/3
     subheading:
       color: primary
-      font: subheading
+      font: secondary
       size: xl4
       text: And it's easier than you think
     theme: default
@@ -381,7 +381,7 @@ sections:
       aspectRatio: 3/2
     subheading:
       color: default
-      font: subheading
+      font: secondary
       size: md
     theme: colored
     tagline:
@@ -420,7 +420,7 @@ sections:
       shadow: none
     subheading:
       color: default
-      font: subheading
+      font: secondary
       size: md
     theme: default
     tagline:
