@@ -5,6 +5,7 @@ import ProductFull from "../components/Sections/ProductFull";
 import ProductCard from "../components/Product/ProductCard"
 import ContentSection from "../components/Sections/ContentSection";
 import Modal from "../components/Sections/Modal";
+import Form from "../components/Sections/Form";
 
 export const sectionsMap = {
   "Hero 01": Hero01,
@@ -13,6 +14,7 @@ export const sectionsMap = {
   "Content": ContentSection,
   "Card": ProductCard,
   "Modal": Modal,
+  "Form": Form,
 }
 
 export const renderSection = (section, key) => {

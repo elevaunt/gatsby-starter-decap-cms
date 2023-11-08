@@ -59,7 +59,7 @@ const ContentSection = ({
       {mainImage.image && ["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
       <HeadingBlock level={secondaryContent ? 2 : 1}>
         <Content {...contentProps} >
-          {buttons?.length && <Buttons buttons={buttons} />}
+          {buttons?.length > 0 && <Buttons buttons={buttons} />}
           <Stack direction={["column", "column", "row"]} gap={[4, 4, 6]}>
             {content?.map((content, key) => renderSection(content, key))}
           </Stack>

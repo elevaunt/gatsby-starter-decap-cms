@@ -100,7 +100,7 @@ collections:
                 label: "Type",
                 name: "type",
                 widget: "select",
-                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
               },
               {
                 label: "Theme",
@@ -454,7 +454,7 @@ collections:
                       label: "Type",
                       name: "type",
                       widget: "select",
-                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
                     },
                     {
                       label: "Secondary Content Flag",
@@ -889,7 +889,7 @@ collections:
                 label: "Type",
                 name: "type",
                 widget: "select",
-                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
               },
               {
                 label: "Theme",
@@ -1243,7 +1243,7 @@ collections:
                       label: "Type",
                       name: "type",
                       widget: "select",
-                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                      options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
                     },
                     {
                       label: "Secondary Content Flag",
@@ -1854,7 +1854,7 @@ collections:
                     label: "Type",
                     name: "type",
                     widget: "select",
-                    options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                    options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
                   },
                   {
                     label: "Theme",
@@ -2208,7 +2208,7 @@ collections:
                           label: "Type",
                           name: "type",
                           widget: "select",
-                          options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal"],
+                          options: ["Hero 01", "Content", "Cta 01", "Card", "Product - Full Width", "Modal", "Form"],
                         },
                         {
                           label: "Secondary Content Flag",

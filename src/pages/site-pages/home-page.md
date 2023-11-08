@@ -406,16 +406,7 @@ sections:
       body: |-
         **Click The Button** Below And Give Us Your Best Email Address\
         To Get Your Free Copy!
-  - buttons:
-      - type: button
-        color: primary
-        variant: solid
-        size: xl2
-        icon:
-          position: after
-        action: link
-        text: Send Me The 5 Steps!
-        url: "#"
+  - buttons: []
     heading:
       color: default
       font: heading
@@ -436,12 +427,50 @@ sections:
       color: default
       font: heading
       size: sm
+    content:
+      - heading:
+          color: default
+          font: heading
+          size: lg
+        mainImage:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
+        subheading:
+          color: default
+          font: heading
+          size: md
+        secondaryContent: true
+        theme: default
+        tagline:
+          color: default
+          font: heading
+          size: sm
+        type: Form
+        id: FiveStepsOfShameForm
+        contentStyles:
+          shadow: none
+          maxWidth: lg
+          forcePadding: true
+          mt: 0
+          containerTheme: default
+          radius: none
+          mb: 0
+          textAlign: left
+          split: 1/1
+        description:
+          bullets:
+            size: md
+            icon:
+              color: secondary
     type: Modal
     id: modal-5-steps
     contentStyles:
       split: 1/1
       textAlign: center
-      maxWidth: md
+      maxWidth: lg
       mt: 0
       mb: 0
       py: 10
@@ -451,7 +480,6 @@ sections:
         size: md
         icon:
           color: secondary
-      body: |-
-        Enter your best email and we'll send you a free copy of our
-        ***5 Steps to Let Go of Shame***
+      body: Enter your best email and we'll send you a free copy of our ***5 Steps to
+        Let Go of Shame***
 ---
