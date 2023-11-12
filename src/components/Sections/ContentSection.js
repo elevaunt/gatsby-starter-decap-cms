@@ -49,7 +49,6 @@ const ContentSection = ({
   }
 
   const contentCount = content?.length;
-  console.log({content, contentCount, secondaryContent, contentProps});
   return (
     <Section
       id={id}
@@ -66,7 +65,7 @@ const ContentSection = ({
       <HeadingBlock level={secondaryContent ? 2 : 1}>
         <Content {...contentProps} >
           {buttons?.length > 0 && <Buttons buttons={buttons} />}
-          <Stack direction={["column", "column", "row"]} gap={[4, 4, 6]}>
+          <Stack direction={["column", "column", "row"]} gap={[4, 4, 6]} justifyContent={"center"} width={"100%"}>
             {content?.map((content, key) => renderSection(content, key))}
           </Stack>
         </Content>

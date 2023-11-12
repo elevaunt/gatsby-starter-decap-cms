@@ -31,7 +31,7 @@ const Section = ({
     const { px, py, forcePadding, secondaryContent } = containerStyles;
     containerPadding = secondaryContent && !forcePadding
       ? { px: [0, 0, 0], pt: [py * .66, null, py], pb: [0, 0, 0] }
-      : { px, py: {sm: py * .3, md: py * .66, lg: py} };
+      : { px: { sm: px * .3, md: px * .66, lg: px }, py: {sm: py * .3, md: py * .66, lg: py} };
   } 
 
   const containerTheme = containerStyles && containerStyles.containerTheme;

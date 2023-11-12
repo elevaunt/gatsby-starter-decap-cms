@@ -15,7 +15,7 @@ export const MainTemplate = ({ sections }) => {
 
 MainTemplate.propTypes = {
   pageTitle: PropTypes.string,
-  sections: PropTypes.object,
+  sections: PropTypes.array,
 };
 
 const RenderPage = ({ data }) => {

@@ -18,7 +18,7 @@ const Buttons = ({ buttons, sx }) => {
   const { setOpenModal } = useContext(ModalContext);
   const [stackDirection, setStackDirection]= useState("row");
 
-  const renderButton = (btn, setStackDirection) => {
+  const renderButton = (btn, setStackDirection, index) => {
     let ButtonComponent = Button;
     const iconOnly = btn.icon.position === "iconOnly";
     const icon = {};
@@ -50,6 +50,7 @@ const Buttons = ({ buttons, sx }) => {
           mr: btn.mr,
         })}
         onClick={handleButtonClick}
+        key={index}
       >
         {btn.text}
         {iconOnly && <Icon name={btn.icon.name} />}
@@ -67,7 +68,7 @@ const Buttons = ({ buttons, sx }) => {
         ...sx,
       }}
     >
-      {buttons.map(btn => renderButton(btn, setStackDirection))}
+      {buttons.map((btn, i) => renderButton(btn, setStackDirection, i))}
     </Stack>
   )
 };

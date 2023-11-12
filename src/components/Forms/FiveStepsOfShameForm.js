@@ -51,12 +51,12 @@ const FiveStepsOfShameForm = () => {
       name="mc-embedded-subscribe-form"
       target="_blank"
       onSubmit={(e) => handleFormSubmit(e)}
-      style={{ width: "700px" }
+      style={{ width: "100%", maxWidth: "700px" }
       }>
       <Input
         type="email"
         name="EMAIL"
-        class="required email"
+        className="required email"
         id="mce-EMAIL"
         placeholder="Your email"
         required
@@ -65,10 +65,10 @@ const FiveStepsOfShameForm = () => {
           my: 3,
         }}
       />
-      <input type="hidden" name="tags" value="7425024" />
+      <input type="hidden" name="tags" value="7425024" readOnly />
       <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
         {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
-        <input type="text" name="b_11dbe61816314480c0f50e6c0_faa3297fd9" tabindex="-1" value="" />
+        <input type="text" name="b_11dbe61816314480c0f50e6c0_faa3297fd9" tabIndex="-1" defaultValue="" />
       </div>
       {responseType ? (
         <Alert color={responseType === "success" ? "success" : "danger"} size="lg">{responseMessage}</Alert>

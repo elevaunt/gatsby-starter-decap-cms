@@ -2,7 +2,7 @@
 import React from 'react';
 import Markdown from 'react-markdown'
 import Typography from '@mui/joy/Typography';
-import { Box, List, ListItem, ListItemDecorator, ListItemContent } from '@mui/joy';
+import { Box, List, ListItem, ListItemDecorator, ListItemContent, Link } from '@mui/joy';
 import { Heading, HeadingBlock } from "./Headings";
 import { Block } from "@mui/icons-material";
 import Icon from "./Icon";
@@ -98,8 +98,9 @@ const Content = ({
           <Markdown
             components={{
               ul: List,
-              li(props) { return <ListItemReplacement icon={description.bullets.icon} {...props} /> },
+              li(props) { return <ListItemReplacement icon={description.bullets.icon} key={props.index} {...props} /> },
               p: Typography,
+              a: Link,
             }}
           >{description.body}</Markdown>
         </Typography>
