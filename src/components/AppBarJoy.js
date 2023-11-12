@@ -91,10 +91,10 @@ function AppBarJoy({ hideMenu }) {
   const MenuDesktop = () => {
     return (
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
-        {mainMenu.map((item) => {
+        {mainMenu.map((item, i) => {
           if (item.submenu) {
             return (
-              <Dropdown>
+              <Dropdown key={i}>
                 <MenuButton
                   variant="plain"
                   color="primary"
@@ -169,10 +169,10 @@ function AppBarJoy({ hideMenu }) {
               padding: 2,
             }}
           >
-            {mainMenu.map((item) => {
+            {mainMenu.map((item, i) => {
               if (item.submenu) {
                 return (
-                  <ListItem nested>
+                  <ListItem nested key={i}>
                     <ListSubheader></ListSubheader>
                     <List>
                       {item.submenu.map((submenu) => (
@@ -185,7 +185,7 @@ function AppBarJoy({ hideMenu }) {
                 )
               }
               return (
-                <ListItem key={item.label} >
+                <ListItem key={i} >
                   <ListItemButton {...linkProps(item)} >
                     <Typography textAlign={"left"}>{item.label}</Typography>
                   </ListItemButton>
@@ -306,11 +306,20 @@ function AppBarJoy({ hideMenu }) {
         alignItems="center"
         spacing={2}
       >
-        <LogoDesktop />
-        {!hideMenu && (
+        {hideMenu ? (
           <>
+            <LogoDesktop />
             <MenuMobile />
-            <LogoMobile />
+          </>
+        ) : (
+          <>
+            <Link href="/">
+              <LogoDesktop />
+            </Link>
+            <MenuMobile />
+            <Link href="/">
+              <LogoMobile />
+            </Link>
             <MenuDesktop />
             <ProfileDesktop />
             <ProfileMobile />

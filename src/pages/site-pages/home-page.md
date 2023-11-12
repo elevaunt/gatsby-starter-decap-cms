@@ -497,7 +497,7 @@ sections:
       mt: 0
       mb: 0
       py: 10
-      px: 20
+      px: 7
     description:
       bullets:
         size: md

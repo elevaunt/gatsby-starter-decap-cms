@@ -8,5 +8,5 @@ menuItems:
   - label: About
     url: "#About"
   - label: Contact
-    url: "#contact"
+    url: /contact
 ---
