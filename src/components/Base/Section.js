@@ -28,7 +28,8 @@ const Section = ({
   let containerPadding = {};
 
   if (containerStyles) {
-    const { px, py, forcePadding, secondaryContent } = containerStyles;
+    let { px, py, forcePadding, secondaryContent } = containerStyles;
+    if (!px) px = 3;
     containerPadding = secondaryContent && !forcePadding
       ? { px: [0, 0, 0], pt: [py * .66, null, py], pb: [0, 0, 0] }
       : { px: { sm: px * .3, md: px * .66, lg: px }, py: {sm: py * .3, md: py * .66, lg: py} };

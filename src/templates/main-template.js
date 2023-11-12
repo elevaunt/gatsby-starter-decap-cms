@@ -159,6 +159,7 @@ export const pageQuery = graphql`
               }
               size
             }
+            fontSize
             body
           }
           buttons {

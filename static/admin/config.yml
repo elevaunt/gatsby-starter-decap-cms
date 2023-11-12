@@ -363,6 +363,13 @@ collections:
                           }
                         ]
                     },
+                    { 
+                      label: Font Size, 
+                      name: fontSize, 
+                      widget: select,
+                      default: md,
+                      options: [xs, sm, md, lg, xl], 
+                    },
                     { label: Text, name: body, required: false, widget: markdown }
                   ] 
               },
@@ -769,6 +776,13 @@ collections:
                                     ]
                                 }
                               ]
+                          },
+                          { 
+                            label: Font Size, 
+                            name: fontSize, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl], 
                           },
                           { label: Text, name: body, required: false, widget: markdown }
                         ] 
@@ -1200,6 +1214,13 @@ collections:
                           }
                         ]
                     },
+                    { 
+                      label: Font Size, 
+                      name: fontSize, 
+                      widget: select,
+                      default: md,
+                      options: [xs, sm, md, lg, xl], 
+                    },
                     { label: Text, name: body, required: false, widget: markdown }
                   ] 
               },
@@ -1606,6 +1627,13 @@ collections:
                                     ]
                                 }
                               ]
+                          },
+                          { 
+                            label: Font Size, 
+                            name: fontSize, 
+                            widget: select,
+                            default: md,
+                            options: [xs, sm, md, lg, xl], 
                           },
                           { label: Text, name: body, required: false, widget: markdown }
                         ] 

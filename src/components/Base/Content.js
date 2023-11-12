@@ -2,7 +2,7 @@
 import React from 'react';
 import Markdown from 'react-markdown'
 import Typography from '@mui/joy/Typography';
-import { Box, List, ListItem, ListItemDecorator, ListItemContent, Link } from '@mui/joy';
+import { Box, List, ListItem, ListItemDecorator, ListItemContent, Link, styled } from '@mui/joy';
 import { Heading, HeadingBlock } from "./Headings";
 import { Block } from "@mui/icons-material";
 import Icon from "./Icon";
@@ -63,15 +63,20 @@ const Content = ({
     return (
       <ListItem
         sx={{
+          fontSize: description?.fontSize,
           textAlign: "left",
           alignItems: "flex-start",
         }}
       >
-        {icon.name && <ListItemDecorator><Icon name={icon.name} color={icon.color} /></ListItemDecorator>}
+        {icon.name && <ListItemDecorator><Icon name={icon.name} color={icon.color} size={props.size} /></ListItemDecorator>}
         <ListItemContent>{children}</ListItemContent>
       </ListItem>
     )
   }
+
+  const Description = styled(Markdown)(({ theme }) => ({
+    fontSize: theme.fontSize[description?.fontSize],
+  }))
 
   return (
     <Box
@@ -94,16 +99,16 @@ const Content = ({
         </Heading>
       )}
       {description.body && (
-        <Typography textAlign={contentStyles.textAlign}>
-          <Markdown
-            components={{
-              ul: List,
-              li(props) { return <ListItemReplacement icon={description.bullets.icon} key={props.index} {...props} /> },
-              p: Typography,
-              a: Link,
-            }}
-          >{description.body}</Markdown>
-        </Typography>
+        <Description
+          components={{
+            ul: List,
+            li(props) { return <ListItemReplacement icon={description.bullets.icon} size={description.bullets.size} key={props.index} {...props} /> },
+            p(props) { return <Typography fontSize={description.fontSize} sx={{"+ p": {mt: 2}}} {...props}/>},
+            a(props) { return <Link fontSize={description.fontSize} sx={{color: "#58a77e"}} {...props} /> },
+          }}
+        >
+          {description.body}
+        </Description>
       )}
       {children}
     </Box>
