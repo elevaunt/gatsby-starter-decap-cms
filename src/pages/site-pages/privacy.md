@@ -2,7 +2,7 @@
 templateKey: page
 title: Privacy
 settings:
-  seoTitle: Privacy
+  seoTitle: Privacy Policy
   pageUrl: /privacy
 sections:
   - buttons: []

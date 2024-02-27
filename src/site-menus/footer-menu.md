@@ -1,12 +1,10 @@
 ---
 templateKey: site-menus
 menuItems:
-  - label: Programs
-    submenu:
-      - label: Kids w/ Internal Filters
-        url: /kids
-  - label: About
-    url: "#About"
-  - label: Contact
-    url: "#contact"
+  - label: Privacy
+    url: /privacy
+  - label: Terms
+    url: /terms
+  - label: Disclaimer
+    url: /disclaimer
 ---

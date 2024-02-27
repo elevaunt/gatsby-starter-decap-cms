@@ -1,6 +1,6 @@
 import { extendTheme } from '@mui/joy/styles';
 
-const brandShades = {
+export const brandShades = {
   green01: {
     50: "#F6FBF8",
     100: "#F0F8F2",

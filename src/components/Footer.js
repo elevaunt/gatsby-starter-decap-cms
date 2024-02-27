@@ -1,27 +1,63 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import { Container, Stack } from '@mui/material';
-import Link from '@mui/material/Link';
 import tpcLogoStacked from "../img/tpc-vertical-dark-green.png";
+import { Box, Link, Stack, Typography } from "@mui/joy";
 import Section from './Base/Section';
+import { useStaticQuery, graphql } from "gatsby";
+import { brandShades } from "../configs/themes.mui.config";
 
-function Copyright() {
+const footerTextColor = brandShades.joyNeutral[100];
+
+const Copyright = ()=> {
   return (
-    <Typography variant="body2" color="text.secondary">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+    <Typography fontSize={"xs"} mt={8} sx={{ color: footerTextColor }}>
+      {'Copyright © '} The Porters Coaching {new Date().getFullYear()}
     </Typography>
   );
 }
 
-export default function Footer() {
+const FooterLinks = () => {
+  const data = useStaticQuery(graphql`
+    query FooterMenuQuery {
+      file(name: {eq: "footer-menu"}) {
+        name
+        children {
+          ... on MarkdownRemark {
+            frontmatter {
+              menuItems {
+                label
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const footerMenu = data.file.children[0].frontmatter.menuItems;
+
   return (
-    <Section id="footer" theme="darkest" sx={{flexShrink: 1}}>
+    <Typography className="footer-menu" fontSize={"xs"} mt={1} sx={{ color: footerTextColor }}>
+      {footerMenu.map((item, i) => {
+        const separator = () => {
+          if (i < footerMenu.length - 1) {
+            return <span> | </span>
+          }
+        }
+        return (
+          <>
+            <Link href={item.url} key={i} sx={{ color: footerTextColor }}>{item.label}</Link>{separator()}
+          </>
+        )
+      })}
+    </Typography>
+  )
+}
+
+export default function Footer() {
+
+  return (
+    <Section id="footer" theme="darkest" sx={{ flexShrink: 1 }}>
       <Box
         component="footer"
         sx={{
@@ -50,10 +86,8 @@ export default function Footer() {
               alt="The Porters Coaching"
               style={{ maxWidth: "300px" }}
             />
-            <Typography variant="body1" mt={6}>
-              My sticky footer can be found here.
-            </Typography>
             <Copyright />
+            <FooterLinks />
           </Stack>
         </Box>
       </Box>
