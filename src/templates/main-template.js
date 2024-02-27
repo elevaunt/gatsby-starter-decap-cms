@@ -6,11 +6,11 @@ import renderSection from "../configs/sectionsMap.config";
 
 
 export const MainTemplate = ({ sections }) => {
-  return (
+  return sections ? (
     <main>
       {sections.map((section, key) => renderSection(section, key))}
     </main>
-  );
+  ) : null;
 };
 
 MainTemplate.propTypes = {
@@ -20,9 +20,10 @@ MainTemplate.propTypes = {
 
 const RenderPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  const hideMenu = ["Privacy", "Terms & Conditions", "Disclaimer"].includes(frontmatter.title) || frontmatter.hideMenu;
 
   return (
-    <Layout hideMenu={frontmatter.hideMenu}>
+    <Layout hideMenu={hideMenu}>
       <MainTemplate {...frontmatter} />
     </Layout>
   );

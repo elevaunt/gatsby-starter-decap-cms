@@ -6,11 +6,11 @@ import Layout from "../components/Layout";
 import renderSection from "../configs/sectionsMap.config";
 
 export const MainTemplate = ({ sections }) => {
-  return (
+  return sections ? (
     <main>
       {sections.map((section, key) => renderSection(section, key))}
     </main>
-  );
+  ) : null;
 };
 
 MainTemplate.propTypes = {
