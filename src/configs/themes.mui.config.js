@@ -249,6 +249,7 @@ const createTheme = (prefix, opts) => {
     // },
     typography: {
       h1: {
+        marginBottom: "20px",
         letterSpacing: "0.01em",
       },
       h2: {

@@ -17,10 +17,11 @@ const Image = ({
     borderRadius: theme.vars.radius[radius],
     boxShadow: theme.vars.shadow[shadow],
   }))
+
   return (
     <Box sx={{
-      marginTop: mt,
-      marginBottom: mb,
+      mt,
+      mb: [mb < 0 && (-mb / 2), null, mb],
       ...sx
     }}>
       <AspectRatio objectFit="cover" ratio={aspectRatio || 16/9}>

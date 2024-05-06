@@ -41,7 +41,7 @@ const FooterLinks = () => {
       {footerMenu.map((item, i) => {
         const separator = () => {
           if (i < footerMenu.length - 1) {
-            return <span> | </span>
+            return <span key={"divider-"+i}> | </span>
           }
         }
         return (

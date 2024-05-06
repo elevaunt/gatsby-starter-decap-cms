@@ -40,6 +40,21 @@ const Content = ({
     }
   }
 
+  // TODO: Make a map of responsive font sizes. Should probably live outside this
+  const responsiveFontSizes = {
+    xs: {xs: "xs"},
+    sm: {xs: "sm"},
+    md: {xs: "sm", sm: "md"},
+    lg: {xs: "md", sm: "lg"},
+    xl: {xs: "lg", sm: "xl"},
+    xl2: {xs: "lg", sm: "xl", md: "xl2"},
+    xl3: {xs: "xl", sm: "xl2", md: "xl3"},
+    xl4: {xs: "xl2", sm: "xl3", md: "xl4"},
+    xl5: {xs: "xl3", sm: "xl4", md: "xl5"},
+    xl6: {xs: "xl4", sm: "xl5", md: "xl6"},
+    xl7: {xs: "xl5", sm: "xl6", md: "xl7"},
+  }
+
   const alignItems = contentStyles?.textAlign === "center" ? "center" : contentStyles?.textAlign === "right" ? "flex-end" : "flex-start";
 
   const renderHeading = (headingType, headingProps) => {
@@ -47,7 +62,7 @@ const Content = ({
     return (
       <Typography
         level={type[headingType][headingProps.type]}
-        fontSize={headingProps.size}
+        fontSize={responsiveFontSizes[headingProps.size]}
         color={headingProps.color}
         sx={(theme) => ({
           display: "block",
@@ -83,7 +98,8 @@ const Content = ({
       sx={() => ({
         display: 'flex',
         flexDirection: 'column',
-        alignItems: ['center', 'center', alignItems],
+        // alignItems: ['center', 'center', alignItems],
+        alignItems: alignItems,
         textAlign: contentStyles.textAlign,
         justifyContent: 'center',
         gap: 0,

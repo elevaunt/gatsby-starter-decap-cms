@@ -95,7 +95,7 @@ export default function Cta01({
     <Section
       id={id}
       theme={theme}
-      containerSx={{ py: 2 }}
+      containerSx={{ mt: [8, 2, 2], py: 2 }}
       maxWidth={contentStyles.maxWidth}
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}

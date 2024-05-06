@@ -26,13 +26,15 @@ const Section = ({
 
   const sectionTheme = themeMap[theme] || defaultTheme;
   let containerPadding = {};
+  let containerMargin = {}
 
   if (containerStyles) {
-    let { px, py, forcePadding, secondaryContent } = containerStyles;
+    let { mt, mb, px, py, forcePadding, secondaryContent } = containerStyles;
     if (!px) px = 3;
     containerPadding = secondaryContent && !forcePadding
       ? { px: [0, 0, 0], pt: [py * .66, null, py], pb: [0, 0, 0] }
-      : { px: { sm: px * .3, md: px * .66, lg: px }, py: {sm: py * .3, md: py * .66, lg: py} };
+      : { px: [px * .3, px * .66, px], py: [py * .3, py * .66, py] };
+    containerMargin = {mt: [mt * .3, mt * .66, mt], mb: [mb * .3, mb * .66, mb ]}
   } 
 
   const containerTheme = containerStyles && containerStyles.containerTheme;
@@ -57,8 +59,7 @@ const Section = ({
                 backgroundColor: `background.body`,
                 borderRadius: containerTheme.vars.radius[containerStyles?.radius],
                 boxShadow: containerTheme.vars.shadow[containerStyles?.shadow],
-                mt: containerStyles?.mt,
-                mb: containerStyles?.mb,
+                ...containerMargin,
                 ...containerPadding,
                 ...containerSx,
               })}

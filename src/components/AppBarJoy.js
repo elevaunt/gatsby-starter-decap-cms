@@ -161,7 +161,7 @@ function AppBarJoy({ hideMenu }) {
             backgroundColor: "background.body",
           }}
         >
-          <ModalClose color={"primary"} />
+          <ModalClose color={"primary"} size="xl" sx={{top: "20px", right: "15px"}}/>
           <List
             id="menu-appbar-mobile"
             sx={{
@@ -313,16 +313,16 @@ function AppBarJoy({ hideMenu }) {
           </>
         ) : (
           <>
-            <Link href="/">
+            <Link href="/" sx={{ display: { xs: 'none', md: 'inline' } }}>
               <LogoDesktop />
             </Link>
-            <MenuMobile />
-            <Link href="/">
+            <Link href="/" sx={{ display: { xs: 'inline', md: 'none' }, ml: "0 !important" }}>
               <LogoMobile />
             </Link>
+            <MenuMobile />
             <MenuDesktop />
-            <ProfileDesktop />
-            <ProfileMobile />
+            {/* <ProfileDesktop />
+            <ProfileMobile /> */}
           </>
         )}
       </Stack>
