@@ -29,7 +29,6 @@ const FiveStepsOfShameForm = () => {
       if (data.result !== "success") {
         throw new Error("response not OK");
       }
-      console.log(data);
       if (data.result === "success") {
         setResponseType("success");
       } else {
