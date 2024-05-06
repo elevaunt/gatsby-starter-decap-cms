@@ -1,18 +1,18 @@
 ---
 templateKey: page
-title: Home page - Find Your Power Over Pornography
+title: Home page - Mental Programmers
 settings:
-  seoTitle: Home - Old
-  pageUrl: /home-old
-  description: "We Help People Overcome Pornography So That They Can Heal From
-    Past Wounds And Live A Shame Free Life Full Of Joy.  "
+  seoTitle: Home
+  pageUrl: /
+  description: We help amazing people like you reprogram their minds to live the
+    fulfilling life they desire
   shareImage: /img/amanda-leaning-on-lee-green-popsicles.jpg
 sections:
   - heading:
       color: default
       font: heading
       size: xl7
-      text: FIND YOUR POWER
+      text: PROGRAM YOUR MIND
     mainImage:
       position: right
       radius: lg
@@ -25,13 +25,14 @@ sections:
       color: primary
       font: secondary
       size: xl3
-      text: Over Pornography
+      text: For Massive Success
     theme: default
     tagline:
-      color: default
+      color: secondary
       font: heading
       size: xl3
-      text: LEARN HOW YOU CAN
+      text: ARE YOU READY TO
+    content: []
     type: Hero 01
     id: Hero
     contentStyles:
@@ -47,8 +48,8 @@ sections:
         size: md
         icon:
           color: secondary
-      body: We Help People Overcome Pornography So That They Can Heal From Past
-        Wounds And Live A Shame Free Life Full Of Joy.
+      body: We Help Amazing People Like You Reprogram Their Minds To Reach Their
+        Dreams And Live A Life Full Of Purpose
       fontSize: md
   - buttons:
       - size: xl
@@ -69,7 +70,7 @@ sections:
       color: default
       font: heading
       size: xl3
-      text: Want to let go of shame in 5 easy steps?
+      text: Ready to master your mind and emotions?
     mainImage:
       position: left
       radius: none
@@ -103,8 +104,7 @@ sections:
         size: md
         icon:
           color: secondary
-      body: Shame is a major factor holding you back from the progress you want.  Get
-        your free copy of our ***5 Steps to Let Go of Shame***.
+      body: Get notified of our upcoming **FREE** events to learn more
       fontSize: md
   - heading:
       color: default
@@ -146,24 +146,16 @@ sections:
         icon:
           color: secondary
       body: >-
-        We’ve been there, we know the struggle and the pain that can persist
-        with a porn habit. We know the heartache it can cause.\
+        Lee & Amanda were turned onto the personal development space over 15
+        years ago, and have been fascinated by the power of the mind ever
+        since.  Lee learned first hand the power of life coaching when he hired
+        a personal life coach and tripled his income in 3 years.
 
-        \
 
-        We've also spent hundreds of hours learning about how the brain works and how to program the results you want!  We are Master Practitioners in Neurolinguistic Programming (NLP).  What does this mean for you? \
+        Later, Amanda built a business in the health and wellness space where she helped hundreds of individuals not only improve their physical health, but also their mental health.  Together, Amanda and Lee spoke at events, provided personal coaching, and trained hundreds as they also built their own businesses.
 
-        \
 
-        We know how to help you CHANGE your mind!\
-
-        \
-
-        We have found tools that worked for us to finally find peace and healing from the problems that come from pornography use.\
-
-        \
-
-        Now we want to share what we’ve learned with you, so you can experience the hope and joy that comes from healing and living in alignment with your values.
+        In 2020, they were introduced to Neuro Linguistic Programming (NLP) and quickly recognized that the tools available through NLP were the key to creating lasting change for individuals.  They both became certified as Practitioners and Master Practitioners and have effectively helped business owners and those looking to level up their lives to reach their full potential.
       fontSize: md
   - buttons: []
     heading:
@@ -191,16 +183,15 @@ sections:
           color: default
           font: heading
           size: xl4
-          text: Worried about your children?
+          text: Can’t reach that next level?
         mainImage:
           position: top
           radius: none
           mt: 0
           mb: 0
           shadow: none
-          image: /img/kateryna-hliznitsova-tpav7j9z6em-unsplash.jpg
-          alt: Teens with laptop
-          aspectRatio: 16/9
+          image: /img/man-on-phone-in-cafe.jpg
+          alt: Professional Man
         subheading:
           color: default
           font: heading
@@ -212,7 +203,7 @@ sections:
           font: heading
           size: sm
         type: Content
-        id: Parents
+        id: Missing-Goals
         contentStyles:
           shadow: none
           maxWidth: xl
@@ -231,32 +222,26 @@ sections:
               color: secondary
               name: KeyboardDoubleArrowRight
           body: >-
-            Unsure of what you will do if your kid comes with questions about
-            sex or you discover a history of inappropriate online searches?
-            Maybe you hoped your online filters would create safety only to find
-            out kids at school talked about or showed your child something.
+            * You have **BIG GOALS** but you can’t seem to reach them?
 
+            * You **work hard** but your income seems to have plateaued?
 
-            * ​**Unsure** of what to say and how to get started
+            * You want to **make changes** but aren’t sure where to begin?
 
-            * ​**Afraid** of creating too much curiosity
-
-            * ​​**Uncomfortable** speaking about pornography / sexuality
-
-            * **​Don’t know what to do** besides external filters
+            * You **feel stuck** and frustrated because things just aren’t working out?
           fontSize: md
       - heading:
           color: default
           font: heading
           size: xl4
-          text: Struggling to kick a Porn habit?
+          text: Missing something in life?
         mainImage:
           position: top
           radius: none
           mt: 0
           mb: 0
           shadow: none
-          image: /img/man-frustrated-glasses.jpg
+          image: /img/woman-eyes-closed.jpg
           alt: Frustrated Man
         subheading:
           color: default
@@ -269,7 +254,7 @@ sections:
           font: heading
           size: sm
         type: Content
-        id: Users
+        id: Missing-Purpose
         contentStyles:
           shadow: none
           maxWidth: xl
@@ -288,18 +273,13 @@ sections:
               color: secondary
               name: KeyboardDoubleArrowRight
           body: >-
-            
+            * Are you **successful**, but still feel like you have more to give?
 
-            Maybe you've been viewing porn for decades, maybe it's only been a short while.  Regardless of how long it's been, maybe you are experiencing some of the same feelings we did for years. Can you relate?
+            * Are you **new in your career** and want to make it meaningful?
 
+            * Are you **a parent** looking to make a significant impact for your family?
 
-            * ​**Frustrated** because you've wanted to quit but don't know how
-
-            * ​**Hopeless**, you've tried everything you can think of but nothing has worked
-
-            * ​​**Feeling terrible** about yourself every time you view porn
-
-            * ​**Scared** you may lose all you hold dear
+            * Are you **hungry for more** and want to fulfill your purpose?
           fontSize: md
     type: Content
     id: Problems
@@ -317,11 +297,50 @@ sections:
         icon:
           color: secondary
       fontSize: md
+      body: ""
+  - heading:
+      color: default
+      font: heading
+      size: lg
+    mainImage:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
+    tagline:
+      color: default
+      font: heading
+      size: sm
+    type: Content
+    id: Problems-02
+    contentStyles:
+      split: 1/1
+      textAlign: center
+      maxWidth: xl
+      mt: -20
+      mb: 0
+      px: 10
+      py: 10
+    description:
+      bullets:
+        size: md
+        icon:
+          color: secondary
+      fontSize: lg
+      body: "***Perhaps it's time to look inward and discover what old programs you
+        have running that are keeping you from fulfilling your biggest
+        dreams?***"
   - heading:
       color: default
       font: heading
       size: xl7
-      text: We can Teach you how to quit Forever!
+      text: We can Teach you to Master Your Mind
     mainImage:
       position: bottom
       radius: none
@@ -342,7 +361,7 @@ sections:
       font: heading
       size: sm
     type: Content
-    id: Quit-Forever
+    id: Mind-Mastery
     contentStyles:
       split: 1/1
       textAlign: center
@@ -356,17 +375,14 @@ sections:
         icon:
           color: secondary
       body: >-
-        You don't need more willpower to quit porn.  But instead, **you need
-        tools** to help you change your programming (habits).  You're brain and
-        body are actually doing what they are supposed to do. \
+        You don't need more willpower to make significant change.  But instead,
+        **you need tools** to help you change your programming (habits). 
 
-        \
 
-        So instead of continuing an internal struggle that seems like it may never end, or deciding to just give up, how much better would it be to learn how to reprogram your brain **to get the results you want?** \
+        So instead of continuing an internal struggle that seems like it may never end, or deciding to just give up, how much better would it be to learn how to reprogram your brain **to get the results you want?**
 
-        \
 
-        We can teach you the tools and skills you need so you can finally find healing for yourself, your relationships, and all other areas of your life - **shame free!**
+        We can teach you the tools and skills you need to clean out your past, design your future, and **create the reality you truly want**.
       fontSize: md
   - buttons:
       - size: xl2
@@ -374,7 +390,7 @@ sections:
         variant: solid
         mr: 0
         mt: 2
-        text: 5 STEPS TO LET GO OF SHAME
+        text: NOTIFY ME!
         url: "#modal-5-steps"
         mb: 0
         action: modal
@@ -386,7 +402,7 @@ sections:
       color: default
       font: heading
       size: xl4
-      text: Let Go OF Shame and Make Progress!
+      text: Mastery is within reach
     mainImage:
       position: left
       radius: none
@@ -419,16 +435,16 @@ sections:
         size: md
         icon:
           color: secondary
-      body: |-
-        **Click The Button** Below And Give Us Your Best Email Address\
-        To Get Your Free Copy!
+      body: Join our next webinar to learn how mental programming can change your
+        life.  Click the button below and give us your best email to send the
+        notification.
       fontSize: md
   - buttons: []
     heading:
       color: default
       font: heading
       size: xl4
-      text: You're ready to Make Progress. We can help
+      text: You're ready to Master Your Mind
     mainImage:
       position: top
       radius: none
@@ -436,9 +452,10 @@ sections:
       mb: 0
       shadow: none
     subheading:
-      color: default
-      font: secondary
-      size: md
+      color: primary
+      font: handwriting
+      size: xl3
+      text: Let's Do This!
     theme: default
     tagline:
       color: default
@@ -451,7 +468,7 @@ sections:
             variant: solid
             mr: 0
             mt: 0
-            text: TEST
+            text: Notify Me
             url: /
             mb: 0
             action: link
@@ -480,7 +497,7 @@ sections:
           font: heading
           size: sm
         type: Form
-        id: FiveStepsOfShameForm
+        id: NotifyOfEventsForm
         contentStyles:
           shadow: none
           maxWidth: lg
@@ -512,7 +529,7 @@ sections:
         size: md
         icon:
           color: secondary
-      body: Enter your best email and we'll send you a free copy of our ***5 Steps to
-        Let Go of Shame***
+      body: Enter your best email to ***get notified of our next events*** so you can
+        learn more about how to reprogram your mind for massive success!
       fontSize: md
 ---
