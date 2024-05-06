@@ -7,7 +7,7 @@ import Icon from "./Icon";
 import { ModalContext } from "../Layout";
 
 export const linkProps = (btn) => {
-  if (!btn.url) return;
+  if (!btn.url || btn.action === "modal") return;
   return {
     component: 'a',
     href: btn.url
@@ -30,6 +30,7 @@ const Buttons = ({ buttons, sx }) => {
     }
     const handleButtonClick = (e) => {
       if (btn.action === "modal") {
+        console.log(btn.url);
         setOpenModal(btn.url.replace("#", ""));
       }
     }

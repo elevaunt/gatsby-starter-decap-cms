@@ -9,7 +9,7 @@ const formAction = "https://assets.mailerlite.com/jsonp/932522/forms/12028243572
 const NotifyOfEventsForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState(null);
-  const [responseType, setResponseType] = useState("success");
+  const [responseType, setResponseType] = useState(null);
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -21,7 +21,6 @@ const NotifyOfEventsForm = () => {
         body: formData
       });
       const data = await response.json();
-      console.log("data", data);
       if (!data.success) {
         setResponseMessage(data.errors.fields.email[0] || "Failed to submit. Please check your email and try agin later");
         throw new Error(data.errors.fields.email[0]);

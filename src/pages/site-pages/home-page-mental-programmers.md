@@ -58,7 +58,7 @@ sections:
         mr: 0
         mt: 0
         text: ""
-        url: "#modal-5-steps"
+        url: "#notify-of-events"
         mb: 0
         action: modal
         icon:
@@ -391,7 +391,7 @@ sections:
         mr: 0
         mt: 2
         text: NOTIFY ME!
-        url: "#modal-5-steps"
+        url: "#notify-of-events"
         mb: 0
         action: modal
         icon:
@@ -515,7 +515,7 @@ sections:
               color: secondary
           fontSize: md
     type: Modal
-    id: modal-5-steps
+    id: notify-of-events
     contentStyles:
       split: 1/1
       textAlign: center

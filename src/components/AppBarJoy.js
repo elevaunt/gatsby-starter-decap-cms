@@ -31,10 +31,7 @@ function AppBarJoy({ hideMenu }) {
               menuItems {
                 label
                 url
-                submenu {
-                  label
-                  url
-                }
+
               }
             }
           }
@@ -42,6 +39,12 @@ function AppBarJoy({ hideMenu }) {
       }
     }
   `)
+// Save for when I need to put submenus back into the menu
+// line 34
+// submenu {
+//   label
+//   url
+// }
 
   const mainMenu = data.file.children[0].frontmatter.menuItems;
 
