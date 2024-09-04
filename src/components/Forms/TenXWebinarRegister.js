@@ -61,60 +61,43 @@ const TenXWebinarRegister = () => {
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               justifyContent="center"
-              alignItems="stretch"
+              alignItems={{ xs: 'center', sm: 'stretch' }}
               spacing={5}
             >
               <Stack
                 direction="column"
                 justifyContent="center"
                 alignItems="stretch"
-                spacing={1}
+                spacing={2}
                 width="50%"
               >
-                <div class="ml-form-fieldRow ">
-                  <div class="ml-field-group ml-field-name ml-validate-required">
-                    <FormLabel>First Name*</FormLabel>
-                    <Input aria-label="name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="given-name" required />
-                  </div>
+                <div>
+                  <FormLabel>First Name*</FormLabel>
+                  <Input aria-label="name" aria-required="true" type="text" data-inputmask="" name="fields[name]" placeholder="Frist Name" autocomplete="given-name" required />
                 </div>
-                <div class="ml-form-fieldRow ">
-                  <div class="ml-field-group ml-field-last_name ml-validate-required">
-                    <FormLabel>Last name*</FormLabel>
-                    <Input aria-label="last_name" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[last_name]" placeholder="" autocomplete="family-name" required />
-                  </div>
+                <div>
+                  <FormLabel>Last name*</FormLabel>
+                  <Input aria-label="last_name" aria-required="true" type="text" data-inputmask="" name="fields[last_name]" placeholder="Last Name" autocomplete="family-name" required />
                 </div>
-                <div class="ml-form-fieldRow ">
-                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                    <FormLabel>Email*</FormLabel>
-                    <Input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email" required />
-                  </div>
+                <div>
+                  <FormLabel>Email*</FormLabel>
+                  <Input aria-label="email" aria-required="true" type="email" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" required />
                 </div>
-                <div class="ml-form-fieldRow ml-last-item">
-                  <div class="ml-field-group ml-field-phone ml-validate-required">
-                    <FormLabel>Phone</FormLabel>
-                    <Input aria-label="phone" type="text" class="form-control" data-inputmask="" name="fields[phone]" placeholder="" autocomplete="" />
-                  </div>
+                <div>
+                  <FormLabel>Phone</FormLabel>
+                  <Input aria-label="phone" type="text" data-inputmask="" name="fields[phone]" placeholder="Phone" autocomplete="" />
                 </div>
               </Stack>
 
               <Box width="50%">
-                <div class="ml-form-fieldRow ml-last-item">
-                  <div class="ml-field-group ml-field-referral ml-validate-required">
-                    <FormLabel>How did you hear about us?*</FormLabel>
-                    <RadioGroup defaultValue="outlined" name="radio-buttons-group" required>
-                      <Radio aria-label="referral" aria-required="true" name="fields[referral]" class="custom-control-input"
-                        type="radio" value="Social Media" id="radio-17727095-43}-0" label="Social Media" size="sm" />
-                      <Radio aria-label="referral" aria-required="true" name="fields[referral]" class="custom-control-input"
-                        type="radio" value="A friend invited me" label="A friend invited me" id="radio-17727095-43}-1" size="sm" />
-                      <Radio aria-label="referral" aria-required="true" name="fields[referral]" class="custom-control-input"
-                        type="radio" value="Invited by Lee" label="Invited by Lee" id="radio-17727095-43}-2" size="sm" />
-                      <Radio aria-label="referral" aria-required="true" name="fields[referral]" class="custom-control-input"
-                        type="radio" value="Heard there was a party... where&#039;s the food" label="Heard there was a party... where&#039;s the food" id="radio-17727095-43}-3" size="sm" />
-                      <Radio aria-label="referral" aria-required="true" name="fields[referral]" class="custom-control-input"
-                        type="radio" value="Other" label="Other" id="radio-17727095-43}-4" size="sm" />
-                    </RadioGroup>
-                  </div>
-                </div>
+                <FormLabel>How did you hear about us?*</FormLabel>
+                <RadioGroup defaultValue="outlined" name="radio-buttons-group" required>
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Social Media" id="radio-17727095-43}-0" label="Social Media" size="sm" />
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="A friend invited me" label="A friend invited me" id="radio-17727095-43}-1" size="sm" />
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Invited by Lee" label="Invited by Lee" id="radio-17727095-43}-2" size="sm" />
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Heard there was a party... where&#039;s the food" label="Heard there was a party... where&#039;s the food" id="radio-17727095-43}-3" size="sm" />
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Other" label="Other" id="radio-17727095-43}-4" size="sm" />
+                </RadioGroup>
               </Box>
             </Stack>
 
