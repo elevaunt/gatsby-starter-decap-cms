@@ -54,7 +54,7 @@ export default function Hero({
       {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
       <HeadingBlock>
         <Content {...contentProps} >
-          {buttons?.length && <Buttons buttons={buttons} sx={{ pt: 4 }} />}
+          {buttons?.length ? <Buttons buttons={buttons} sx={{ pt: 4 }} /> : null}
         </Content>
       </HeadingBlock>
       {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}

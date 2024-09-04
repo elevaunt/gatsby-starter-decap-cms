@@ -24,7 +24,7 @@ const Image = ({
       mb: [mb < 0 && (-mb / 2), null, mb],
       ...sx
     }}>
-      <AspectRatio objectFit="cover" ratio={aspectRatio || 16/9}>
+      <AspectRatio objectFit="cover" ratio={aspectRatio || 16/9} variant="plain">
         <Image src={img.src} srcSet={img.srcSet} alt={alt} />
       </AspectRatio>
     </Box>
