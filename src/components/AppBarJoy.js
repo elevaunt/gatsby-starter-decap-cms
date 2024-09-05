@@ -39,12 +39,12 @@ function AppBarJoy({ hideMenu }) {
       }
     }
   `)
-// Save for when I need to put submenus back into the menu
-// line 34
-// submenu {
-//   label
-//   url
-// }
+  // Save for when I need to put submenus back into the menu
+  // line 34
+  // submenu {
+  //   label
+  //   url
+  // }
 
   const mainMenu = data.file.children[0].frontmatter.menuItems;
 
@@ -57,13 +57,14 @@ function AppBarJoy({ hideMenu }) {
     />
   );
 
-  const LogoMobile = () => (
+  const LogoMobile = ({ center }) => (
     <Box
       sx={{
         display: { xs: 'flex', md: 'none' },
         flexGrow: 0,
         mr: 1,
-        maxWidth: "180px"
+        ml: center && "0 !important",
+        maxWidth: center? "120px" : "180px"
       }}
     >
       <Box
@@ -164,7 +165,7 @@ function AppBarJoy({ hideMenu }) {
             backgroundColor: "background.body",
           }}
         >
-          <ModalClose color={"primary"} size="xl" sx={{top: "20px", right: "15px"}}/>
+          <ModalClose color={"primary"} size="xl" sx={{ top: "20px", right: "15px" }} />
           <List
             id="menu-appbar-mobile"
             sx={{
@@ -302,17 +303,23 @@ function AppBarJoy({ hideMenu }) {
   )
 
   return (
-    <Container maxWidth="xl" sx={{ py: 2 }}>
+    <Container 
+      maxWidth="xl" 
+      sx={{ 
+        py: hideMenu ? 1 : 2, 
+        bgcolor: { xs: hideMenu && `background.colored`, md: "transparent"},
+        mb: { xs: hideMenu && 2, md: 0},
+      }}>
       <Stack
         direction={"row"}
-        justifyContent={{ xs: "space-between", md: "flex-start" }}
+        justifyContent={{ xs: hideMenu ? "center" : "space-between", md: "flex-start" }}
         alignItems="center"
         spacing={2}
       >
         {hideMenu ? (
           <>
             <LogoDesktop />
-            <MenuMobile />
+            <LogoMobile center />
           </>
         ) : (
           <>

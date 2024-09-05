@@ -247,7 +247,7 @@ sections:
         icon:
           color: secondary
           name: TrendingFlat
-      fontSize: xs
+      fontSize: sm
       body: >-
         * **The Ultimate Success Shortcut**\
           How To Completely Transform Your Life And Work Less While Doing It
@@ -291,7 +291,7 @@ sections:
         icon:
           color: secondary
           name: TrendingFlat
-      fontSize: xs
+      fontSize: sm
       body: >-
         * Attend two more trainings as part of the pilot program
 
@@ -334,7 +334,7 @@ sections:
         icon:
           color: secondary
           name: TrendingFlat
-      fontSize: xs
+      fontSize: sm
       body: >-
         * Continued learning from different perspectives
 
@@ -377,7 +377,7 @@ sections:
         icon:
           color: secondary
           name: TrendingFlat
-      fontSize: xs
+      fontSize: sm
       body: >-
         * One-on-one phone call
 
