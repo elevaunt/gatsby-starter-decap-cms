@@ -3,10 +3,10 @@ templateKey: page
 title: Test Product
 settings:
   pageUrl: /test-product
-  hasProductPage: true
-  featuredProduct: true
+  hasProductPage: false
+  featuredProduct: false
   seoTitle: Test Product
-  funnelUrl: /
+  funnelUrl: /go-10x
   description: /
   shareImage: /img/products-grid2.jpg
 priceSettings:

@@ -69,7 +69,7 @@ const TenXWebinarRegister = () => {
                 justifyContent="center"
                 alignItems="stretch"
                 spacing={2}
-                width="50%"
+                width={{ xs: '80%', sm: '50%' }}
               >
                 <div>
                   <FormLabel>First Name*</FormLabel>
@@ -89,7 +89,9 @@ const TenXWebinarRegister = () => {
                 </div>
               </Stack>
 
-              <Box width="50%">
+              <Box
+                width={{ xs: '80%', sm: '50%' }}
+              >
                 <FormLabel>How did you hear about us?*</FormLabel>
                 <RadioGroup defaultValue="outlined" name="radio-buttons-group" required>
                   <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Social Media" id="radio-17727095-43}-0" label="Social Media" size="sm" />

@@ -15,7 +15,7 @@ sections:
         mt: 0
         text: REGISTER NOW
         url: "#Form"
-        mb: 0
+        mb: 4
         action: link
         icon:
           position: after
@@ -129,7 +129,7 @@ sections:
       maxWidth: xl
       mt: 0
       mb: 0
-      py: 3
+      py: 6
     description:
       bullets:
         size: md
@@ -225,8 +225,8 @@ sections:
           forcePadding: true
           mt: 0
           containerTheme: default
-          px: 3
-          py: 3
+          px: 4
+          py: 6
           radius: lg
           mb: 0
           textAlign: center
@@ -252,7 +252,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: How To Rewrite Your History To Change Your Present Reality
+          text: How To Rewrite Your History And Change Your Present Reality
         secondaryContent: true
         theme: colored
         tagline:
@@ -268,8 +268,8 @@ sections:
           forcePadding: true
           mt: 0
           containerTheme: default
-          px: 3
-          py: 3
+          px: 4
+          py: 6
           radius: lg
           mb: 0
           textAlign: center
@@ -312,8 +312,8 @@ sections:
           forcePadding: true
           mt: 0
           containerTheme: default
-          px: 3
-          py: 3
+          px: 4
+          py: 6
           radius: lg
           mb: 0
           textAlign: center
@@ -329,10 +329,11 @@ sections:
     contentStyles:
       split: 1/2
       textAlign: center
-      maxWidth: lg
+      maxWidth: xl
       mt: 0
       mb: 0
       py: 1
+      px: 20
     description:
       bullets:
         size: md
@@ -366,7 +367,7 @@ sections:
       maxWidth: xl
       mt: 0
       mb: 0
-      py: 7
+      py: 9
     description:
       bullets:
         size: md
@@ -419,10 +420,11 @@ sections:
         id: TenXWebinarRegister
         contentStyles:
           shadow: none
-          maxWidth: sm
+          maxWidth: lg
           forcePadding: true
           mt: 0
           containerTheme: default
+          px: 10
           radius: none
           mb: 0
           textAlign: left
@@ -438,9 +440,10 @@ sections:
     contentStyles:
       split: 1/1
       textAlign: center
-      maxWidth: md
+      maxWidth: lg
       mt: 10
       mb: 10
+      px: 4
     description:
       bullets:
         size: md
