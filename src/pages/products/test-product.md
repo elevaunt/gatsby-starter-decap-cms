@@ -15,7 +15,9 @@ purchaseAction:
   assetDownload: /img/apple-touch-icon.png
   courseName: /
 featuredimage: /img/products-grid2.jpg
+video: cadasfc
 tagline: /
 shortDescription: This is an excellent product
+vide: fdasf
 ---
 This is an excellent product

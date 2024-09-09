@@ -73,7 +73,7 @@ const TenXWebinarRegister = () => {
               >
                 <div>
                   <FormLabel>First Name*</FormLabel>
-                  <Input aria-label="name" aria-required="true" type="text" data-inputmask="" name="fields[name]" placeholder="Frist Name" autocomplete="given-name" required />
+                  <Input aria-label="name" aria-required="true" type="text" data-inputmask="" name="fields[name]" placeholder="First Name" autocomplete="given-name" required />
                 </div>
                 <div>
                   <FormLabel>Last name*</FormLabel>
@@ -97,7 +97,7 @@ const TenXWebinarRegister = () => {
                   <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Social Media" id="radio-17727095-43}-0" label="Social Media" size="sm" />
                   <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="A friend invited me" label="A friend invited me" id="radio-17727095-43}-1" size="sm" />
                   <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Invited by Lee" label="Invited by Lee" id="radio-17727095-43}-2" size="sm" />
-                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Heard there was a party... where&#039;s the food" label="Heard there was a party... where&#039;s the food" id="radio-17727095-43}-3" size="sm" />
+                  <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Heard there was a party... where&#039;s the food" label="Heard there was a party... where&#039;s the food?" id="radio-17727095-43}-3" size="sm" />
                   <Radio aria-label="referral" aria-required="true" name="fields[referral]" type="radio" value="Other" label="Other" id="radio-17727095-43}-4" size="sm" />
                 </RadioGroup>
               </Box>

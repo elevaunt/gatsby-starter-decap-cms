@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Image from '../Base/Image';
+import Media from '../Base/Media';
 import Section from '../Base/Section';
 import Buttons from "../Base/Buttons";
 import Content from "../Base/Content";
@@ -60,7 +60,7 @@ export default function Cta01({
   id,
   theme,
   contentStyles,
-  mainImage,
+  mainMedia,
   tagline,
   subheading,
   heading,
@@ -68,7 +68,7 @@ export default function Cta01({
   buttons,
 }) {
   // const imgRatio = img?.width ? img.width / img.height : 3 / 4;
-  const imgPosition = mainImage.position;
+  const imgPosition = mainMedia?.position;
   let direction = "row";
   let mobileDirection = "column";
   if (["top", "bottom"].includes(imgPosition)) {
@@ -100,11 +100,11 @@ export default function Cta01({
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
     >
-      {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {["top", "left"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
       <HeadingBlock level={1}>
         <Content {...contentProps} />
       </HeadingBlock>
-      {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {["right", "bottom"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
       {buttons?.length && <Buttons buttons={buttons} />}
     </Section>
   );

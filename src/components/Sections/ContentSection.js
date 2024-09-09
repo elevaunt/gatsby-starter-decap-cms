@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Image from '../Base/Image';
+import Media from "../Base/Media";
 import Section from '../Base/Section';
 import Content from "../Base/Content";
 import Buttons from "../Base/Buttons";
@@ -14,7 +14,7 @@ const ContentSection = ({
   id,
   theme,
   contentStyles,
-  mainImage,
+  mainMedia,
   tagline,
   heading,
   subheading,
@@ -24,7 +24,7 @@ const ContentSection = ({
   secondaryContent,
 }) => {
   const { primaryFlexBasis, secondaryFlexBasis } = useFlexBasis(contentStyles.split);
-  const imgPosition = mainImage.position;
+  const imgPosition = mainMedia?.position;
   let direction = "row";
   let mobileDirection = "column";
   if (["top", "bottom"].includes(imgPosition) || contentStyles.split === "1/1") {
@@ -61,7 +61,7 @@ const ContentSection = ({
         flex: "0 1 100%",
       }}
     >
-      {mainImage.image && ["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {mainMedia?.image && ["top", "left"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
       <HeadingBlock level={secondaryContent ? 2 : 1}>
         <Content {...contentProps} >
           {buttons?.length > 0 && <Buttons buttons={buttons} />}
@@ -70,7 +70,7 @@ const ContentSection = ({
           </Stack>
         </Content>
       </HeadingBlock>
-      {mainImage.image && ["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {mainMedia?.image && ["right", "bottom"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
     </Section>
   );
 };

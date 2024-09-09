@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import Image from '../Base/Image';
+import Media from '../Base/Media';
 import Section from '../Base/Section';
 import Content from "../Base/Content";
 import Buttons from "../Base/Buttons";
@@ -11,7 +11,7 @@ export default function Hero({
   id,
   theme,
   contentStyles,
-  mainImage,
+  mainMedia,
   tagline,
   subheading,
   heading,
@@ -19,7 +19,7 @@ export default function Hero({
   buttons,
 }) {
   // const imgRatio = img?.width ? img.width / img.height : 3 / 4;
-  const imgPosition = mainImage.position;
+  const imgPosition = mainMedia?.position;
   let direction = "row";
   let mobileDirection = "column";
   if (["top", "bottom"].includes(imgPosition)) {
@@ -51,13 +51,13 @@ export default function Hero({
       stackDirection={[mobileDirection, mobileDirection, direction]}
       stackGap={4}
     >
-      {["top", "left"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {["top", "left"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
       <HeadingBlock>
         <Content {...contentProps} >
           {buttons?.length ? <Buttons buttons={buttons} sx={{ pt: 4 }} /> : null}
         </Content>
       </HeadingBlock>
-      {["right", "bottom"].includes(imgPosition) && <Image {...mainImage} sx={imgSx} />}
+      {["right", "bottom"].includes(imgPosition) && <Media {...mainMedia} sx={imgSx} />}
     </Section>
   );
 }

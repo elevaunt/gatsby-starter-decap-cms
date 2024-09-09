@@ -13,7 +13,7 @@ sections:
       font: heading
       size: xl7
       text: FIND YOUR POWER
-    mainImage:
+    mainMedia:
       position: right
       radius: lg
       mt: 0
@@ -70,7 +70,7 @@ sections:
       font: heading
       size: xl3
       text: Want to let go of shame in 5 easy steps?
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: -1
@@ -111,7 +111,7 @@ sections:
       font: heading
       size: xl5
       text: Lee & Amanda Porter
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: 0
@@ -171,7 +171,7 @@ sections:
       font: heading
       size: xl7
       text: Does This Sound Like You?
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -192,7 +192,7 @@ sections:
           font: heading
           size: xl4
           text: Worried about your children?
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0
@@ -250,7 +250,7 @@ sections:
           font: heading
           size: xl4
           text: Struggling to kick a Porn habit?
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0
@@ -322,7 +322,7 @@ sections:
       font: heading
       size: xl7
       text: We can Teach you how to quit Forever!
-    mainImage:
+    mainMedia:
       position: bottom
       radius: none
       mt: 0
@@ -387,7 +387,7 @@ sections:
       font: heading
       size: xl4
       text: Let Go OF Shame and Make Progress!
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: 0
@@ -429,7 +429,7 @@ sections:
       font: heading
       size: xl4
       text: You're ready to Make Progress. We can help
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -463,7 +463,7 @@ sections:
           color: default
           font: heading
           size: lg
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0

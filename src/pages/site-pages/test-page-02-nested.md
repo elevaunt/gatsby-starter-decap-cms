@@ -11,7 +11,7 @@ sections:
       font: heading
       size: xl5
       text: TEST PAGE 02
-    mainImage:
+    mainMedia:
       position: right
       radius: none
       mt: 0
@@ -47,7 +47,7 @@ sections:
       font: heading
       size: xl6
       text: About Us
-    mainImage:
+    mainMedia:
       position: right
       radius: none
       mt: 0

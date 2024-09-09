@@ -10,7 +10,7 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0

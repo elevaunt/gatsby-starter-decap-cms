@@ -14,7 +14,7 @@ sections:
       font: heading
       size: xl4
       text: Get In Touch
-    mainImage:
+    mainMedia:
       position: right
       radius: none
       mt: 0

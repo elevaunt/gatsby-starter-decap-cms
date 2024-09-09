@@ -171,14 +171,15 @@ collections:
                   ]
               },
               {
-                label: "Main Image",
-                name: "mainImage",
+                label: "Main Media",
+                name: "mainMedia",
                 collapsed: true,
                 required: false,
                 widget: object,
                 fields: 
                   [
                     { label: Image, name: image, required: false, widget: image },
+                    { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                     { label: Alt, name: alt, required: false, widget: string },
                     { 
                       label: Position, 
@@ -585,14 +586,15 @@ collections:
                       ]
                     },
                     {
-                      label: "Main Image",
-                      name: "mainImage",
+                      label: "Main Media",
+                      name: "mainMedia",
                       collapsed: true,
                       required: false,
                       widget: object,
                       fields: 
                         [
                           { label: Image, name: image, required: false, widget: image },
+                          { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                           { label: Alt, name: alt, required: false, widget: string },
                           { 
                             label: Position, 
@@ -1022,14 +1024,15 @@ collections:
                   ]
               },
               {
-                label: "Main Image",
-                name: "mainImage",
+                label: "Main Media",
+                name: "mainMedia",
                 collapsed: true,
                 required: false,
                 widget: object,
                 fields: 
                   [
                     { label: Image, name: image, required: false, widget: image },
+                    { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                     { label: Alt, name: alt, required: false, widget: string },
                     { 
                       label: Position, 
@@ -1436,14 +1439,15 @@ collections:
                       ]
                     },
                     {
-                      label: "Main Image",
-                      name: "mainImage",
+                      label: "Main Media",
+                      name: "mainMedia",
                       collapsed: true,
                       required: false,
                       widget: object,
                       fields: 
                         [
                           { label: Image, name: image, required: false, widget: image },
+                          { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                           { label: Alt, name: alt, required: false, widget: string },
                           { 
                             label: Position, 
@@ -1820,6 +1824,7 @@ collections:
             ]
         }
       - { label: "Featured Image", name: "featuredimage", widget: image, required: false }
+      - { label: "Featured Video", name: "video", required: false, widget: string, hint: "Video URL" }
       - { label: "Tagline", name: "tagline", widget: "string", required: false }
       - { label: "Short Description", name: "shortDescription", widget: "text" }
       - { label: "Long Description", name: "body", widget: "markdown", required: false }
@@ -1839,6 +1844,7 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Image, name: image, widget: image }
+          - { label: "Featured Video", name: "vide", required: false, widget: string, hint: "Video URL" }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
           - {
@@ -2049,14 +2055,15 @@ collections:
                       ]
                   },
                   {
-                    label: "Main Image",
-                    name: "mainImage",
+                    label: "Main Media",
+                    name: "mainMedia",
                     collapsed: true,
                     required: false,
                     widget: object,
                     fields: 
                       [
                         { label: Image, name: image, required: false, widget: image },
+                        { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                         { label: Alt, name: alt, required: false, widget: string },
                         { 
                           label: Position, 
@@ -2456,14 +2463,15 @@ collections:
                           ]
                         },
                         {
-                          label: "Main Image",
-                          name: "mainImage",
+                          label: "Main Media",
+                          name: "mainMedia",
                           collapsed: true,
                           required: false,
                           widget: object,
                           fields: 
                             [
                               { label: Image, name: image, required: false, widget: image },
+                              { label: Video, name: video, required: false, widget: string, hint: "Video URL" },
                               { label: Alt, name: alt, required: false, widget: string },
                               { 
                                 label: Position, 

@@ -12,7 +12,7 @@ sections:
       font: heading
       size: xl7
       text: 10X Evolution
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -61,7 +61,7 @@ sections:
       font: heading
       size: xl6
       text: ""
-    mainImage:
+    mainMedia:
       position: left
       radius: xl2
       mt: 0
@@ -85,7 +85,7 @@ sections:
           color: default
           font: heading
           size: lg
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0
@@ -143,7 +143,7 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -178,7 +178,7 @@ sections:
       font: secondary
       size: xl3
       text: What You’re Gonna Get…
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -215,7 +215,7 @@ sections:
       font: heading
       size: xl
       text: "1 Day, Intensive Training "
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -260,7 +260,7 @@ sections:
       font: heading
       size: xl
       text: 2 Bonus Trainings
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -303,7 +303,7 @@ sections:
       font: heading
       size: xl
       text: Mental Growth Reading List
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -346,7 +346,7 @@ sections:
       font: heading
       size: xl
       text: 1 Hour Consultation
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -389,7 +389,7 @@ sections:
       font: heading
       size: xl2
       text: "Total Value: $10,738"
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -423,7 +423,7 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -472,7 +472,7 @@ sections:
       font: secondary
       size: xl3
       text: Register NOW for just
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -493,7 +493,7 @@ sections:
           color: default
           font: heading
           size: lg
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0

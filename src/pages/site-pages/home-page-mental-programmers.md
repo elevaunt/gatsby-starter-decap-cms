@@ -13,7 +13,7 @@ sections:
       font: heading
       size: xl7
       text: PROGRAM YOUR MIND
-    mainImage:
+    mainMedia:
       position: right
       radius: lg
       mt: 0
@@ -71,7 +71,7 @@ sections:
       font: heading
       size: xl3
       text: Ready to master your mind and emotions?
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: -1
@@ -111,7 +111,7 @@ sections:
       font: heading
       size: xl5
       text: Lee & Amanda Porter
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: 0
@@ -163,7 +163,7 @@ sections:
       font: heading
       size: xl7
       text: Does This Sound Like You?
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -184,7 +184,7 @@ sections:
           font: heading
           size: xl4
           text: Can’t reach that next level?
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0
@@ -235,7 +235,7 @@ sections:
           font: heading
           size: xl4
           text: Missing something in life?
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0
@@ -302,7 +302,7 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -341,7 +341,7 @@ sections:
       font: heading
       size: xl7
       text: We can Teach you to Master Your Mind
-    mainImage:
+    mainMedia:
       position: bottom
       radius: none
       mt: 0
@@ -403,7 +403,7 @@ sections:
       font: heading
       size: xl4
       text: Mastery is within reach
-    mainImage:
+    mainMedia:
       position: left
       radius: none
       mt: 0
@@ -445,7 +445,7 @@ sections:
       font: heading
       size: xl4
       text: You're ready to Master Your Mind
-    mainImage:
+    mainMedia:
       position: top
       radius: none
       mt: 0
@@ -480,7 +480,7 @@ sections:
           color: default
           font: heading
           size: lg
-        mainImage:
+        mainMedia:
           position: top
           radius: none
           mt: 0

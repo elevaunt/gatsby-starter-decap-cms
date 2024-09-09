@@ -26,7 +26,13 @@ sections:
       font: heading
       size: xl4
       text: How To 10X Your Business In Record Time
-    mainImage:
+    subheading:
+      color: primary
+      font: heading
+      size: xl4
+      text: Without Increasing Your Workload
+    theme: default
+    mainMedia:
       position: left
       radius: xl2
       mt: 0
@@ -34,12 +40,6 @@ sections:
       shadow: none
       image: /img/lee-after-skydiving.jpg
       aspectRatio: 3/2
-    subheading:
-      color: primary
-      font: heading
-      size: xl4
-      text: Without Increasing Your Workload
-    theme: default
     tagline:
       color: secondary
       font: heading
@@ -62,14 +62,21 @@ sections:
       fontSize: lg
       body: |-
         N﻿ext Webinar:\
-        0﻿9/05/2024 @ 4:00 PM CT
-        ** **
+        0﻿9/11/2024 @ 4:00 PM CT
+
+        - - -
   - heading:
       color: default
       font: heading
       size: xl
       text: Special Web Class THIS WEEK With Lee Porter
-    mainImage:
+    subheading:
+      color: default
+      font: secondary
+      size: md
+      text: Wednesday, September 11th @ 4:00 PM CT
+    theme: dark
+    mainMedia:
       position: left
       radius: none
       mt: 2
@@ -77,12 +84,6 @@ sections:
       shadow: none
       image: ""
       aspectRatio: 1/1
-    subheading:
-      color: default
-      font: secondary
-      size: md
-      text: Thursday, September 5th @ 4:00 PM CT
-    theme: dark
     tagline:
       color: default
       font: heading
@@ -106,17 +107,17 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: default
       font: secondary
       size: md
     theme: colored
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -141,18 +142,18 @@ sections:
       font: secondary
       size: xl
       text: "What You Will Learn On This Free Training Webinar:"
-    mainImage:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: default
       font: secondary
       size: md
       text: ""
     theme: colored
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -178,17 +179,17 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: default
       font: secondary
       size: md
     theme: colored
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -199,12 +200,6 @@ sections:
           font: secondary
           size: md
           text: "- - -"
-        mainImage:
-          position: top
-          radius: none
-          mt: 0
-          mb: 0
-          shadow: none
         subheading:
           color: default
           font: secondary
@@ -212,6 +207,12 @@ sections:
           text: How To Completely Transform Your Life And Work Less While Doing It
         secondaryContent: true
         theme: colored
+        mainMedia:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
         tagline:
           color: default
           font: heading
@@ -242,12 +243,6 @@ sections:
           font: secondary
           size: md
           text: "- - -"
-        mainImage:
-          position: top
-          radius: none
-          mt: 0
-          mb: 0
-          shadow: none
         subheading:
           color: default
           font: secondary
@@ -255,6 +250,12 @@ sections:
           text: How To Rewrite Your History And Change Your Present Reality
         secondaryContent: true
         theme: colored
+        mainMedia:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
         tagline:
           color: default
           font: heading
@@ -285,12 +286,6 @@ sections:
           font: secondary
           size: md
           text: "- - -"
-        mainImage:
-          position: top
-          radius: none
-          mt: 0
-          mb: 0
-          shadow: none
         subheading:
           color: default
           font: secondary
@@ -299,6 +294,12 @@ sections:
             Struggle
         secondaryContent: true
         theme: colored
+        mainMedia:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
         tagline:
           color: default
           font: heading
@@ -344,17 +345,17 @@ sections:
       color: default
       font: heading
       size: lg
-    mainImage:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: default
       font: secondary
       size: md
     theme: colored
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -380,17 +381,17 @@ sections:
       size: xl3
       text: Register To Learn How to 10X Your Business Faster Than You Ever Thought
         Possible
-    mainImage:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: default
       font: secondary
       size: md
     theme: default
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -400,18 +401,18 @@ sections:
           color: default
           font: heading
           size: lg
-        mainImage:
-          position: top
-          radius: none
-          mt: 0
-          mb: 0
-          shadow: none
         subheading:
           color: default
           font: heading
           size: md
         secondaryContent: true
         theme: default
+        mainMedia:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
         tagline:
           color: default
           font: heading

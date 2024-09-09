@@ -113,7 +113,7 @@ export const pageQuery = graphql`
             textAlign
             maxWidth
           }
-          mainImage {
+          mainMedia {
             image {
               childImageSharp {
                 fluid {
@@ -123,6 +123,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            video
             position
             aspectRatio
             alt
@@ -196,7 +197,7 @@ export const pageQuery = graphql`
               radius
               shadow
             }
-            mainImage {
+            mainMedia {
               image {
                 childImageSharp {
                   fluid {
@@ -206,6 +207,7 @@ export const pageQuery = graphql`
                   }
                 }
               }
+              video
               position
               aspectRatio
               alt
