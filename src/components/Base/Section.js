@@ -41,6 +41,7 @@ const Section = ({
   const inherit = containerTheme === "inherit";
   const secondaryTheme = (containerTheme && !inherit) ? themeMap[containerTheme] : sectionTheme
 
+  console.log("Section", maxWidth);
   return (
     <CssVarsProvider theme={sectionTheme}>
       <HeadingBlock level={-1}>

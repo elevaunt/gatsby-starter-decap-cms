@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { AspectRatio, Box, styled } from '@mui/joy';
+import { NoEncryption } from "@mui/icons-material";
 
 const Video = ({
-  url,
+  video,
   alt,
   aspectRatio,
   radius,
@@ -15,6 +16,7 @@ const Video = ({
   const Video = styled("iframe")(({ theme }) => ({
     borderRadius: theme.vars.radius[radius],
     boxShadow: theme.vars.shadow[shadow],
+    border: "none",
   }))
 
   return (
@@ -24,7 +26,7 @@ const Video = ({
       ...sx
     }}>
       <AspectRatio objectFit="cover" ratio={aspectRatio || 16/9} variant="plain">
-        <Video src={url} alt={alt} />
+        <Video src={video} title={alt} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>
       </AspectRatio>
     </Box>
   )

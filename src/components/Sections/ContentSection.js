@@ -48,6 +48,7 @@ const ContentSection = ({
     flex: `0 1 ${primaryFlexBasis}`,
   }
 
+  console.log("ContentSection", contentStyles);
   const contentCount = content?.length;
   return (
     <Section
