@@ -12,7 +12,7 @@ const Image = ({
   shadow,
   sx
 }) => {
-  const img = image.childImageSharp.fluid
+  const img = image?.childImageSharp.fluid || {}
   const Image = styled("img")(({ theme }) => ({
     borderRadius: theme.vars.radius[radius],
     boxShadow: theme.vars.shadow[shadow],

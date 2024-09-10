@@ -36,7 +36,7 @@ sections:
       mt: 0
       mb: 0
       shadow: none
-      image: ""
+      image: /img/lee-amanda-3-2.jpg
       video: https://youtu.be/srYUno6XIN0
     tagline:
       color: default
