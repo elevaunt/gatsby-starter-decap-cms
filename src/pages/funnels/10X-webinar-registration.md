@@ -62,7 +62,7 @@ sections:
       fontSize: lg
       body: |-
         N﻿ext Webinar:\
-        0﻿9/11/2024 @ 4:00 PM CT
+        0﻿9/19/2024 @ 4:00 PM CT
 
         - - -
   - heading:
@@ -74,7 +74,7 @@ sections:
       color: default
       font: secondary
       size: md
-      text: Wednesday, September 11th @ 4:00 PM CT
+      text: Wednesday, September 19th @ 4:00 PM CT
     theme: dark
     mainMedia:
       position: left
