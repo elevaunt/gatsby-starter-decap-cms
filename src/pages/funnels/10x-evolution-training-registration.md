@@ -12,17 +12,17 @@ sections:
       font: heading
       size: xl7
       text: 10X Evolution
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: default
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: default
     tagline:
       color: secondary
       font: heading
@@ -61,6 +61,12 @@ sections:
       font: heading
       size: xl6
       text: ""
+    subheading:
+      color: primary
+      font: secondary
+      size: lg
+      text: ""
+    theme: default
     mainMedia:
       position: left
       radius: xl2
@@ -69,12 +75,6 @@ sections:
       shadow: none
       image: /img/lee-after-skydiving.jpg
       aspectRatio: 3/2
-    subheading:
-      color: primary
-      font: secondary
-      size: lg
-      text: ""
-    theme: default
     tagline:
       color: secondary
       font: heading
@@ -85,19 +85,19 @@ sections:
           color: default
           font: heading
           size: lg
+        subheading:
+          color: default
+          font: secondary
+          size: md
+          text: October 18th
+        secondaryContent: true
+        theme: default
         mainMedia:
           position: top
           radius: none
           mt: 0
           mb: 0
           shadow: none
-        subheading:
-          color: default
-          font: secondary
-          size: md
-          text: September 13th
-        secondaryContent: true
-        theme: default
         tagline:
           color: default
           font: body
@@ -143,17 +143,17 @@ sections:
       color: default
       font: heading
       size: lg
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -178,17 +178,17 @@ sections:
       font: secondary
       size: xl3
       text: What You’re Gonna Get…
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -215,18 +215,18 @@ sections:
       font: heading
       size: xl
       text: "1 Day, Intensive Training "
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: secondary
       font: secondary
       size: md
       text: ($2,997 value)
     theme: light
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -260,18 +260,18 @@ sections:
       font: heading
       size: xl
       text: 2 Bonus Trainings
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: secondary
       font: secondary
       size: md
       text: ($5,994 Value)
     theme: light
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -303,18 +303,18 @@ sections:
       font: heading
       size: xl
       text: Mental Growth Reading List
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: secondary
       font: secondary
       size: md
       text: ($997 Value)
     theme: light
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -346,18 +346,18 @@ sections:
       font: heading
       size: xl
       text: 1 Hour Consultation
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: secondary
       font: secondary
       size: md
       text: ($750 Value)
     theme: light
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -389,17 +389,17 @@ sections:
       font: heading
       size: xl2
       text: "Total Value: $10,738"
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -423,17 +423,17 @@ sections:
       color: default
       font: heading
       size: lg
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -472,18 +472,18 @@ sections:
       font: secondary
       size: xl3
       text: Register NOW for just
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: primary
       font: heading
       size: xl7
       text: $997 Today
     theme: default
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -493,19 +493,19 @@ sections:
           color: default
           font: heading
           size: lg
+        subheading:
+          color: default
+          font: secondary
+          size: md
+          text: October 18th
+        secondaryContent: true
+        theme: default
         mainMedia:
           position: top
           radius: none
           mt: 0
           mb: 0
           shadow: none
-        subheading:
-          color: default
-          font: secondary
-          size: md
-          text: September 13th
-        secondaryContent: true
-        theme: default
         tagline:
           color: default
           font: body
