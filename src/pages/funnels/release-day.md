@@ -110,9 +110,9 @@ sections:
           name: ArrowRightAlt
       fontSize: md
       body: >-
-        
-
-        Do you feel stuck, held back by invisible barriers that are keeping you from reaching the success you know you’re capable of? It’s time to break free.
+        Do you feel stuck, held back by invisible barriers that are keeping you
+        from reaching the success you know you’re capable of? It’s time to break
+        free.
 
 
         Mark your calendar for October 18th – Release Day, your opportunity for a life-changing breakthrough (limited seats available).
@@ -137,7 +137,7 @@ sections:
         ### Why You Can’t Miss This
 
 
-        This event is designed with one goal in mind: Evolve Yourself. You’ll gain a powerful and practical transformation for your mind and your life.
+        This event is designed with one goal in mind: *Evolve Yourself.* You’ll gain a powerful and practical transformation for your mind and your life.
 
 
         Now, Release Day isn’t just another motivational seminar. It’s your chance to learn practical tools that you can apply immediately and for years to come:
