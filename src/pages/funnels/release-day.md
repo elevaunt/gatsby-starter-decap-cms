@@ -8,12 +8,13 @@ settings:
   shareImage: /img/woman-eyes-closed.jpg
 sections:
   - buttons:
-      - size: md
+      - size: lg
         color: primary
         variant: solid
         mr: 0
         mt: 2
         text: Register Now!
+        url: "#Register"
         mb: 0
         action: link
         icon:
@@ -28,11 +29,11 @@ sections:
     subheading:
       color: primary
       font: secondary
-      size: xl3
+      size: xl
       text: October 18th is Release Day!
     theme: default
     mainMedia:
-      position: top
+      position: left
       radius: none
       mt: 0
       mb: 0
@@ -49,7 +50,7 @@ sections:
       split: 1/2
       textAlign: left
       maxWidth: xl
-      mt: 0
+      mt: 3
       mb: 0
     description:
       bullets:
@@ -90,6 +91,7 @@ sections:
         size: md
         icon:
           color: secondary
+          name: Arrow Right Alt
       fontSize: md
       body: >-
         Do you feel stuck, held back by invisible barriers that are keeping you
@@ -125,12 +127,12 @@ sections:
         Now, Release Day isn’t just another motivational seminar. It’s your chance to learn practical tools that you can apply immediately and for years to come:
 
 
-        1. **Break Through Mental Barriers**\
-           Discover how to identify and remove the subconscious blocks that have been holding you back. Our formulas are the fastest and most precise methods we’ve ever seen – simple yet transformative. You won’t just break barriers during the event; you’ll continue to shatter them long after.
-        2. **Reclaim Your Energy**\
-           Stop wasting time and focus on old habits and limiting beliefs. These patterns have kept you stuck long enough, and Release Day is your chance to finally let them go. This is a commitment you’ll look back on and thank yourself for, time and time again.
-        3. **Accelerate Your Success**\
-           Make room for explosive growth in both your business and personal life. The changes you experience will create a compounding effect – imagine what that could do for your future.
+        * **Break Through Mental Barriers**\
+          Discover how to identify and remove the subconscious blocks that have been holding you back. Our formulas are the fastest and most precise methods we’ve ever seen – simple yet transformative. You won’t just break barriers during the event; you’ll continue to shatter them long after.
+        * **Reclaim Your Energy**\
+          Stop wasting time and focus on old habits and limiting beliefs. These patterns have kept you stuck long enough, and Release Day is your chance to finally let them go. This is a commitment you’ll look back on and thank yourself for, time and time again.
+        * **Accelerate Your Success**\
+          Make room for explosive growth in both your business and personal life. The changes you experience will create a compounding effect – imagine what that could do for your future.
 
         You’re at a pivotal moment:
 
@@ -185,13 +187,13 @@ sections:
       font: heading
       size: sm
     type: Content
-    id: Register Button
+    id: Register
     contentStyles:
       split: 1/2
       textAlign: left
       maxWidth: xl
-      mt: 0
-      mb: 0
+      mt: 2
+      mb: 6
     description:
       bullets:
         size: md
