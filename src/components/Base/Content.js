@@ -74,7 +74,8 @@ const Content = ({
     )
   }
 
-  const ListItemReplacement = ({ icon, children, ...props }) => {
+  const ListItemReplacement = ({ icon, index, ordered, children, ...props }) => {
+    console.log("ListItemReplacement", props);
     return (
       <ListItem
         sx={{
@@ -83,7 +84,8 @@ const Content = ({
           alignItems: "flex-start",
         }}
       >
-        {icon.name && <ListItemDecorator><Icon name={icon.name} color={icon.color} size={props.size} /></ListItemDecorator>}
+        {ordered ? <ListItemDecorator>{index + 1}.</ListItemDecorator> :
+        icon.name && <ListItemDecorator><Icon name={icon.name} color={icon.color} size={props.size} /></ListItemDecorator>}
         <ListItemContent>{children}</ListItemContent>
       </ListItem>
     )
@@ -118,7 +120,11 @@ const Content = ({
         <Description
           components={{
             ul: List,
+            ol: List,
             li(props) { return <ListItemReplacement icon={description.bullets.icon} size={description.bullets.size} key={props.index} {...props} /> },
+            H1(props) { return <Typography fontSize={description.fontSize} level="h1" sx={{ mb: 1 }} {...props}/>},
+            H2(props) { return <Typography fontSize={description.fontSize} level="h2" sx={{ mb: 1 }} {...props}/>},
+            H3(props) { return <Typography fontSize={description.fontSize} level="h3" sx={{ mb: 1 }} {...props}/>},
             p(props) { return <Typography fontSize={description.fontSize} sx={{"+ p": {mt: 2}}} {...props}/>},
             a(props) { return <Link fontSize={description.fontSize} sx={{color: "#58a77e"}} {...props} /> },
           }}

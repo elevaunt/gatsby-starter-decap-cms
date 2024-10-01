@@ -30,7 +30,6 @@ const Buttons = ({ buttons, sx }) => {
     }
     const handleButtonClick = (e) => {
       if (btn.action === "modal") {
-        console.log(btn.url);
         setOpenModal(btn.url.replace("#", ""));
       }
     }

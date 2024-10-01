@@ -6,7 +6,6 @@ import renderSection from "../configs/sectionsMap.config";
 
 
 export const MainTemplate = ({ sections }) => {
-  console.log("mainTemplate", sections);
   return sections ? (
     <main>
       {sections.map((section, key) => renderSection(section, key))}
