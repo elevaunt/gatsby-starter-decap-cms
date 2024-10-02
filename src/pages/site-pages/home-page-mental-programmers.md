@@ -16,7 +16,7 @@ sections:
         mt: 0
         text: Start Your 10X Evolution Now!
         url: /10x-webinar-registration
-        mb: 0
+        mb: 4
         action: link
         icon:
           position: after
