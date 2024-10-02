@@ -9,7 +9,7 @@ settings:
   shareImage: /img/amanda-leaning-on-lee-green-popsicles.jpg
 sections:
   - buttons:
-      - size: md
+      - size: xl
         color: primary
         variant: solid
         mr: 0
