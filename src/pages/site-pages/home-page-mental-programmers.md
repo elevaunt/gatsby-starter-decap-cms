@@ -8,11 +8,31 @@ settings:
     fulfilling life they desire
   shareImage: /img/amanda-leaning-on-lee-green-popsicles.jpg
 sections:
-  - heading:
+  - buttons:
+      - size: md
+        color: primary
+        variant: solid
+        mr: 0
+        mt: 0
+        text: Start Your 10X Evolution
+        url: /10x-webinar-registration
+        mb: 0
+        action: link
+        icon:
+          position: after
+        type: button
+        ml: 0
+    heading:
       color: default
       font: heading
       size: xl7
       text: PROGRAM YOUR MIND
+    subheading:
+      color: primary
+      font: secondary
+      size: xl3
+      text: For Massive Success
+    theme: default
     mainMedia:
       position: right
       radius: lg
@@ -21,12 +41,6 @@ sections:
       shadow: none
       image: /img/amanda-leaning-on-lee-green-popsicles.jpg
       aspectRatio: 9/10
-    subheading:
-      color: primary
-      font: secondary
-      size: xl3
-      text: For Massive Success
-    theme: default
     tagline:
       color: secondary
       font: heading
@@ -71,6 +85,11 @@ sections:
       font: heading
       size: xl3
       text: Ready to master your mind and emotions?
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: darkest
     mainMedia:
       position: left
       radius: none
@@ -80,11 +99,6 @@ sections:
       image: /img/man-smiling-street.jpg
       alt: ""
       aspectRatio: 3/2
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: darkest
     tagline:
       color: default
       font: heading
@@ -111,6 +125,11 @@ sections:
       font: heading
       size: xl5
       text: Lee & Amanda Porter
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: default
     mainMedia:
       position: left
       radius: none
@@ -120,11 +139,6 @@ sections:
       image: /img/lee-amanda-posing-triangles.jpg
       alt: Lee & Amanda Porter
       aspectRatio: 3/4
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: default
     tagline:
       color: primary
       font: heading
@@ -163,17 +177,17 @@ sections:
       font: heading
       size: xl7
       text: Does This Sound Like You?
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -184,6 +198,12 @@ sections:
           font: heading
           size: xl4
           text: Can’t reach that next level?
+        subheading:
+          color: default
+          font: heading
+          size: md
+        secondaryContent: true
+        theme: light
         mainMedia:
           position: top
           radius: none
@@ -192,12 +212,6 @@ sections:
           shadow: none
           image: /img/man-on-phone-in-cafe.jpg
           alt: Professional Man
-        subheading:
-          color: default
-          font: heading
-          size: md
-        secondaryContent: true
-        theme: light
         tagline:
           color: default
           font: heading
@@ -235,6 +249,12 @@ sections:
           font: heading
           size: xl4
           text: Missing something in life?
+        subheading:
+          color: default
+          font: heading
+          size: md
+        secondaryContent: true
+        theme: light
         mainMedia:
           position: top
           radius: none
@@ -243,12 +263,6 @@ sections:
           shadow: none
           image: /img/woman-eyes-closed.jpg
           alt: Frustrated Man
-        subheading:
-          color: default
-          font: heading
-          size: md
-        secondaryContent: true
-        theme: light
         tagline:
           color: default
           font: heading
@@ -302,17 +316,17 @@ sections:
       color: default
       font: heading
       size: lg
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: light
     mainMedia:
       position: top
       radius: none
       mt: 0
       mb: 0
       shadow: none
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: light
     tagline:
       color: default
       font: heading
@@ -341,6 +355,12 @@ sections:
       font: heading
       size: xl7
       text: We can Teach you to Master Your Mind
+    subheading:
+      color: primary
+      font: secondary
+      size: xl4
+      text: And it's easier than you think
+    theme: default
     mainMedia:
       position: bottom
       radius: none
@@ -350,12 +370,6 @@ sections:
       image: /img/amanda-in-focus-lee-behind.jpg
       alt: We can teach you how to quit forever
       aspectRatio: 4/3
-    subheading:
-      color: primary
-      font: secondary
-      size: xl4
-      text: And it's easier than you think
-    theme: default
     tagline:
       color: default
       font: heading
@@ -403,6 +417,11 @@ sections:
       font: heading
       size: xl4
       text: Mastery is within reach
+    subheading:
+      color: default
+      font: secondary
+      size: md
+    theme: colored
     mainMedia:
       position: left
       radius: none
@@ -411,11 +430,6 @@ sections:
       shadow: none
       image: /img/man-looking-at-camera-on-couch-trees.jpg
       aspectRatio: 3/2
-    subheading:
-      color: default
-      font: secondary
-      size: md
-    theme: colored
     tagline:
       color: default
       font: heading
@@ -445,18 +459,18 @@ sections:
       font: heading
       size: xl4
       text: You're ready to Master Your Mind
-    mainMedia:
-      position: top
-      radius: none
-      mt: 0
-      mb: 0
-      shadow: none
     subheading:
       color: primary
       font: handwriting
       size: xl3
       text: Let's Do This!
     theme: default
+    mainMedia:
+      position: top
+      radius: none
+      mt: 0
+      mb: 0
+      shadow: none
     tagline:
       color: default
       font: heading
@@ -480,18 +494,18 @@ sections:
           color: default
           font: heading
           size: lg
-        mainMedia:
-          position: top
-          radius: none
-          mt: 0
-          mb: 0
-          shadow: none
         subheading:
           color: default
           font: heading
           size: md
         secondaryContent: true
         theme: default
+        mainMedia:
+          position: top
+          radius: none
+          mt: 0
+          mb: 0
+          shadow: none
         tagline:
           color: default
           font: heading
