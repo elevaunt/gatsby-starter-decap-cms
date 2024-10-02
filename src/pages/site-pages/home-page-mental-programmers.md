@@ -14,7 +14,7 @@ sections:
         variant: solid
         mr: 0
         mt: 0
-        text: Start Your 10X Evolution
+        text: Start Your 10X Evolution Now!
         url: /10x-webinar-registration
         mb: 0
         action: link
