@@ -89,7 +89,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: October 18th
+          text: November 15th
         secondaryContent: true
         theme: default
         mainMedia:
@@ -497,7 +497,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: October 18th
+          text: November 15th
         secondaryContent: true
         theme: default
         mainMedia:
