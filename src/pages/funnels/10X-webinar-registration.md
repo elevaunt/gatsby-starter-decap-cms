@@ -217,7 +217,7 @@ sections:
           color: default
           font: heading
           size: xl2
-          text: "Secret #1"
+          text: "Phase #1"
         type: Content
         id: Secret-1
         contentStyles:
@@ -260,7 +260,7 @@ sections:
           color: default
           font: heading
           size: xl2
-          text: "Secret #2"
+          text: "Phase #2"
         type: Content
         id: Secret-2
         contentStyles:
@@ -303,7 +303,7 @@ sections:
           color: default
           font: heading
           size: xl2
-          text: "Secret #3"
+          text: "Phase #3"
         type: Content
         id: Secret-3
         contentStyles:
@@ -325,7 +325,7 @@ sections:
               color: secondary
           fontSize: md
     type: Content
-    id: Secrets
+    id: Phases
     contentStyles:
       split: 1/2
       textAlign: center
