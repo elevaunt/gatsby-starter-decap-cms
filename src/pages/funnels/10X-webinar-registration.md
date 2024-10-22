@@ -204,7 +204,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: How To Completely Transform Your Life And Work Less While Doing It
+          text: How To Master Your Inner World To Master Your Outer World
         secondaryContent: true
         theme: colored
         mainMedia:
@@ -247,7 +247,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: How To Rewrite Your History And Change Your Present Reality
+          text: How To Release Trauma And Limiting Beliefs To Change Your Reality
         secondaryContent: true
         theme: colored
         mainMedia:
@@ -290,8 +290,7 @@ sections:
           color: default
           font: secondary
           size: md
-          text: How To Unlock The Cheat Code To Your Dream Life, And Save Years Of
-            Struggle
+          text: How To Unlock Your Dream Life, And Save Years Of Struggle
         secondaryContent: true
         theme: colored
         mainMedia:
