@@ -62,7 +62,7 @@ sections:
       fontSize: lg
       body: |-
         N﻿ext Webinar:\
-        10/2/2024 @ 4:00 PM CT4
+        10/24/2024 @ 4:00 PM CT4
 
         - - -
   - heading:
