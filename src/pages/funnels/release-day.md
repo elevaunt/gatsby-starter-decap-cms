@@ -115,7 +115,7 @@ sections:
         free.
 
 
-        Mark your calendar for **November 15th OR 16th – Release Day**, your opportunity for a life-changing breakthrough (limited seats available).
+        Mark your calendar for **Release Day -** choose between **November 15th or 16th**, your opportunity for a life-changing breakthrough (limited seats available).
 
 
         ### The Power of Release Day
