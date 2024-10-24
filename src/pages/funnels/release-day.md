@@ -14,7 +14,7 @@ sections:
         mr: 0
         mt: 2
         text: Register Now!
-        url: https://buy.stripe.com/fZeeWi2I12ud2JO9AC
+        url: https://buy.stripe.com/6oEaG2ciBgl32JOaEH
         mb: 0
         action: link
         icon:
@@ -66,7 +66,7 @@ sections:
         mr: 0
         mt: 6
         text: Register Now!
-        url: https://buy.stripe.com/fZeeWi2I12ud2JO9AC
+        url: https://buy.stripe.com/6oEaG2ciBgl32JOaEH
         mb: 0
         action: link
         icon:
