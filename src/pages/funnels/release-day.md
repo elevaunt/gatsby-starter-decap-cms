@@ -137,7 +137,7 @@ sections:
         ### Why You Can’t Miss This
 
 
-        This event is designed with one goal in mind: **\*Evolve Yourself**.* You’ll gain a powerful and practical transformation for your mind and your life.
+        This event is designed with one goal in mind: ***Evolve Yourself**.* You’ll gain a powerful and practical transformation for your mind and your life.
 
 
         Now, Release Day isn’t just another motivational seminar. This *3 hour event* is your chance to learn practical tools that you can apply immediately and for years to come:
