@@ -30,7 +30,7 @@ sections:
       color: primary
       font: secondary
       size: xl2
-      text: During Release Day
+      text: Welcome To Release Day
     theme: default
     mainMedia:
       position: top
