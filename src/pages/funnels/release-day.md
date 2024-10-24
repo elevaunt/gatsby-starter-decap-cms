@@ -29,8 +29,8 @@ sections:
     subheading:
       color: primary
       font: secondary
-      size: xl
-      text: November 16th is Release Day!
+      size: xl2
+      text: During Release Day
     theme: default
     mainMedia:
       position: top
@@ -115,7 +115,7 @@ sections:
         free.
 
 
-        Mark your calendar for **November 16th – Release Day**, your opportunity for a life-changing breakthrough (limited seats available).
+        Mark your calendar for **November 15th OR 16th – Release Day**, your opportunity for a life-changing breakthrough (limited seats available).
 
 
         ### The Power of Release Day
@@ -137,10 +137,10 @@ sections:
         ### Why You Can’t Miss This
 
 
-        This event is designed with one goal in mind: ***Evolve Yourself**.* You’ll gain a powerful and practical transformation for your mind and your life.
+        This event is designed with one goal in mind: **\*Evolve Yourself**.* You’ll gain a powerful and practical transformation for your mind and your life.
 
 
-        Now, Release Day isn’t just another motivational seminar. This *full day event* is your chance to learn practical tools that you can apply immediately and for years to come:
+        Now, Release Day isn’t just another motivational seminar. This *3 hour event* is your chance to learn practical tools that you can apply immediately and for years to come:
 
 
         1. **Break Through Mental Barriers**\
