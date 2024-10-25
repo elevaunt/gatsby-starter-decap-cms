@@ -38,7 +38,7 @@ sections:
       mt: 0
       mb: 0
       shadow: none
-      video: https://www.youtube.com/embed/mjI9JL5QeEA?si=WQAFpKsUjEHUaSy9
+      video: https://www.youtube.com/embed/bN1hH9wklOo?si=TrD8W54uYXmr1xlj
       aspectRatio: 16/9
     tagline:
       color: secondary
