@@ -13,8 +13,8 @@ sections:
         variant: solid
         mr: 0
         mt: 0
-        text: Go 10X
-        url: /go-10x
+        text: Register For Release Day Now!
+        url: /release-day
         mb: 0
         action: link
         icon:
